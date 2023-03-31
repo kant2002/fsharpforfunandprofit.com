@@ -61,7 +61,7 @@ Seriously! As I make clear on the home page, this site is not targeted at mathem
 {{</footnote>}}
 
 
-## Feedback
+## Зворотний зв'язок
 
 Please help me improve this site. I am happy to receive any constructive criticism or comments.
 
