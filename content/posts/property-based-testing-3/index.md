@@ -10,7 +10,7 @@ seriesOrder: 4
 ---
 
 
-In [the previous post](/posts/property-based-testing-2/), we looked at some common patterns for finding properties. In this post, we'll apply these approaches to see if we can come up with properties for some simple functions such as "sort a list" and "reverse a list". As we work, we'll always being thinking about the Enterprise Developer From Hell ([see earlier post](/posts/property-based-testing/)) and how the EDFH could trick our tests into passing.
+In [the previous post](posts/property-based-testing-2/), we looked at some common patterns for finding properties. In this post, we'll apply these approaches to see if we can come up with properties for some simple functions such as "sort a list" and "reverse a list". As we work, we'll always being thinking about the Enterprise Developer From Hell ([see earlier post](posts/property-based-testing/)) and how the EDFH could trick our tests into passing.
 
 * ["Different paths, same destination"](#path_sort) applied to sorting a list
 * ["Different paths, same destination"](#path_rev) applied to reversing a list
@@ -421,7 +421,7 @@ As it happens, we'll fix this particular problem by using the next principle!
 
 A useful kind of property is based on an invariant that is preserved after some transformation, such as preserving length or contents. These properties are not normally sufficient in themselves to ensure a correct implementation, but they *do* often act as a counter-check to more general properties.
 
-For example, in [an earlier post](/posts/property-based-testing/), we created commutative and associative properties for addition, but then noticed that simply having an implementation that returned zero would satisfy them just as well!  It was only when we added `x + 0 = x` as a property that we could eliminate that particular malicious implementation.
+For example, in [an earlier post](posts/property-based-testing/), we created commutative and associative properties for addition, but then noticed that simply having an implementation that returned zero would satisfy them just as well!  It was only when we added `x + 0 = x` as a property that we could eliminate that particular malicious implementation.
 
 And in the "list sort" example above, we could satisfy the "pairwise ordered" property with a function that just returned an empty list!  How could we fix that?
 
@@ -923,7 +923,7 @@ So yes, it's true that truly malicious implementations are unlikely to be a prob
 
 ## Summary
 
-In this post we looked at using the properties to test various list functions. But what about finding properties for other problems? In [the next post](/posts/property-based-testing-4) we will keep going and use the same techniques to test a different domain.
+In this post we looked at using the properties to test various list functions. But what about finding properties for other problems? In [the next post](posts/property-based-testing-4) we will keep going and use the same techniques to test a different domain.
 
 {{<ghsource "/posts/property-based-testing-3">}}
 

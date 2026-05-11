@@ -8,7 +8,7 @@ seriesId: "Porting from C#"
 seriesOrder: 1
 ---
 
-*NOTE: Before reading this series, I suggest that you read the following series as a prerequisite: ["thinking functionally"](/series/thinking-functionally.html), ["expressions and syntax"](/series/expressions-and-syntax.html), and ["understanding F# types"](/series/understanding-fsharp-types.html).*
+*NOTE: Before reading this series, I suggest that you read the following series as a prerequisite: ["thinking functionally"](series/thinking-functionally.html), ["expressions and syntax"](series/expressions-and-syntax.html), and ["understanding F# types"](series/understanding-fsharp-types.html).*
 
 For many developers, the next step after learning a new language might be to port some existing code over to it, so that they can get a good feel for the differences between the two languages.
 
@@ -20,7 +20,7 @@ So, in this series, we'll look at various approaches to porting existing C# code
 
 ## Levels of porting sophistication ##
 
-If you recall the diagram from an [earlier post](/posts/key-concepts), there are four key concepts that differentiate F# from C#.
+If you recall the diagram from an [earlier post](posts/key-concepts), there are four key concepts that differentiate F# from C#.
 
 * Function-oriented rather than object-oriented
 * Expressions rather than statements
@@ -57,8 +57,8 @@ The second option might seem clumsy, but for real code it will probably be both 
 
 At this final level, not only is the code functional, but the design itself has been changed to exploit the power of algebraic data types (especially union types).
 
-The domain will have been [encoded into types](/posts/designing-with-types-single-case-dus/) such that [illegal states are not even representable](/posts/designing-with-types-making-illegal-states-unrepresentable/), and [correctness is enforced at compile time](/posts/correctness-type-checking/).
-For a concrete demonstration of the power of this approach, see the [shopping cart example](/posts/designing-for-correctness) in the ["why use F#" series](/series/why-use-fsharp.html) and the whole ["Designing with types" series](/series/designing-with-types.html).
+The domain will have been [encoded into types](posts/designing-with-types-single-case-dus/) such that [illegal states are not even representable](posts/designing-with-types-making-illegal-states-unrepresentable/), and [correctness is enforced at compile time](posts/correctness-type-checking/).
+For a concrete demonstration of the power of this approach, see the [shopping cart example](posts/designing-for-correctness) in the ["why use F#" series](series/why-use-fsharp.html) and the whole ["Designing with types" series](series/designing-with-types.html).
 
 This level can only be done in F#, and is not really practical in C#.
 
@@ -73,7 +73,7 @@ Here is a diagram to help you visualize the various porting paths described abov
 To see how these three levels work in practice, we'll apply them to some worked examples:
 
 * The first example is a simple system for creating and scoring a ten-pin bowling game, based on the code from the well known "bowling game kata" described by "Uncle" Bob Martin. The original C# code has only one class and about 70 lines of code, but even so, it demonstrates a number of important principles.
-* Next, we'll look at some shopping cart code, based on [this example](/posts/designing-for-correctness/).
+* Next, we'll look at some shopping cart code, based on [this example](posts/designing-for-correctness/).
 * The final example is code that represents states for a subway turnstile system, also based on an example from Bob Martin. This example demonstrates how the union types in F# can represent a state transition model more easily than the OO approach.
 
 But first, before we get started on the detailed examples, we'll go back to basics and do some simple porting of some code snippets. That will be the topic of the next post.

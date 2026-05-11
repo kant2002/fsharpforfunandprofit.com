@@ -8,7 +8,7 @@ date: 2020-01-01
 
 The goal of this site is to introduce .NET developers to the joys of functional programming, and F# in particular.
 
-Please be aware of the [Terms and Conditions](/about/terms/) when using this site.
+Please be aware of the [Terms and Conditions](about/terms/) when using this site.
 
 I hope that this site will live up to its title and demonstrate that not only is F# a lot of fun to program in, but it is also useful for mainstream business and enterprise software. F# is not just an academic exercise, it is meant to be useful.
 
@@ -44,11 +44,11 @@ what functional programming is all about, and there is not the space to explain 
 
 **Some of the posts have really important ideas buried in the middle of the page. Why not pull this stuff into posts of their own?**
 
-Again, the answer is context. For example, the section on why [Option.None is not the same as null](/posts/the-option-type/#option-is-not-null) comes at the bottom of the page containing the explanation of what an option type actually is (and a diagram as well!) I think that if you read through the entire page, rather than trying to get a quick answer, then the content of that last section (and the answer to the "null" question) will be self-evident.
+Again, the answer is context. For example, the section on why [Option.None is not the same as null](posts/the-option-type/#option-is-not-null) comes at the bottom of the page containing the explanation of what an option type actually is (and a diagram as well!) I think that if you read through the entire page, rather than trying to get a quick answer, then the content of that last section (and the answer to the "null" question) will be self-evident.
 
 {{< linktarget "banned" >}}
 
-I do highlight the most important bits on the [contents page](/site-contents/) as well, so they are not completely buried!
+I do highlight the most important bits on the [contents page](site-contents/) as well, so they are not completely buried!
 
 
 

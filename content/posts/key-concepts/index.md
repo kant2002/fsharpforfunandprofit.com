@@ -50,11 +50,11 @@ It's hard to explain this in a few paragraphs, but here are some of the benefits
 
 * **Building with composition**. Composition is the 'glue' that allows us build larger systems from smaller ones. This is not an optional technique, but is at the very heart of the functional style. Almost every line of code is a composable expression (see below). Composition is used to build basic functions, and then functions that use those functions, and so on. And the composition principle doesn't just apply to functions, but also to types (the product and sum types discussed below).
 * **Factoring and refactoring**. The ability to factor a problem into parts depends how easily the parts can be glued back together. Methods and classes that might seem to be indivisible in an imperative language can often be broken down into surprisingly small pieces in a functional design. These fine-grained components typically consist of (a) a few very general functions that take other functions as parameters, and (b) other helper functions that specialize the general case for a particular data structure or application.
-  Once factored out, the generalized functions allow many additional operations to be programmed very easily without having to write new code. You can see a good example of a general function like this (the fold function) in the [post on extracting duplicate code from loops](/posts/conciseness-extracting-boilerplate/).
-* **Good design**. Many of the principles of good design, such as "separation of concerns", "single responsibility principle", ["program to an interface, not an implementation"](/posts/convenience-functions-as-interfaces/), arise naturally as a result of a functional approach. And functional code tends to be high level and declarative in general.
+  Once factored out, the generalized functions allow many additional operations to be programmed very easily without having to write new code. You can see a good example of a general function like this (the fold function) in the [post on extracting duplicate code from loops](posts/conciseness-extracting-boilerplate/).
+* **Good design**. Many of the principles of good design, such as "separation of concerns", "single responsibility principle", ["program to an interface, not an implementation"](posts/convenience-functions-as-interfaces/), arise naturally as a result of a functional approach. And functional code tends to be high level and declarative in general.
 
 The following posts in this series will have examples of how functions can make code more
-concise and convenient, and then for a deeper understanding, there is a whole series on [thinking functionally](/series/thinking-functionally.html).
+concise and convenient, and then for a deeper understanding, there is a whole series on [thinking functionally](series/thinking-functionally.html).
 
 ### Expressions rather than statements
 
@@ -143,7 +143,7 @@ let z = BoolChoice true
 These "choice" types are not available in C#, but are incredibly useful for modeling many real-world cases, such as states in a state machine (which is a surprisingly common theme in many domains).
 
 And by combining "product" and "sum" types in this way, it is easy to create a rich set of types that accurately models any business domain.
-For examples of this in action, see the posts on [low overhead type definitions](/posts/conciseness-type-definitions/) and [using the type system to ensure correct code](/posts/correctness-type-checking).
+For examples of this in action, see the posts on [low overhead type definitions](posts/conciseness-type-definitions/) and [using the type system to ensure correct code](posts/correctness-type-checking).
 
 
 ### Pattern matching for flow of control
@@ -189,7 +189,7 @@ match aList with
 
 Although the match expression seems unnecessarily complicated at first, you'll see that in practice it is both elegant and powerful.
 
-For the benefits of pattern matching, see the post on [exhaustive pattern matching](/posts/correctness-exhaustive-pattern-matching), and for a worked example that uses pattern matching heavily, see the [roman numerals example](/posts/roman-numerals/).
+For the benefits of pattern matching, see the post on [exhaustive pattern matching](posts/correctness-exhaustive-pattern-matching), and for a worked example that uses pattern matching heavily, see the [roman numerals example](posts/roman-numerals/).
 
 ### Pattern matching with union types ###
 
@@ -226,7 +226,7 @@ let polygon = Polygon( [(1,1); (2,2); (3,3)])
 A few things to note:
 
 * As usual, we didn't have to specify any types. The compiler correctly determined that the shape parameter for the "draw" function was of type `Shape`.
-* The `int * int` in the definition of the `Polygon` case is a tuple, a pair of ints. If you're wondering why the types are "multiplied", see this [post on tuples](/posts/tuples/).
+* The `int * int` in the definition of the `Polygon` case is a tuple, a pair of ints. If you're wondering why the types are "multiplied", see this [post on tuples](posts/tuples/).
 * You can see that the `match..with` logic not only matches against the internal structure of the shape, but also assigns values based on what is appropriate for the shape.
 * The underscore is similar to the "default" branch in a switch statement, except that in F# it is required -- every possible case must always be handled. If you comment out the line
 
@@ -248,7 +248,7 @@ But in a pure functional design there are no objects and no behavior. There are 
 Data types do not have any behavior associated with them, and functions do not contain data -- they just transform data types into other data types.
 
 In this case, `Circle` and `Rectangle` are not actually types. The only type is `Shape` -- a choice, a discriminated union -- and these are various cases of that type.
-(More about discriminated unions [here](/posts/discriminated-unions/)).
+(More about discriminated unions [here](posts/discriminated-unions/)).
 
 In order to work with the `Shape` type, a function needs to handle each case of the `Shape`, which it does with [pattern matching](conciseness-pattern-matching.html).
 

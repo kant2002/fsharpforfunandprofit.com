@@ -10,7 +10,7 @@ seriesOrder: 7
 
 ## Series summary
 
-Well, [this series](/series/map-and-bind-and-apply-oh-my.html) turned out to be longer than I originally planned. Thanks for making it to the end!
+Well, [this series](series/map-and-bind-and-apply-oh-my.html) turned out to be longer than I originally planned. Thanks for making it to the end!
 
 I hope that this discussion has been helpful in understanding the various function transformations like `map` and `bind`, and given you
 some useful techniques for dealing with world-crossing functions -- maybe even demystified the m-word a bit!
@@ -30,11 +30,11 @@ you should also consider using one of the excellent F# utility libraries that co
   validation with applicative functors, general functions like flip, and some asynchronous programming utilities,
   and functions to make C# - F# interop easier.
 
-For example, the monadic traverse `List.traverseResultM` that I implemented [in this post](/posts/elevated-world-4/#traverse) is already available in ExtCore
+For example, the monadic traverse `List.traverseResultM` that I implemented [in this post](posts/elevated-world-4/#traverse) is already available in ExtCore
 [here](https://github.com/jack-pappas/ExtCore/blob/4fc2302e74a9b5217d980e5ce2680f0b3db26c3d/ExtCore/ControlCollections.Choice.fs#L398).
 
-And if you liked this series, I have posts explaining the State monad in my series on ["Dr Frankenfunctor and the Monadster"](/posts/monadster/)
-and the Either monad in my talk ["Railway Oriented Programming"](/rop/).
+And if you liked this series, I have posts explaining the State monad in my series on ["Dr Frankenfunctor and the Monadster"](posts/monadster/)
+and the Either monad in my talk ["Railway Oriented Programming"](rop/).
 
 As I said at the very beginning, writing this up has been a learning process for me too.
 I am not an expert, so if I have made any errors please do let me know.
@@ -46,36 +46,36 @@ Thanks!
 Here's a list of shortcuts to the various functions mentioned in this series:
 
 * **Part 1: Lifting to the elevated world**
-  * [The `map` function](/posts/elevated-world/#map)
-  * [The `return` function](/posts/elevated-world/#return)
-  * [The `apply` function](/posts/elevated-world/#apply)
-  * [The `liftN` family of functions](/posts/elevated-world/#lift)
-  * [The `zip` function and ZipList world](/posts/elevated-world/#zip)
+  * [The `map` function](posts/elevated-world/#map)
+  * [The `return` function](posts/elevated-world/#return)
+  * [The `apply` function](posts/elevated-world/#apply)
+  * [The `liftN` family of functions](posts/elevated-world/#lift)
+  * [The `zip` function and ZipList world](posts/elevated-world/#zip)
 * **Part 2: How to compose world-crossing functions**
-  * [The `bind` function](/posts/elevated-world-2/#bind)
-  * [List is not a monad. Option is not a monad.](/posts/elevated-world-2/#not-a-monad)
+  * [The `bind` function](posts/elevated-world-2/#bind)
+  * [List is not a monad. Option is not a monad.](posts/elevated-world-2/#not-a-monad)
 * **Part 3: Using the core functions in practice**
-  * [Independent and dependent data](/posts/elevated-world-3/#dependent)
-  * [Example: Validation using applicative style and monadic style](/posts/elevated-world-3/#validation)
-  * [Lifting to a consistent world](/posts/elevated-world-3/#consistent)
-  * [Kleisli world](/posts/elevated-world-3/#kleisli)
+  * [Independent and dependent data](posts/elevated-world-3/#dependent)
+  * [Example: Validation using applicative style and monadic style](posts/elevated-world-3/#validation)
+  * [Lifting to a consistent world](posts/elevated-world-3/#consistent)
+  * [Kleisli world](posts/elevated-world-3/#kleisli)
 * **Part 4: Mixing lists and elevated values**
-  * [Mixing lists and elevated values](/posts/elevated-world-4/#mixing)
-  * [The `traverse`/`MapM` function](/posts/elevated-world-4/#traverse)
-  * [The `sequence` function](/posts/elevated-world-4/#sequence)
-  * ["Sequence" as a recipe for ad-hoc implementations](/posts/elevated-world-4/#adhoc)
-  * [Readability vs. performance](/posts/elevated-world-4/#readability)
-  * [Dude, where's my `filter`?](/posts/elevated-world-4/#filter)
+  * [Mixing lists and elevated values](posts/elevated-world-4/#mixing)
+  * [The `traverse`/`MapM` function](posts/elevated-world-4/#traverse)
+  * [The `sequence` function](posts/elevated-world-4/#sequence)
+  * ["Sequence" as a recipe for ad-hoc implementations](posts/elevated-world-4/#adhoc)
+  * [Readability vs. performance](posts/elevated-world-4/#readability)
+  * [Dude, where's my `filter`?](posts/elevated-world-4/#filter)
 * **Part 5: A real-world example that uses all the techniques**
-  * [Example: Downloading and processing a list of websites](/posts/elevated-world-5/#asynclist)
-  * [Treating two worlds as one](/posts/elevated-world-5/#asyncresult)
+  * [Example: Downloading and processing a list of websites](posts/elevated-world-5/#asynclist)
+  * [Treating two worlds as one](posts/elevated-world-5/#asyncresult)
 * **Part 6: Designing your own elevated world**
-  * [Designing your own elevated world](/posts/elevated-world-6/#part6)
-  * [Filtering out failures](/posts/elevated-world-6/#filtering)
-  * [The Reader monad](/posts/elevated-world-6/#readermonad)
+  * [Designing your own elevated world](posts/elevated-world-6/#part6)
+  * [Filtering out failures](posts/elevated-world-6/#filtering)
+  * [The Reader monad](posts/elevated-world-6/#readermonad)
 * **Part 7: Summary**
-  * [List of operators mentioned](/posts/elevated-world-7/#operators)
-  * [Further reading](/posts/elevated-world-7/#further-reading)
+  * [List of operators mentioned](posts/elevated-world-7/#operators)
+  * [Further reading](posts/elevated-world-7/#further-reading)
 
 {{< linktarget "operators" >}}
 
@@ -88,18 +88,18 @@ so I thought it would be helpful to document the ones that have been used in thi
 
 Operator  | Equivalent function | Discussion
 -------------|---------|----
-`>>`  | Left-to-right composition | Not part of this series, but [discussed here](/posts/function-composition/)
+`>>`  | Left-to-right composition | Not part of this series, but [discussed here](posts/function-composition/)
 `<<`  | Right-to-left composition | As above
 `|>`  | Left-to-right piping | As above
 `<|`  | Right-to-left piping | As above
-`<!>` | `map` | [Discussed here](/posts/elevated-world/#map)
+`<!>` | `map` | [Discussed here](posts/elevated-world/#map)
 `<$>` | `map` | Haskell operator for map, but not a valid operator in F#, so I'm using `<!>` in this series.
-`<*>` | `apply` | [Discussed here](/posts/elevated-world/#apply)
-`<*`  | - | One sided combiner. [Discussed here](/posts/elevated-world/#lift)
-`*>`  | - | One sided combiner. [Discussed here](/posts/elevated-world/#lift)
-`>>=` | Left-to-right `bind` | [Discussed here](/posts/elevated-world-2/#bind)
+`<*>` | `apply` | [Discussed here](posts/elevated-world/#apply)
+`<*`  | - | One sided combiner. [Discussed here](posts/elevated-world/#lift)
+`*>`  | - | One sided combiner. [Discussed here](posts/elevated-world/#lift)
+`>>=` | Left-to-right `bind` | [Discussed here](posts/elevated-world-2/#bind)
 `=<<` | Right-to-left `bind` | As above
-`>=>` | Left-to-right Kleisli composition | [Discussed here](/posts/elevated-world-3/#kleisli)
+`>=>` | Left-to-right Kleisli composition | [Discussed here](posts/elevated-world-3/#kleisli)
 `<=<` | Right-to-left Kleisli composition | As above
 
 

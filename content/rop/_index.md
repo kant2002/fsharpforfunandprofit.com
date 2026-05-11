@@ -22,12 +22,12 @@ Here's the blurb for the talk:
 > This talk will provide a brief introduction to this topic,
 > using a fun and easy-to-understand railway analogy.
 
-I am also planning to upload some posts on these topics soon. Meanwhile, please see the [recipe for a functional app](/series/a-recipe-for-a-functional-app.html) series, which covers similar ground.
+I am also planning to upload some posts on these topics soon. Meanwhile, please see the [recipe for a functional app](series/a-recipe-for-a-functional-app.html) series, which covers similar ground.
 
 If you want to to see some real code, I have created
 [this project on Github that compares normal C# with F# using the ROP approach](https://github.com/swlaschin/Railway-Oriented-Programming-Example)
 
-WARNING: This is a useful approach to error handling, but please don't take it to extremes! See my post on ["Against Railway-Oriented Programming"](/posts/against-railway-oriented-programming/).
+WARNING: This is a useful approach to error handling, but please don't take it to extremes! See my post on ["Against Railway-Oriented Programming"](posts/against-railway-oriented-programming/).
 
 ## Videos
 
@@ -104,7 +104,7 @@ together in a comprehensive way.
 
 * If you want a ready-made F# library that works with NuGet, check out the [Chessie project](https://fsprojects.github.io/Chessie/).
 * If you want to see a sample web-service using these techniques, [I have created a project on GitHub](https://github.com/swlaschin/Railway-Oriented-Programming-Example).
-* You can also [see the ROP approach applied to FizzBuzz](/posts/railway-oriented-programming-carbonated/)!
+* You can also [see the ROP approach applied to FizzBuzz](posts/railway-oriented-programming-carbonated/)!
 
 F# does not have type classes, and so you don't really have a reusable way to do monads (although the [FSharpX library](https://github.com/fsprojects/fsharpx/blob/master/src/FSharpx.Core/ComputationExpressions/Monad.fs)
 has a useful approach).  This means the `Rop.fs` library defines all its functions from scratch.
@@ -115,7 +115,7 @@ has a useful approach).  This means the `Rop.fs` library defines all its functio
 > *"One bind does not a monad make" -- Aristotle*
 
 As I mentioned above, one reason why I stayed away from monads is that defining a monad correctly is *not* just a matter of implementing "bind" and "return".
-It is an algebraic structure that needs to obey the monad laws (which in turn are just the [monoid laws](/posts/monoids-without-tears/) in a specific situation)
+It is an algebraic structure that needs to obey the monad laws (which in turn are just the [monoid laws](posts/monoids-without-tears/) in a specific situation)
 and that was a path I did not want to head down in this particular talk.
 
 However if you are interested in more detail on `Either` and Kleisi composition, here are some links that might be useful:

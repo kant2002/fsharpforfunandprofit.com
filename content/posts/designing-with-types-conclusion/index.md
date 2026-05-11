@@ -22,7 +22,7 @@ For this final post, let's see them all applied together.
 
 ## The "before" code ##
 
-Here's the original example we started off with in the [first post](/posts/designing-with-types-intro/) in the series:
+Here's the original example we started off with in the [first post](posts/designing-with-types-intro/) in the series:
 
 ```fsharp
 type Contact =
@@ -441,7 +441,7 @@ And in terms of the code itself, many of the things that you as a developer have
 Finally, beware! Getting comfortable with this style of type-based design will have an insidious effect on you. You will start to develop paranoia whenever you see code that isn't typed strictly enough. (*How long should an email address be, exactly?*) and you will be unable to write the simplest python script without getting anxious. When this happens, you will have been fully inducted into the cult. Welcome!
 
 
-*If you liked this series, here is a slide deck that covers many of the same topics. There is [a video as well (here)](/ddd/)*
+*If you liked this series, here is a slide deck that covers many of the same topics. There is [a video as well (here)](ddd/)*
 
 {{< slideshare A4ay4HQqJgu0Q "domain-driven-design-with-the-f-type-system-functional-londoners-2014" "Domain Driven Design with the F# type System -- F#unctional Londoners 2014" >}}
 

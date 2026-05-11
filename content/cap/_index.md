@@ -26,15 +26,15 @@ Here's the blurb for the talk:
 
 This talk is based on my blog posts on this topic:
 
-* [A functional approach to authorization](/posts/capability-based-security/)
-* [Constraining capabilities based on identity and role](/posts/capability-based-security-2/)
-* [Using types as access tokens](/posts/capability-based-security-3/)
+* [A functional approach to authorization](posts/capability-based-security/)
+* [Constraining capabilities based on identity and role](posts/capability-based-security-2/)
+* [Using types as access tokens](posts/capability-based-security-3/)
 
 Also related are the talk and posts on designing Enterprise Tic-Tac-Toe:
 
-* [Enterprise Tic-Tac-Toe](/posts/enterprise-tic-tac-toe/)
-* [Enterprise Tic-Tac-Toe Part 2, In which I throw away the previous design](/posts/enterprise-tic-tac-toe-2/)
-* [Video and slides for my "Enterprise Tic-Tac-Toe" talk](/ettt/)
+* [Enterprise Tic-Tac-Toe](posts/enterprise-tic-tac-toe/)
+* [Enterprise Tic-Tac-Toe Part 2, In which I throw away the previous design](posts/enterprise-tic-tac-toe-2/)
+* [Video and slides for my "Enterprise Tic-Tac-Toe" talk](ettt/)
 
 ## Video
 

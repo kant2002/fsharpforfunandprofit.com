@@ -9,7 +9,7 @@ seriesOrder: 4
 categories: [Types, Functions]
 ---
 
-Now that we have some understanding of functions, we'll look at how types work with functions, both as domains and ranges. This is just an overview; the series ["understanding F# types"](/series/understanding-fsharp-types.html) will cover types in detail.
+Now that we have some understanding of functions, we'll look at how types work with functions, both as domains and ranges. This is just an overview; the series ["understanding F# types"](series/understanding-fsharp-types.html) will cover types in detail.
 
 First, we need to understand the type notation a bit more. We've seen that the arrow notation "`->`" is used to show the domain and range. So that a function signature always looks like:
 
@@ -390,7 +390,7 @@ Generic parameters are also very important when it comes to lists and more abstr
 
 ## Other types ##
 
-The types discussed so far are just the basic types. These types can be combined in various ways to make much more complex types. A full discussion of these types will have to wait for [another series](/series/understanding-fsharp-types.html), but meanwhile, here is a brief introduction to them so that you can recognize them in function signatures.
+The types discussed so far are just the basic types. These types can be combined in various ways to make much more complex types. A full discussion of these types will have to wait for [another series](series/understanding-fsharp-types.html), but meanwhile, here is a brief introduction to them so that you can recognize them in function signatures.
 
 * **The "tuple" types**. These are pairs, triples, etc., of other types. For example `("hello", 1)` is a tuple made from a string and an int. The comma is the distinguishing characteristic of a tuple -- if you see a comma in F#, it is almost certainly part of a tuple!
 
@@ -415,8 +415,8 @@ int []            // Array type e.g. [|1;2;3|]
 int option        // Some(1)
 ```
 
-* **The discriminated union type**. These are built from a set of choices of other types. We saw some examples of this in the ["why use F#?"](/series/why-use-fsharp.html) series. In function signatures, they are referred to by the name of the type, so there is no special keyword.
-* **The record type**. These are like structures or database rows, a list of named slots. We saw some examples of this in the ["why use F#?"](/series/why-use-fsharp.html) series as well. In function signatures, they are referred to by the name of the type, so again there is no special keyword.
+* **The discriminated union type**. These are built from a set of choices of other types. We saw some examples of this in the ["why use F#?"](series/why-use-fsharp.html) series. In function signatures, they are referred to by the name of the type, so there is no special keyword.
+* **The record type**. These are like structures or database rows, a list of named slots. We saw some examples of this in the ["why use F#?"](series/why-use-fsharp.html) series as well. In function signatures, they are referred to by the name of the type, so again there is no special keyword.
 
 ## Test your understanding of types ##
 

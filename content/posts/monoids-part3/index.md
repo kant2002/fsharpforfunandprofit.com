@@ -9,7 +9,7 @@ seriesOrder: 3
 ---
 
 
-In the previous posts in [this series](/series/understanding-monoids.html), we only dealt with things that were proper monoids.
+In the previous posts in [this series](series/understanding-monoids.html), we only dealt with things that were proper monoids.
 
 But what if the thing you want to work with is *not* a monoid? What then?
 Well, in this post, I'll give you some tips on converting almost anything into a monoid.
@@ -54,7 +54,7 @@ let addMyType t1 t2 =
 The `addMyType` function uses integer addition on the `int` field, and list concatenation on the `list` field.
 As a result the `MyType` is closed using the function `addMyType` -- in fact, not only is it closed, it is a monoid too. So in this case, we're done!
 
-This is exactly the approach we took with `CustomerStats` in the [previous post](/posts/monoids-part2/).
+This is exactly the approach we took with `CustomerStats` in the [previous post](posts/monoids-part2/).
 
 So here's my first tip:
 

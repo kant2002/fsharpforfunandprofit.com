@@ -126,7 +126,7 @@ Some key things to know about tuples are:
 
 These points are very important -- if you don't understand them you will get confused quite quickly!
 
-And it is worth re-iterating the point made in [previous posts](/posts/defining-functions/): *don't mistake tuples for multiple parameters in a function*.
+And it is worth re-iterating the point made in [previous posts](posts/defining-functions/): *don't mistake tuples for multiple parameters in a function*.
 
 ```fsharp
 // a function that takes a single tuple parameter
@@ -273,7 +273,7 @@ Tuples also have an automatically defined hash value based on the values in the 
 
 ### Tuple representation
 
-And as noted in a [previous post](/posts/convenience-types/), tuples have a nice default string representation, and can be serialized easily.
+And as noted in a [previous post](posts/convenience-types/), tuples have a nice default string representation, and can be serialized easily.
 
 ```fsharp
 (1,2,3).ToString()

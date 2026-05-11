@@ -11,8 +11,8 @@ seriesOrder: 3
 
 In this series, we are looking at six different approaches to dependency injection.
 
-* In the [first post](/posts/dependencies/), we looked at "dependency retention" (inlining the dependencies) and "dependency rejection" (keeping I/O at the edges of your implementation).
-* In the [second post](/posts/dependencies-2/), we looked at injecting dependencies as standard function parameters.
+* In the [first post](posts/dependencies/), we looked at "dependency retention" (inlining the dependencies) and "dependency rejection" (keeping I/O at the edges of your implementation).
+* In the [second post](posts/dependencies-2/), we looked at injecting dependencies as standard function parameters.
 * In this post, we'll look at dependency handling using classic OO-style dependency injection and the FP equivalent: the Reader monad
 
 ----
@@ -165,7 +165,7 @@ Notice that the return type has now changed from `ILogger -> ComparisonResult` t
 Ok, so why we have done all this extra work? Why bother?
 
 The reason is that the `Reader` type can be composed, transformed and chained in just the same way that the `Option` or `Result` or `List` or `Async` types can be.
-If you are familiar with my [Railway Oriented Programming](/rop/) post, you can use the same patterns to chain "Reader-returning" functions as you do for chaining "Result-returning" functions. You can write a `map` function for it, and a `bind`/`flatMap` function for it, and so on.  It's a monad!
+If you are familiar with my [Railway Oriented Programming](rop/) post, you can use the same patterns to chain "Reader-returning" functions as you do for chaining "Result-returning" functions. You can write a `map` function for it, and a `bind`/`flatMap` function for it, and so on.  It's a monad!
 
 Here's a module with some useful `Reader` functions:
 
@@ -333,7 +333,7 @@ let program :Reader<IServices,_> = reader {
   }
 ```
 
-It's important to understand that at this point the `program` has not been run yet. Just like `Async` values or [home made parsers](/parser/), it has the *potential* to be run, but we will need to pass in an `IServices` to actually run it.
+It's important to understand that at this point the `program` has not been run yet. Just like `Async` values or [home made parsers](parser/), it has the *potential* to be run, but we will need to pass in an `IServices` to actually run it.
 
 Given that we have a default implementation of the console and logger, we can implementation of `IServices` like this:
 
@@ -462,7 +462,7 @@ Reader.run services program
 
 ## Further reading
 
-For another example of using the Reader monad, see [the last post in this series](/posts/dependencies-5/#approach-4b-reader-monad).
+For another example of using the Reader monad, see [the last post in this series](posts/dependencies-5/#approach-4b-reader-monad).
 
 The Reader approach is rarely used in F# but is commonly used in Haskell and FP-style Scala.
 Some good posts on using it in F# are by [Carsten König](http://gettingsharper.de/2015/03/10/dependency-injection-a-functional-way/)
@@ -485,7 +485,7 @@ For example, if you want to return a `Result` as well as a `Reader`, you can't j
 To summarize, I think that Readers are a good tool to have in your toolbox, especially if you are passionate about keeping your code pure, Haskell style. But F# is not Haskell, and so I think that using Reader by default is overkill. I'd probably reach first for one of the other approaches discussed in this series, depending on the circumstances.
 
 
-We are not done yet! In the [next post](/posts/dependencies-4/), we'll look at one more approach to managing dependencies: the interpreter pattern.
+We are not done yet! In the [next post](posts/dependencies-4/), we'll look at one more approach to managing dependencies: the interpreter pattern.
 
 *The source code for this post is available at [this gist](https://gist.github.com/swlaschin/4ed2e4e8ea5b63c968bc469fbce620b5).*
 

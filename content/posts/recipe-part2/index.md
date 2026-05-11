@@ -9,9 +9,9 @@ categories: []
 image: "/posts/recipe-part2/Recipe_Railway_Transparent.png"
 ---
 
-*UPDATE: [Slides and video from a more comprehensive presentation available here](/rop/) (and if you understand the Either monad, [read this first](/rop/#monads)!)*.
+*UPDATE: [Slides and video from a more comprehensive presentation available here](rop/) (and if you understand the Either monad, [read this first](rop/#monads)!)*.
 
-*UPDATE 2: This is one of my most popular posts, and it is a useful approach to error handling, but please don't overuse the idea! See my post on ["Against Railway-Oriented Programming"](/posts/against-railway-oriented-programming/).*
+*UPDATE 2: This is one of my most popular posts, and it is a useful approach to error handling, but please don't overuse the idea! See my post on ["Against Railway-Oriented Programming"](posts/against-railway-oriented-programming/).*
 
 In the previous post, we saw how a use case could be broken into steps, and all the errors shunted off onto a separate error track, like this:
 
@@ -175,7 +175,7 @@ let bind switchFunction twoTrackInput =
     | Failure f -> Failure f
 ```
 
-This is exactly the same as the first definition. And if you are wondering how a two parameter function can be exactly the same as a one parameter function, you need to read the post on [currying](/posts/currying/)!
+This is exactly the same as the first definition. And if you are wondering how a two parameter function can be exactly the same as a one parameter function, you need to read the post on [currying](posts/currying/)!
 
 Yet another way of writing it is to replace the `match..with` syntax with the more concise `function` keyword, like this:
 
@@ -1159,8 +1159,8 @@ One final suggestion. If you are working with a team of non-experts, unfamiliar 
 
 ## Further reading
 
-* If you like this "railway oriented" approach, you can also [see it applied to FizzBuzz](/posts/railway-oriented-programming-carbonated/).
-* I also have some [slides and video](/rop/) that show how take this approach further. (At some point I will turn these into a proper blog post)
+* If you like this "railway oriented" approach, you can also [see it applied to FizzBuzz](posts/railway-oriented-programming-carbonated/).
+* I also have some [slides and video](rop/) that show how take this approach further. (At some point I will turn these into a proper blog post)
 
 I presented on this topic at NDC Oslo 2014 (click image to view video)
 

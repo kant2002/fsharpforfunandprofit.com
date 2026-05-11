@@ -31,13 +31,13 @@ First we need to define the data structure for a stack. To keep things simple, w
 type Stack = float list
 ```
 
-But, hold on, let's wrap it in a [single case union type](/posts/discriminated-unions/#single-case) to make it more descriptive, like this:
+But, hold on, let's wrap it in a [single case union type](posts/discriminated-unions/#single-case) to make it more descriptive, like this:
 
 ```fsharp
 type Stack = StackContents of float list
 ```
 
-For more details on why this is nicer, read the discussion of single case union types in [this post](/posts/discriminated-unions/#single-case).
+For more details on why this is nicer, read the discussion of single case union types in [this post](posts/discriminated-unions/#single-case).
 
 Now, to create a new stack, we use `StackContents` as a constructor:
 
@@ -75,7 +75,7 @@ First, note that the list structure is immutable, so the function must accept an
     Input: a Stack plus other parameters
     Output: a new Stack
 
-Next, what should the order of the parameters be? Should the stack parameter come first or last? If you remember the discussion of [designing functions for partial application](/posts/partial-application), you will remember that the most changeable thing should come last. You'll see shortly that this guideline will be born out.
+Next, what should the order of the parameters be? Should the stack parameter come first or last? If you remember the discussion of [designing functions for partial application](posts/partial-application), you will remember that the most changeable thing should come last. You'll see shortly that this guideline will be born out.
 
 Finally, the function can be made more concise by using pattern matching in the function parameter itself, rather than using a `let` in the body of the function.
 
@@ -94,7 +94,7 @@ And by the way, look at the nice signature it has:
 val push : float -> Stack -> Stack
 ```
 
-As we know from a [previous post](/posts/function-signatures), the signature tells you a lot about the function.
+As we know from a [previous post](posts/function-signatures), the signature tells you a lot about the function.
 In this case, I could probably guess what it did from the signature alone, even without knowing that the name of the function was "push".
 This is one of the reasons why it is a good idea to have explicit type names. If the stack type had just been a list of floats, it wouldn't have been as self-documenting.
 
@@ -195,7 +195,7 @@ The compiler has caught a case we have overlooked -- what happens if the stack i
 
 So now we have to decide how to handle this.
 
-* Option 1: Return a special "Success" or "Error" state, as we did in a [post from the "why use F#?" series](/posts/correctness-exhaustive-pattern-matching/).
+* Option 1: Return a special "Success" or "Error" state, as we did in a [post from the "why use F#?" series](posts/correctness-exhaustive-pattern-matching/).
 * Option 2: Throw an exception.
 
 Generally, I prefer to use error cases, but in this case, we'll use an exception. So here's the `pop` code changed to handle the empty case:
@@ -301,7 +301,7 @@ And here's the definition of some other math functions:
 ```fsharp
 let SUB = binary (-)
 let MUL = binary (*)
-let DIV = binary (/)
+let DIV = binary ()
 ```
 
 Let's test interactively again.
@@ -584,7 +584,7 @@ let FIVE = push 5.0
 let ADD = binary (+)
 let SUB = binary (-)
 let MUL = binary (*)
-let DIV = binary (/)
+let DIV = binary ()
 
 let NEG = unary (fun x -> -x)
 

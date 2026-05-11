@@ -8,7 +8,7 @@ seriesId: "Expressions and syntax"
 seriesOrder: 1
 ---
 
-*NOTE: Before reading this series, I suggest that you read the ["thinking functionally"](/series/thinking-functionally.html) series as a prerequisite.*
+*NOTE: Before reading this series, I suggest that you read the ["thinking functionally"](series/thinking-functionally.html) series as a prerequisite.*
 
 In this series we'll look at how functions and values are combined into expressions, and the different kinds of expressions that are available in F#.
 

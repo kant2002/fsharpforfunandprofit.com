@@ -25,7 +25,7 @@ Here's the blurb for the talk:
 
 This talk is based on my blog posts on this topic:
 
-* [Property-based testing](/series/property-based-testing/)
+* [Property-based testing](series/property-based-testing/)
 
 ## Video
 

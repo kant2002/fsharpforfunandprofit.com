@@ -265,7 +265,7 @@ type ResultBuilder() =
 let result = ResultBuilder()
 ```
 
-*You can read more about using `Result` for error handling [here](/rop/).*
+*You can read more about using `Result` for error handling [here](rop/).*
 
 ### Wrapping the JSON Serializer
 
@@ -836,6 +836,6 @@ Here are the links to the F# serializers mentioned:
 * [Chiron](https://xyncro.tech/chiron/)
 * [FsPickler](https://mbraceproject.github.io/FsPickler/)
 
-And if you liked this post, you'll be glad to know that I have written a whole book on the topic of domain modeling! You can read more about it on the [books page](/books/#domain-modeling-made-functional-ebook-and-paper).
+And if you liked this post, you'll be glad to know that I have written a whole book on the topic of domain modeling! You can read more about it on the [books page](books/#domain-modeling-made-functional-ebook-and-paper).
 
 Happy Holidays!

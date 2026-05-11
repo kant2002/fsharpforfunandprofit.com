@@ -45,8 +45,8 @@ I think you get the idea!
 
 ## Calculating the size of compound types
 
-Let's look at calculating the sizes of compound types now. If you remember from the [understanding F# types](/series/understanding-fsharp-types.html) series,
-there are two kinds of algebraic types: "product" types such as [tuples](/posts/tuples/) and records, and "sum" types, called [discriminated unions](/posts/discriminated-unions/) in F#.
+Let's look at calculating the sizes of compound types now. If you remember from the [understanding F# types](series/understanding-fsharp-types.html) series,
+there are two kinds of algebraic types: "product" types such as [tuples](posts/tuples/) and records, and "sum" types, called [discriminated unions](posts/discriminated-unions/) in F#.
 
 For example, let's say that we have a `Speed` as well as a `Direction`, and we combine them into a record type called `Velocity`:
 
@@ -649,7 +649,7 @@ The values are unconstrained: any string for the name, a unvalidated email, an a
 This means that we *cannot* create a `CustomerDTO` to `DomainCustomer` mapping. We *have* to have at least one other value (`DomainCustomer + 1`) to map the
 invalid inputs onto, and preferably more to document the various errors.
 
-This leads naturally to the `Success/Failure` model as described in my [functional error handling](/rop/) talk,
+This leads naturally to the `Success/Failure` model as described in my [functional error handling](rop/) talk,
 
 The final version of the mapping would then be from a `CustomerDTO` to a `SuccessFailure<DomainCustomer>` or similar.
 
@@ -663,7 +663,7 @@ If we take this rule seriously, it has some knock on effects, such as:
 * Always validate every record you read from a database or other "trusted" source.
 
 You might think that having everything wrapped in a `Success/Failure` type can get annoying, and this is true (!), but there are ways to make this easier.
-See [this post](/posts/elevated-world-5/#asynclist) for example.
+See [this post](posts/elevated-world-5/#asynclist) for example.
 
 ## Further reading
 

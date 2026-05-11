@@ -117,7 +117,7 @@ Most OO languages do not understand `Result` or other discriminated unions. If y
 
 So after all that negativity, what situations *should* you use `Result` for?
 
-As I said in my book [*Domain Modeling Made Functional*](/books/), I like to classify errors into three classes:
+As I said in my book [*Domain Modeling Made Functional*](books/), I like to classify errors into three classes:
 
 * **Domain Errors**. These are errors that are to be expected as part of the business process, and therefore must be included in the design of the domain. For example, an order that is rejected by billing, or an order than contains an invalid product code. The business will already have procedures in place to deal with this kind of thing, and so the code will need to reflect these processes. Domain errors are part of the domain, like anything else, and so should be incorporated into our domain modeling, discussed with domain experts, and
 documented in the type system if possible. Note that diagnostics are not needed -- we are using `Result` as a glorified `bool`.

@@ -10,7 +10,7 @@ seriesOrder: 6
 ---
 
 
-In [the previous](/posts/property-based-testing-4/) [two posts](/posts/property-based-testing-4/), we looked at applying property-based testing to lists and roman numerals. Now let's look at one more example problem, and see if we can find properties for it.
+In [the previous](posts/property-based-testing-4/) [two posts](posts/property-based-testing-4/), we looked at applying property-based testing to lists and roman numerals. Now let's look at one more example problem, and see if we can find properties for it.
 
 This sample is based on the well-known `Dollar` example described in Kent Beck's "TDD By Example" book. We're not going to attempt to critique the design itself and make it more type-driven -- [others have done that](http://spin.atomicobject.com/2014/12/10/typed-language-tdd-part2/).
 Instead, we'll take the design as given and see what properties we can come up with.
@@ -135,7 +135,7 @@ So then, what new properties can we devise now?
 
 Let's look at the `Times` method. How can we test that? Which one of the strategies can we use?
 
-I think the "different paths to same result" is very applicable. We can do the same thing we did with [sorting lists](/posts/property-based-testing-3) and do a times operation both "inside" and "outside" and see if they give the same result.
+I think the "different paths to same result" is very applicable. We can do the same thing we did with [sorting lists](posts/property-based-testing-3) and do a times operation both "inside" and "outside" and see if they give the same result.
 
 ![Dollar times](./property_dollar_times.png)
 
@@ -372,7 +372,7 @@ How does property-based testing (PBT) fit in with TDD? This is a common question
 
 First off, TDD works with *specific examples*, while PBT works with *universal properties*.
 
-As I said in the [first post in this series](/posts/property-based-testing), I think examples are useful as a way into a design, and can be a form of documentation. But in my opinion, relying *only* on example-based tests would be a mistake.
+As I said in the [first post in this series](posts/property-based-testing), I think examples are useful as a way into a design, and can be a form of documentation. But in my opinion, relying *only* on example-based tests would be a mistake.
 
 Property-based approaches have a number of advantages over example-based tests:
 

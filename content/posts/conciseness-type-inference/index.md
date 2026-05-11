@@ -47,7 +47,7 @@ let GroupBy source keySelector =
 ```
 
 {{<alertinfo>}}
-You might notice that the standard F# implementations for "filter" and "groupBy" have the parameters in exactly the opposite order from the LINQ implementations used in C#. The "source" parameter is placed last, rather than first. There is a reason for this, which will be explained in the [thinking functionally](/series/thinking-functionally.html) series.
+You might notice that the standard F# implementations for "filter" and "groupBy" have the parameters in exactly the opposite order from the LINQ implementations used in C#. The "source" parameter is placed last, rather than first. There is a reason for this, which will be explained in the [thinking functionally](series/thinking-functionally.html) series.
 {{</alertinfo>}}
 
 The type inference algorithm is excellent at gathering information from many sources to determine the types. In the following example, it correctly deduces that the `list` value is a list of strings.

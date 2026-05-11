@@ -32,9 +32,9 @@ Slides from *NDC Oslo*, June 14, 2017
 
 If you liked this, the topics are expanded in some other talks and posts:
 
-* [Functional Programming Design Patterns (talk)](/fppatterns/)
-* [Domain Driven Design with the F# Type System (talk)](/ddd/)
-* [Is your programming language unreasonable? (post on predictability)](/posts/is-your-language-unreasonable/)
+* [Functional Programming Design Patterns (talk)](fppatterns/)
+* [Domain Driven Design with the F# Type System (talk)](ddd/)
+* [Is your programming language unreasonable? (post on predictability)](posts/is-your-language-unreasonable/)
 * [C# Light (slides)](https://www.slideshare.net/ScottWlaschin/c-light)
 
 

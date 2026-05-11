@@ -11,7 +11,7 @@ categories: [Patterns,Folds]
 
 Pattern matching is ubiquitous in F#. It is used for binding values to expressions with `let`, and in function parameters, and for branching using the `match..with` syntax.
 
-We have briefly covered binding values to expressions in a [post in the "why use F#?" series](/posts/conciseness-pattern-matching), and it will be covered many times as we [investigate types](/posts/overview-of-types-in-fsharp).
+We have briefly covered binding values to expressions in a [post in the "why use F#?" series](posts/conciseness-pattern-matching), and it will be covered many times as we [investigate types](posts/overview-of-types-in-fsharp).
 
 So in this post, we'll cover the `match..with` syntax and its use for control flow.
 
@@ -82,7 +82,7 @@ So this is one major difference between a "`switch`" or "`case`" statement compa
 
 Since F# is sensitive to indentation, you might be wondering how best to format this expression, as there are quite a few moving parts.
 
-The [post on F# syntax](/posts/fsharp-syntax) gives an overview of how alignment works, but for `match..with` expressions, here are some specific guidelines.
+The [post on F# syntax](posts/fsharp-syntax) gives an overview of how alignment works, but for `match..with` expressions, here are some specific guidelines.
 
 **Guideline 1: The alignment of the `| expression` clauses should be directly under the `match`**
 
@@ -394,7 +394,7 @@ The second example shows how we can carry state from one iteration of the loop t
 
 ### Matching on tuples, records and unions
 
-Pattern matching is available for all the built-in F# types.  More details in the [series on types](/posts/overview-of-types-in-fsharp).
+Pattern matching is available for all the built-in F# types.  More details in the [series on types](posts/overview-of-types-in-fsharp).
 
 ```fsharp
 // -----------------------
@@ -649,7 +649,7 @@ classifyString "alice@example.com"
 classifyString "google.com"
 ```
 
-You can see other examples of active patterns in a [previous post](/posts/convenience-active-patterns).
+You can see other examples of active patterns in a [previous post](posts/convenience-active-patterns).
 
 ## The "function" keyword
 
@@ -712,7 +712,7 @@ A minor drawback of `function` compared with `match..with` is that you can't see
 
 ## Exception handling with try..with
 
-In the [previous post](/posts/exceptions), we looked at catching exceptions with the `try..with` expression.
+In the [previous post](posts/exceptions), we looked at catching exceptions with the `try..with` expression.
 
 ```fsharp
 try
@@ -799,7 +799,7 @@ let loopAndSum3 aList = List.fold (fun sum i -> sum+i) 0 aList
 [1..10] |> loopAndSum3
 ```
 
-Similarly, the Option type (discussed at length in [this post](/posts/the-option-type)) has an associated `Option` module with many useful functions.
+Similarly, the Option type (discussed at length in [this post](posts/the-option-type)) has an associated `Option` module with many useful functions.
 
 For example, a function that does a match on `Some` vs `None` can be replaced with `Option.map`:
 
@@ -846,7 +846,7 @@ module Temperature =
 All `fold` functions follow this same general pattern:
 
 * there is one function for each case in the union structure (or clause in the match pattern)
-* finally, the actual value to match on comes last. (Why? See the post on ["designing functions for partial application"](/posts/partial-application))
+* finally, the actual value to match on comes last. (Why? See the post on ["designing functions for partial application"](posts/partial-application))
 
 Now we have our fold function, we can use it in different contexts.
 

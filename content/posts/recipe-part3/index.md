@@ -85,7 +85,7 @@ Finally, we can translate this layered design into F# files by turning it upside
 * The next file depends only on the first file. It would represents the functionality at the next-to-bottom layer.
 * And so on. Each file depends only on the previous ones.
 
-So, if we refer back to the use case example discussed in [Part 1](/posts/recipe-part1/):
+So, if we refer back to the use case example discussed in [Part 1](posts/recipe-part1/):
 
 ![Recipe Happy Path](../recipe-part1/Recipe_HappyPath.png)
 
@@ -219,7 +219,7 @@ let g () = Person.create "Alice" "Smith"
 
 Then the compiler will understand that you are referring to the `Person` module.
 
-For more on modules, see the post on [organizing functions](/posts/organizing-functions/).
+For more on modules, see the post on [organizing functions](posts/organizing-functions/).
 
 ## The organization of the modules
 
@@ -246,7 +246,7 @@ Folders in F# tools must conform to file ordering semantics, just like files. Fo
 
 A concrete example of this is in the [F# tools for Visual Studio itself](https://github.com/Microsoft/visualfsharp/tree/master/vsintegration/src/FSharp.Editor). In this project, the top-down stack of dependencies is actually quite small, despite there being a moderate amount of files. The "Completion" folder contains multiple files which are about providing completion (IntelliSense) in Visual Studio. There are multiple kinds of completion in Visual Studio, and logic which can be shared across some of them - but that shared logic would not be applicable for anything else.
 
-To learn more about ordering with F# and its effects on a codebase, see the post on [cycles and modularity in the wild](/posts/cycles-and-modularity-in-the-wild/).
+To learn more about ordering with F# and its effects on a codebase, see the post on [cycles and modularity in the wild](posts/cycles-and-modularity-in-the-wild/).
 
 ### Help, I have mutual dependencies between my types
 
@@ -260,7 +260,7 @@ type Employee = {name: string; worksAt: Location}
 
 How can you fix this to make the F# compiler happy?
 
-It's not that hard, but it does requires some more explanation, so I have devoted [another whole post to dealing with cyclic dependencies](/posts/cyclic-dependencies/).
+It's not that hard, but it does requires some more explanation, so I have devoted [another whole post to dealing with cyclic dependencies](posts/cyclic-dependencies/).
 
 ## Example code
 
@@ -439,6 +439,6 @@ In this post, we looked at organizing code into modules.  In the next post in th
 
 Meanwhile, you can read more on cyclic dependencies in the follow up posts:
 
-* [Cyclic dependencies are evil](/posts/cyclic-dependencies/).
-* [Refactoring to remove cyclic dependencies](/posts/removing-cyclic-dependencies/).
-* [Cycles and modularity in the wild](/posts/cycles-and-modularity-in-the-wild/), which compares some real-world metrics for C# and F# projects.
+* [Cyclic dependencies are evil](posts/cyclic-dependencies/).
+* [Refactoring to remove cyclic dependencies](posts/removing-cyclic-dependencies/).
+* [Cycles and modularity in the wild](posts/cycles-and-modularity-in-the-wild/), which compares some real-world metrics for C# and F# projects.

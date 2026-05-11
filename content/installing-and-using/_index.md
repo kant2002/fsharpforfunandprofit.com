@@ -27,7 +27,7 @@ Alternatively you can type the examples directly into the F# interactive console
 For the longer examples, the code is downloadable from this website -- the links will be in the post.
 
 Finally, I would encourage you to play with and modify the examples.
-If you then get compiler errors, do check out the ["troubleshooting F#"](/troubleshooting-fsharp/) page, which explains the most common problems, and how to fix them.
+If you then get compiler errors, do check out the ["troubleshooting F#"](troubleshooting-fsharp/) page, which explains the most common problems, and how to fix them.
 
 ### Contents ###
 
@@ -122,7 +122,7 @@ F# has a simple interactive console called FSI.exe that can also be used to run 
 {{< linktarget "compilation-errors" >}}
 ## Compilation Errors? ##
 
-If you have problems getting your own code to compile, the ["troubleshooting F#"](/troubleshooting-fsharp/) page might be helpful.
+If you have problems getting your own code to compile, the ["troubleshooting F#"](troubleshooting-fsharp/) page might be helpful.
 
 {{< linktarget "projects-solutions" >}}
 ## Projects and Solutions ##

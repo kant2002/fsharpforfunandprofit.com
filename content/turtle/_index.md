@@ -22,8 +22,8 @@ Here's the blurb for the talk:
 
 This talk is based on my blog posts on this topic:
 
-* [Thirteen ways of looking at a turtle](/posts/13-ways-of-looking-at-a-turtle/)
-* [Thirteen ways of looking at a turtle, Part 2](/posts/13-ways-of-looking-at-a-turtle-2/)
+* [Thirteen ways of looking at a turtle](posts/13-ways-of-looking-at-a-turtle/)
+* [Thirteen ways of looking at a turtle, Part 2](posts/13-ways-of-looking-at-a-turtle-2/)
 
 
 ## Videos

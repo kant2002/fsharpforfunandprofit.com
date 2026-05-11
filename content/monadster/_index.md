@@ -39,14 +39,14 @@ Slides from *Leetspeak 2015*, Stockholm, Oct 10, 2015
 
 This talk inspired a series of blog posts on this same topic:
 
-* [Dr Frankenfunctor and the Monadster](/posts/monadster/)
-* [Completing the body of the Monadster](/posts/monadster-2/)
-* [Refactoring the Monadster](/posts/monadster-3/)
+* [Dr Frankenfunctor and the Monadster](posts/monadster/)
+* [Completing the body of the Monadster](posts/monadster-2/)
+* [Refactoring the Monadster](posts/monadster-3/)
 
 Also related are the posts on map and bind, and on two-track error handling:
 
-* [Map and Bind and Apply, Oh my!](/series/map-and-bind-and-apply-oh-my.html)
-* [A functional approach to error handling ("Railway Oriented Programming")](/rop/)
+* [Map and Bind and Apply, Oh my!](series/map-and-bind-and-apply-oh-my.html)
+* [A functional approach to error handling ("Railway Oriented Programming")](rop/)
 
 ## Background
 

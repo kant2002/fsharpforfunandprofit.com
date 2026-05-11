@@ -9,7 +9,7 @@ categories: [Dependency Injection ]
 > This post is part of the [F# Advent Calendar in English 2016](https://sergeytihon.wordpress.com/2016/10/23/f-advent-calendar-in-english-2016/) project.
 > Check out all the other great posts there! And special thanks to Sergey Tihon for organizing this.
 
-*UPDATE: This post is superceded by a [newer one here](/posts/dependencies).*
+*UPDATE: This post is superceded by a [newer one here](posts/dependencies).*
 
 For people who are learning functional programming techniques, one of the more common questions is: "how do you do dependency injection?"
 This series of posts addresses that topic.
@@ -89,7 +89,7 @@ type UpdateProfileRequest = {
 }
 ```
 
-For now, I'm just going to use type aliases for `UserId`, `UserName`. For a more sophisticated approach, we would use [constrained types](/posts/designing-with-types-more-semantic-types/) instead of primitives such as `int` and `string`. And also, I won't be doing
+For now, I'm just going to use type aliases for `UserId`, `UserName`. For a more sophisticated approach, we would use [constrained types](posts/designing-with-types-more-semantic-types/) instead of primitives such as `int` and `string`. And also, I won't be doing
 any kind of validation either. That's a big topic for another time!
 
 So, here's the first OO version, without dependency injection:
@@ -594,7 +594,7 @@ let updateCustomerProfile ... =
 
 It's not very well designed, because it catches *all* exceptions, even ones we probably want to fail-fast due to a programming error (such as `NullReferenceException`).
 
-Let's replace the exception handling logic with the choice type `Result` (see my [functional error handling talk](/rop/) for more on this concept).
+Let's replace the exception handling logic with the choice type `Result` (see my [functional error handling talk](rop/) for more on this concept).
 
 First we can define the `Result` type itself (and this is built-in to F# 4.1, hooray!).
 

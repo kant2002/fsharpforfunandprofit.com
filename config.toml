@@ -1,5 +1,5 @@
-baseURL = "https://fsharpforfunandprofit.com"
-languageCode = "en-us"
+baseURL = "https://kant2002.github.io/fsharpforfunandprofit.com"
+languageCode = "uk-ua"
 title = "F# for Fun and Profit"
 description = "This site shows you ways that F# can help in day-to-day development of mainstream commercial business software"
 theme = "hugo-geekdoc"

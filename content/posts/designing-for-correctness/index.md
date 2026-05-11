@@ -353,11 +353,11 @@ The nice thing about the F# design is none of these problems can even exist. So 
 
 When faced with these requirements in C#, you might immediately think -- just create an interface!
 
-But it is not as easy as you might think. I have written a follow up post on this to explain why: [The shopping cart example in C#](/csharp/union-types-in-csharp.html).
+But it is not as easy as you might think. I have written a follow up post on this to explain why: [The shopping cart example in C#](csharp/union-types-in-csharp.html).
 
 If you are interested to see what the C# code for a solution looks like, here it is below. This code meets the requirements above and guarantees correctness at *compile time*, as desired.
 
-The key thing to note is that, because C# doesn't have union types, the implementation uses a ["fold" function](/posts/match-expression/#folds),
+The key thing to note is that, because C# doesn't have union types, the implementation uses a ["fold" function](posts/match-expression/#folds),
 a function that has three function parameters, one for each state. To use the cart, the caller passes a set of three lambdas in, and the (hidden) state determines what happens.
 
 ```csharp

@@ -144,7 +144,7 @@ and then use it to implement a full featured JSON parser.
 
 This talk is based on my blog posts on this topic:
 
-* [Understanding parser combinators](/series/understanding-parser-combinators/)
+* [Understanding parser combinators](series/understanding-parser-combinators/)
 
 {{< twocolumn-image >}}
 
@@ -170,7 +170,7 @@ stream processing, capability-based design, and the interpreter pattern (aka fre
 
 This talk is based on my blog posts on this topic:
 
-* [Thirteen ways of looking at a turtle](/posts/13-ways-of-looking-at-a-turtle/)
+* [Thirteen ways of looking at a turtle](posts/13-ways-of-looking-at-a-turtle/)
 
 {{< twocolumn-image >}}
 
@@ -197,8 +197,8 @@ and why you should consider adding it to your arsenal of testing tools.
 
 This talk is based on my blog posts on this topic:
 
-* [An introduction to property-based testing](/posts/property-based-testing/)
-* [Choosing properties for property-based testing](/posts/property-based-testing-2/)
+* [An introduction to property-based testing](posts/property-based-testing/)
+* [Choosing properties for property-based testing](posts/property-based-testing-2/)
 
 {{< twocolumn-image >}}
 
@@ -221,7 +221,7 @@ In this session, I'll show how functional programming can transform all sorts of
 
 This talk is based on my blog post on this topic:
 
-* [Dr Frankenfunctor and the Monadster](/posts/monadster/)
+* [Dr Frankenfunctor and the Monadster](posts/monadster/)
 
 {{< twocolumn-image >}}
 
@@ -247,8 +247,8 @@ HATEAOS, the functional approach to logging, actors, scalability and more.
 
 This talk is based on my blog posts on this topic:
 
-* [Enterprise Tic-Tac-Toe](/posts/enterprise-tic-tac-toe/)
-* [Enterprise Tic-Tac-Toe Part 2, In which I throw away the previous design](/posts/enterprise-tic-tac-toe-2/)
+* [Enterprise Tic-Tac-Toe](posts/enterprise-tic-tac-toe/)
+* [Enterprise Tic-Tac-Toe Part 2, In which I throw away the previous design](posts/enterprise-tic-tac-toe-2/)
 
 {{< twocolumn-image >}}
 
@@ -278,9 +278,9 @@ and how capabilities are a natural fit with a REST API that uses HATEAOS.
 
 This talk is based on my blog posts on this topic:
 
-* [A functional approach to authorization](/posts/capability-based-security/)
-* [Constraining capabilities based on identity and role](/posts/capability-based-security-2/)
-* [Using types as access tokens](/posts/capability-based-security-3/)
+* [A functional approach to authorization](posts/capability-based-security/)
+* [Constraining capabilities based on identity and role](posts/capability-based-security-2/)
+* [Using types as access tokens](posts/capability-based-security-3/)
 
 {{< twocolumn-image >}}
 

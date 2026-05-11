@@ -6,7 +6,7 @@ date: 2016-04-12
 categories: []
 ---
 
-Last year, I wrote a post called ["Happy F# Day"](/posts/happy-fsharp-day/), explaining why I thought F# needed a "birthday" that we could celebrate as a community.
+Last year, I wrote a post called ["Happy F# Day"](posts/happy-fsharp-day/), explaining why I thought F# needed a "birthday" that we could celebrate as a community.
 
 Here we are one year later! I'm going to promote that date (April 12th) again, and use it an excuse to review what has happened in the last year in the world of F#.
 

@@ -10,7 +10,7 @@ categories: []
 
 ## Domain Modelling vs. Performance
 
-I am a big fan of using [types for domain modelling](/ddd/) -- lots and lots and *lots* of types!
+I am a big fan of using [types for domain modelling](ddd/) -- lots and lots and *lots* of types!
 
 These types act both as documentation and as a compile time constraint to ensure that only valid data is used.
 

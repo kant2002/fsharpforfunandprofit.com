@@ -21,7 +21,7 @@ Here's the blurb for the talk:
 > In this talk, we'll look at some of the ways you can use types as part of a domain driven design process,
 > with some simple real world examples in F#. No jargon, no maths, and no prior F# experience necessary.
 
-I am also planning to upload some posts on these topics soon. Meanwhile, please see the [Designing with Types](/series/designing-with-types.html) series, which covers similar ground.
+I am also planning to upload some posts on these topics soon. Meanwhile, please see the [Designing with Types](series/designing-with-types.html) series, which covers similar ground.
 
 You should also read ["why type-first development matters"](http://tomasp.net/blog/type-first-development.aspx/) by Tomas Petricek
 and a great [series](http://gorodinski.com/blog/2013/02/17/domain-driven-design-with-fsharp-and-eventstore/) of [articles](http://gorodinski.com/blog/2013/04/23/domain-driven-design-with-fsharp-validation/) by Lev Gorodinski.
@@ -44,13 +44,13 @@ added sections on why OO, not FP is scary, and designing with states and transit
 
 ## Book
 
-I have a book all about this topic -- you can find more details on the [books page](/books/).
+I have a book all about this topic -- you can find more details on the [books page](books/).
 
-[![Domain Modeling Made Functional](./domain-modeling-made-functional-320.jpg)](/books/)
+[![Domain Modeling Made Functional](./domain-modeling-made-functional-320.jpg)](books/)
 
 ##  Getting the code
 
 If you want to follow along with the code, then:
 
-* If you have F# installed locally, download [this file](/ddd/ddd.fsx).
+* If you have F# installed locally, download [this file](ddd/ddd.fsx).
 * If you don't have F# installed locally, you can run the code in your web browser at: [tryfsharp.org/create/scottw/ddd.fsx](http://www.tryfsharp.org/create/scottw/ddd.fsx)

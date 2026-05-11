@@ -35,7 +35,7 @@ Next, I work on modelling the domain, using [domain-driven design](http://fsharp
 with a focus on domain events (["event storming"](http://ziobrando.blogspot.co.uk/2013/11/introducing-event-storming.html)), not just static data ("aggregates" in DDD terminology).
 
 As part of the modelling process, I sketch a design using [type-first development](http://tomasp.net/blog/type-first-development.aspx/)
-to [create types](/series/designing-with-types.html) that represent both the domain data types ("nouns") and the domain activities ("verbs").
+to [create types](series/designing-with-types.html) that represent both the domain data types ("nouns") and the domain activities ("verbs").
 
 After doing a first draft of the domain model, I typically switch to a "bottom up" approach and code a small prototype that exercises the model that I have defined so far.
 
@@ -101,7 +101,7 @@ But do we need anything else, such as a structure containing formatted output fo
 We want to isolate ourselves from the display logic, so we'll just let the UI turn the state into
 something that can be displayed.
 
-What about errors? In [other posts](/rop/), I have spent a lot of time talking about error handling. Is it needed in this case?
+What about errors? In [other posts](rop/), I have spent a lot of time talking about error handling. Is it needed in this case?
 
 In this case, I think not. In a cheap pocket calculator, any errors are shown right in the display, so we'll stick with that approach for now.
 
@@ -113,7 +113,7 @@ type Calculate = CalculatorInput * CalculatorState -> CalculatorState
 
 `CalculatorInput` now means the keystrokes or whatever, and `CalculatorState` is the state.
 
-Notice that I have defined this function using a [tuple](/posts/tuples/) (`CalculatorInput * CalculatorState`) as input,
+Notice that I have defined this function using a [tuple](posts/tuples/) (`CalculatorInput * CalculatorState`) as input,
 rather than as two separate parameters (which would look like `CalculatorInput -> CalculatorState -> CalculatorState`).
 I did this because both parameters are always needed and a tuple makes this clear -- I don't want to be partially applying the input, for example.
 
@@ -166,7 +166,7 @@ but since I am in "sketch" mode, and I don't want to reorder things all the time
 I will just append new declarations to the bottom and use `and` to connect them.
 
 In the final production code though, when the design has stabilized, I *would* reorder these types to avoid using `and`.
-The reason is that `and` can [hide cycles between types](/posts/cyclic-dependencies/) and prevent refactoring.
+The reason is that `and` can [hide cycles between types](posts/cyclic-dependencies/) and prevent refactoring.
 
 ## Defining the CalculatorInput type
 
@@ -331,7 +331,7 @@ and MathOperationError =
     | DivideByZero
 ```
 
-We could have also used the built-in generic `Choice` type, or even a full ["railway oriented programming"](/rop/) approach, but since this is a sketch of the design,
+We could have also used the built-in generic `Choice` type, or even a full ["railway oriented programming"](rop/) approach, but since this is a sketch of the design,
 I want the design to stand alone, without a lot of dependencies, so I'll just define the specific type right here.
 
 Any other errors? NaNs or underflows or overflows? I'm not sure. We have the `MathOperationError` type, and it would be easy to extend it as needed.
@@ -516,7 +516,7 @@ type CalculatorServices = {
 
 I think that this is quite nice. We haven't written any "real" code yet, but with a bit of thought, we have already built quite a detailed design.
 
-In the [next post](/posts/calculator-implementation), I'll put this design to the test by attempting to create an implementation.
+In the [next post](posts/calculator-implementation), I'll put this design to the test by attempting to create an implementation.
 
 *The code for this post is available in this [gist](https://gist.github.com/swlaschin/0e954cbdc383d1f5d9d3#file-calculator_design-fsx) on GitHub.*
 

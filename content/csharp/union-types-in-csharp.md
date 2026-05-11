@@ -5,7 +5,7 @@ permalink: /csharp/union-types-in-csharp.html
 categories: [csharp]
 ---
 
-This is an appendix to the [post on "designing for correctness"](/posts/designing-for-correctness/).
+This is an appendix to the [post on "designing for correctness"](posts/designing-for-correctness/).
 
 In that post, I had some requirements for a simple shopping cart. I showed some bad C# code, and some F# code that implemented the requirements easily.
 There are some responses that come up when a C# developer looks at the F# code, such as "why not just use an interface?" or "what about the visitor pattern?"

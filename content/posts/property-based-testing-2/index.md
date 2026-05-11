@@ -9,9 +9,9 @@ seriesId: "Property Based Testing"
 seriesOrder: 3
 ---
 
-*UPDATE: I did a talk on property-based testing based on these posts. [Slides and video here.](/pbt/)*
+*UPDATE: I did a talk on property-based testing based on these posts. [Slides and video here.](pbt/)*
 
-In [the previous two posts](/posts/property-based-testing/), I described the basics of property-based testing, and showed how it can save a lot of time by generating random tests.
+In [the previous two posts](posts/property-based-testing/), I described the basics of property-based testing, and showed how it can save a lot of time by generating random tests.
 
 But here's a common problem. Everyone who sees a property-based testing tool like FsCheck or QuickCheck thinks that it is amazing... but
 when it comes time to start creating your own properties, the universal complaint is: "what properties should I use? I can't think of any!"
@@ -154,7 +154,7 @@ Here are the seven ways again, along with a more formal term, if available.
 * "A test oracle"
 
 So that's the theory. How might we apply them in practice?
-[In the next post, we'll look at some simple tasks](/posts/property-based-testing-3), such as "sort a list", "reverse a list", and so on, and see how we might test their implementations with these various approaches.
+[In the next post, we'll look at some simple tasks](posts/property-based-testing-3), such as "sort a list", "reverse a list", and so on, and see how we might test their implementations with these various approaches.
 
 
 

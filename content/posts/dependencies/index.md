@@ -20,14 +20,14 @@ The six approaches we will look at are:
 
 * **Dependency retention**, in which we don't worry about managing dependencies; we just inline and hard-code everything!
 * **Dependency rejection**, a great term (coined by Mark Seemann, above), in which we avoid having *any* dependencies in our core business logic code. We do this by keeping all I/O and other impure code at the "edges" of our domain.
-* [**Dependency parameterization**](/posts/dependencies-2/), in which we pass in all dependencies as parameters. This is commonly used in conjunction with partial application.
-* [**Dependency injection** and the **Reader monad**](/posts/dependencies-3/), in which we pass in dependencies after the rest of the code has already been constructed. In OO-style code this is typically done via constructor injection and in FP-style code this corresponds to the Reader monad.
-* [**Dependency interpretation**](/posts/dependencies-4/), in which we replace calls to dependencies with a data structure that is interpreted later. This approach is used in both OO ([Interpreter Pattern](https://en.wikipedia.org/wiki/Interpreter_pattern)) and in FP (e.g. [free monads](https://softwaremill.com/free-monads/))
+* [**Dependency parameterization**](posts/dependencies-2/), in which we pass in all dependencies as parameters. This is commonly used in conjunction with partial application.
+* [**Dependency injection** and the **Reader monad**](posts/dependencies-3/), in which we pass in dependencies after the rest of the code has already been constructed. In OO-style code this is typically done via constructor injection and in FP-style code this corresponds to the Reader monad.
+* [**Dependency interpretation**](posts/dependencies-4/), in which we replace calls to dependencies with a data structure that is interpreted later. This approach is used in both OO ([Interpreter Pattern](https://en.wikipedia.org/wiki/Interpreter_pattern)) and in FP (e.g. [free monads](https://softwaremill.com/free-monads/))
 
 For each approach, we will look at a sample implementation, and then discuss the pros and cons of each approach.
-And as a bonus, in the [final post in the series](/posts/dependencies-5/), we'll take a different example and again implement it in the six different ways.
+And as a bonus, in the [final post in the series](posts/dependencies-5/), we'll take a different example and again implement it in the six different ways.
 
-*NOTE: I did a [similar post](/posts/dependency-injection-1/) a long time ago. That post is now superseded by these ones.*
+*NOTE: I did a [similar post](posts/dependency-injection-1/) a long time ago. That post is now superseded by these ones.*
 
 ## What is a "dependency"?
 
@@ -229,4 +229,4 @@ The source code for this post is available at these gists:
 * [DependencyRejection.fsx](https://gist.github.com/swlaschin/cbc9a5992695a88e32e3f39fbf1ecf79)
 * [DependencyRetention.fsx](https://gist.github.com/swlaschin/d35b59795a85a62723124df1a79d2388)
 
-In the [next post](/posts/dependencies-2/), we'll look at "dependency parameterization". That is, passing in dependencies as standard function parameters.
+In the [next post](posts/dependencies-2/), we'll look at "dependency parameterization". That is, passing in dependencies as standard function parameters.

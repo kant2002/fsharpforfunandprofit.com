@@ -10,7 +10,7 @@ image: "/posts/elevated-world-3/vgfp_rop_before.png"
 ---
 
 This post is the third in a series.
-In the [previous two posts](/posts/elevated-world/), I described some of the core functions for dealing with generic data types: `map`, `apply`, `bind`, and so on.
+In the [previous two posts](posts/elevated-world/), I described some of the core functions for dealing with generic data types: `map`, `apply`, `bind`, and so on.
 
 In this post, I'll show how to use these functions in practice, and will explain the difference between the so-called "applicative" and "monadic" styles.
 
@@ -19,36 +19,36 @@ In this post, I'll show how to use these functions in practice, and will explain
 Here's a list of shortcuts to the various functions mentioned in this series:
 
 * **Part 1: Lifting to the elevated world**
-  * [The `map` function](/posts/elevated-world/#map)
-  * [The `return` function](/posts/elevated-world/#return)
-  * [The `apply` function](/posts/elevated-world/#apply)
-  * [The `liftN` family of functions](/posts/elevated-world/#lift)
-  * [The `zip` function and ZipList world](/posts/elevated-world/#zip)
+  * [The `map` function](posts/elevated-world/#map)
+  * [The `return` function](posts/elevated-world/#return)
+  * [The `apply` function](posts/elevated-world/#apply)
+  * [The `liftN` family of functions](posts/elevated-world/#lift)
+  * [The `zip` function and ZipList world](posts/elevated-world/#zip)
 * **Part 2: How to compose world-crossing functions**
-  * [The `bind` function](/posts/elevated-world-2/#bind)
-  * [List is not a monad. Option is not a monad.](/posts/elevated-world-2/#not-a-monad)
+  * [The `bind` function](posts/elevated-world-2/#bind)
+  * [List is not a monad. Option is not a monad.](posts/elevated-world-2/#not-a-monad)
 * **Part 3: Using the core functions in practice**
-  * [Independent and dependent data](/posts/elevated-world-3/#dependent)
-  * [Example: Validation using applicative style and monadic style](/posts/elevated-world-3/#validation)
-  * [Lifting to a consistent world](/posts/elevated-world-3/#consistent)
-  * [Kleisli world](/posts/elevated-world-3/#kleisli)
+  * [Independent and dependent data](posts/elevated-world-3/#dependent)
+  * [Example: Validation using applicative style and monadic style](posts/elevated-world-3/#validation)
+  * [Lifting to a consistent world](posts/elevated-world-3/#consistent)
+  * [Kleisli world](posts/elevated-world-3/#kleisli)
 * **Part 4: Mixing lists and elevated values**
-  * [Mixing lists and elevated values](/posts/elevated-world-4/#mixing)
-  * [The `traverse`/`MapM` function](/posts/elevated-world-4/#traverse)
-  * [The `sequence` function](/posts/elevated-world-4/#sequence)
-  * ["Sequence" as a recipe for ad-hoc implementations](/posts/elevated-world-4/#adhoc)
-  * [Readability vs. performance](/posts/elevated-world-4/#readability)
-  * [Dude, where's my `filter`?](/posts/elevated-world-4/#filter)
+  * [Mixing lists and elevated values](posts/elevated-world-4/#mixing)
+  * [The `traverse`/`MapM` function](posts/elevated-world-4/#traverse)
+  * [The `sequence` function](posts/elevated-world-4/#sequence)
+  * ["Sequence" as a recipe for ad-hoc implementations](posts/elevated-world-4/#adhoc)
+  * [Readability vs. performance](posts/elevated-world-4/#readability)
+  * [Dude, where's my `filter`?](posts/elevated-world-4/#filter)
 * **Part 5: A real-world example that uses all the techniques**
-  * [Example: Downloading and processing a list of websites](/posts/elevated-world-5/#asynclist)
-  * [Treating two worlds as one](/posts/elevated-world-5/#asyncresult)
+  * [Example: Downloading and processing a list of websites](posts/elevated-world-5/#asynclist)
+  * [Treating two worlds as one](posts/elevated-world-5/#asyncresult)
 * **Part 6: Designing your own elevated world**
-  * [Designing your own elevated world](/posts/elevated-world-6/#part6)
-  * [Filtering out failures](/posts/elevated-world-6/#filtering)
-  * [The Reader monad](/posts/elevated-world-6/#readermonad)
+  * [Designing your own elevated world](posts/elevated-world-6/#part6)
+  * [Filtering out failures](posts/elevated-world-6/#filtering)
+  * [The Reader monad](posts/elevated-world-6/#readermonad)
 * **Part 7: Summary**
-  * [List of operators mentioned](/posts/elevated-world-7/#operators)
-  * [Further reading](/posts/elevated-world-7/#further-reading)
+  * [List of operators mentioned](posts/elevated-world-7/#operators)
+  * [Further reading](posts/elevated-world-7/#further-reading)
 
 
 {{< linktarget "part2" >}}
@@ -98,7 +98,7 @@ Now you have a choice:
 
 As you can see, the choice between applicative style and monadic style is not clear cut; it depends on what you want to do.
 
-We'll look at a real implementation of this example in the [final post of this series](/posts/elevated-world-5/#asynclist).
+We'll look at a real implementation of this example in the [final post of this series](posts/elevated-world-5/#asynclist).
 
 **but...**
 
@@ -250,7 +250,7 @@ Also note that `apply` will concat the error messages from each side if both par
 This allows us to collect all the failures without discarding any. This is the reason why I made the `Failure` case have a list of strings, rather than a single string.
 
 *NOTE: I'm using `string` for the failure case to make the demonstration easier. In a more sophisticated design I would list the possible failures explicitly.
-See my [functional error handling](/rop/) talk for more details.*
+See my [functional error handling](rop/) talk for more details.*
 
 ### Validation using applicative style
 
@@ -516,7 +516,7 @@ with one input and a success/failure output:
 This combined function is yet another world-crossing function of the form `a->Result<b>`, and so it in turn can be used as a component part of a even bigger function.
 
 For more examples of this "elevating everything to the same world" approach,
-see my posts on [functional error handling](/rop/) and [threading state](/series/handling-state.html).
+see my posts on [functional error handling](rop/) and [threading state](series/handling-state.html).
 
 {{< linktarget "kleisli" >}}
 
@@ -558,4 +558,4 @@ In this post, we learned about "applicative" vs "monadic" style, and why the cho
 
 We also saw how to lift different kinds values and functions to a consistent world so that our functions can be composed more easily.
 
-In the [next post](/posts/elevated-world-4/) we'll look at a common problem: working with lists of elevated values.
+In the [next post](posts/elevated-world-4/) we'll look at a common problem: working with lists of elevated values.

@@ -8,7 +8,7 @@ seriesId: "Understanding Parser Combinators"
 seriesOrder: 1
 ---
 
-*UPDATE: [Slides and video from my talk on this topic](/parser/)*
+*UPDATE: [Slides and video from my talk on this topic](parser/)*
 
 In this series, we'll look at how so-called "applicative parsers" work. In order to understand something, there's nothing like building it for yourself, and so we'll create a basic parser library from scratch, and then some useful "parser combinators", and then finish off by building a complete JSON parser.
 
@@ -20,9 +20,9 @@ We'll build up to the complex stuff incrementally via a series of implementation
 There will be four posts in this series:
 
 * In this, the first post, we'll look at the basic concepts of parser combinators and build the core of the library.
-* In the [second post](/posts/understanding-parser-combinators-2/), we'll build up a useful library of combinators.
-* In the [third post](/posts/understanding-parser-combinators-3/), we'll work on providing helpful error messages.
-* In the [last post](/posts/understanding-parser-combinators-4/), we'll build a JSON parser using this parser library.
+* In the [second post](posts/understanding-parser-combinators-2/), we'll build up a useful library of combinators.
+* In the [third post](posts/understanding-parser-combinators-3/), we'll work on providing helpful error messages.
+* In the [last post](posts/understanding-parser-combinators-4/), we'll build a JSON parser using this parser library.
 
 Obviously, the focus here will not be on performance or efficiency, but I hope that it will give you the understanding that will then enable you to use libraries like [FParsec](http://www.quanttec.com/fparsec/) effectively. And by the way, a big thank you to Stephan Tolksdorf, who created FParsec. You should make it your first port of call for all your .NET parsing needs!
 
@@ -184,7 +184,7 @@ type ParseResult<'a> =
 The `Success` case is generic and can contain any value. The `Failure` case contains an error message.
 
 {{<alertinfo>}}
-For more on using this Success/Failure approach, see my talk on [functional error handling](/rop/).
+For more on using this Success/Failure approach, see my talk on [functional error handling](rop/).
 {{</alertinfo>}}
 
 We can now rewrite the parser to return one of the `Result` cases, like this:
@@ -307,7 +307,7 @@ Here is the curried version of `pchar` represented as a diagram:
 
 ### What is currying?
 
-If you are unclear on how currying works, I have a post about it [here](/posts/currying/), but basically it means that a multi-parameter function can be written as a series of one-parameter functions.
+If you are unclear on how currying works, I have a post about it [here](posts/currying/), but basically it means that a multi-parameter function can be written as a series of one-parameter functions.
 
 In other words, this two-parameter function:
 
@@ -402,7 +402,7 @@ let pchar charToMatch =
 
 ### The benefits of the curried implementation
 
-What's nice about the curried implementation is that we can [partially apply](/posts/partial-application/) the character we want to parse, to get a new function, like this:
+What's nice about the curried implementation is that we can [partially apply](posts/partial-application/) the character we want to parse, to get a new function, like this:
 
 ```fsharp {src=#parseA_curried}
 let parseA = pchar 'A'
@@ -540,7 +540,7 @@ let parseAThenB = parseA >> parseB
 
 but that gives us a compiler error, as the output of `parseA` does not match the input of `parseB`, and so they cannot be composed like that.
 
-If you are familiar with [functional programming patterns](/fppatterns/), the need to chain a sequence of wrapped types together like this happens frequently, and the solution is a `bind` function.
+If you are familiar with [functional programming patterns](fppatterns/), the need to chain a sequence of wrapped types together like this happens frequently, and the solution is a `bind` function.
 
 However, in this case, I won't implement `bind` but will instead go straight to an `andThen` implementation.
 
@@ -752,7 +752,7 @@ We won't attempt to fix this right now, but in a later post we'll implement bett
 
 This is where where the power of combinators starts kicking in, because with `orElse` in our toolbox, we can use it to build even more combinators. For example, let's say that we want choose from a *list* of parsers, rather than just two.
 
-Well, that's easy. If we have a pairwise way of combining things, we can extend that to combining an entire list using `reduce` (for more on working with `reduce`, [see this post on monoids](/posts/monoids-without-tears/) ).
+Well, that's easy. If we have a pairwise way of combining things, we can extend that to combining an entire list using `reduce` (for more on working with `reduce`, [see this post on monoids](posts/monoids-without-tears/) ).
 
 ```fsharp {src=#choice}
 /// Choose any of a list of parsers
@@ -937,7 +937,7 @@ let anyOf listOfChars =
 
 In this post, we have created the foundations of a parsing library, and few simple combinators.
 
-In the [next post](/posts/understanding-parser-combinators-2/), we'll build on this to create a library with many more combinators.
+In the [next post](posts/understanding-parser-combinators-2/), we'll build on this to create a library with many more combinators.
 
 
 ## Further information

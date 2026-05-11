@@ -9,7 +9,7 @@ seriesOrder: 5
 
 ---
 
-This post is the conclusion of the series on [low-risk and incremental ways to use F# at work](/posts/low-risk-ways-to-use-fsharp-at-work/).
+This post is the conclusion of the series on [low-risk and incremental ways to use F# at work](posts/low-risk-ways-to-use-fsharp-at-work/).
 
 To wrap up, we'll look at a few more ways in which F# can help you with various development tasks around the edges, without impacting any core or mission critical code.
 
@@ -19,45 +19,45 @@ Before moving on to the content of the post, here's the full list of the twenty 
 
 **Part 1 - Using F# to explore and develop interactively**
 
-[1. Use F# to explore the .NET framework interactively](/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively)\
-[2. Use F# to test your own code interactively](/posts/low-risk-ways-to-use-fsharp-at-work/#explore-own-code-interactively)\
-[3. Use F# to play with webservices interactively](/posts/low-risk-ways-to-use-fsharp-at-work/#explore-webservices-interactively)\
-[4. Use F# to play with UI's interactively](/posts/low-risk-ways-to-use-fsharp-at-work/#explore-winforms-interactively)
+[1. Use F# to explore the .NET framework interactively](posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively)\
+[2. Use F# to test your own code interactively](posts/low-risk-ways-to-use-fsharp-at-work/#explore-own-code-interactively)\
+[3. Use F# to play with webservices interactively](posts/low-risk-ways-to-use-fsharp-at-work/#explore-webservices-interactively)\
+[4. Use F# to play with UI's interactively](posts/low-risk-ways-to-use-fsharp-at-work/#explore-winforms-interactively)
 
 **Part 2 - Using F# for development and devops scripts**
 
-[5. Use FAKE for build and CI scripts](/posts/low-risk-ways-to-use-fsharp-at-work-2/#fake)\
-[6. An F# script to check that a website is responding](/posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-website-responding)\
-[7. An F# script to convert an RSS feed into CSV](/posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-rss-to-csv)\
-[8. An F# script that uses WMI to check the stats of a process](/posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-wmi-stats)\
-[9. Use F# for configuring and managing the cloud](/posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-cloud)
+[5. Use FAKE for build and CI scripts](posts/low-risk-ways-to-use-fsharp-at-work-2/#fake)\
+[6. An F# script to check that a website is responding](posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-website-responding)\
+[7. An F# script to convert an RSS feed into CSV](posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-rss-to-csv)\
+[8. An F# script that uses WMI to check the stats of a process](posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-wmi-stats)\
+[9. Use F# for configuring and managing the cloud](posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-cloud)
 
 **Part 3 - Using F# for testing**
 
-[10. Use F# to write unit tests with readable names](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-nunit)\
-[11. Use F# to run unit tests programmatically](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-runner)\
-[12. Use F# to learn to write unit tests in other ways](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-other)\
-[13. Use FsCheck to write better unit tests](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-fscheck)\
-[14. Use FsCheck to create random dummy data](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-dummy)\
-[15. Use F# to create mocks](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-mock)\
-[16. Use F# to do automated browser testing](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-canopy)\
-[17. Use F# for Behaviour Driven Development](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-bdd)
+[10. Use F# to write unit tests with readable names](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-nunit)\
+[11. Use F# to run unit tests programmatically](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-runner)\
+[12. Use F# to learn to write unit tests in other ways](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-other)\
+[13. Use FsCheck to write better unit tests](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-fscheck)\
+[14. Use FsCheck to create random dummy data](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-dummy)\
+[15. Use F# to create mocks](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-mock)\
+[16. Use F# to do automated browser testing](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-canopy)\
+[17. Use F# for Behaviour Driven Development](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-bdd)
 
 **Part 4 - Using F# for database related tasks**
 
-[18. Use F# to replace LINQpad](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-linqpad)\
-[19. Use F# to unit test stored procedures](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-testprocs)\
-[20. Use FsCheck to generate random database records](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-randomdata)\
-[21. Use F# to do simple ETL](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-etl)\
-[22. Use F# to generate SQL Agent scripts](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-sqlagent)
+[18. Use F# to replace LINQpad](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-linqpad)\
+[19. Use F# to unit test stored procedures](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-testprocs)\
+[20. Use FsCheck to generate random database records](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-randomdata)\
+[21. Use F# to do simple ETL](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-etl)\
+[22. Use F# to generate SQL Agent scripts](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-sqlagent)
 
 **Part 5 - Other interesting ways of using F#**
 
-[23. Use F# for parsing](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-parsers)\
-[24. Use F# for diagramming and visualization](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-diagramming)\
-[25. Use F# for accessing web-based data stores](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-data-access)\
-[26. Use F# for data science and machine learning](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-data-science)\
-[(BONUS) 27: Balance the generation schedule for the UK power station fleet](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-balance-power)
+[23. Use F# for parsing](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-parsers)\
+[24. Use F# for diagramming and visualization](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-diagramming)\
+[25. Use F# for accessing web-based data stores](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-data-access)\
+[26. Use F# for data science and machine learning](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-data-science)\
+[(BONUS) 27: Balance the generation schedule for the UK power station fleet](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-balance-power)
 
 
 ----------
@@ -79,7 +79,7 @@ doing substitutions in a template, finding HTML links for a web crawler, parsing
 F#, being an ML-derived language, is ideal for parsing tasks of all kinds, from simple regexes to full fledged parsers.
 
 Of course, there are many off-the-shelf libraries for common tasks, but sometimes you need to write your own.
-A good example of this is TickSpec, the BDD framework that [we saw earlier](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-bdd).
+A good example of this is TickSpec, the BDD framework that [we saw earlier](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-bdd).
 
 TickSpec needs to parse the so-called "Gherkin" format of Given/When/Then. Rather than create a dependency on another library,
 I imagine that it was easier (and more fun) for [Phil](http://trelford.com/blog/post/TickSpec.aspx) to write his own parser in a few hundred lines.
@@ -106,7 +106,7 @@ and a [custom DSL for load testing scenarios](http://www.frenk.com/2012/01/real-
 
 Once you have parsed or analyzed something, it is always nice if you can display the results visually, rather than as tables full of data.
 
-For example, in a [previous post](/posts/cycles-and-modularity-in-the-wild/) I used F# in conjunction with [GraphViz](http://www.graphviz.org/)
+For example, in a [previous post](posts/cycles-and-modularity-in-the-wild/) I used F# in conjunction with [GraphViz](http://www.graphviz.org/)
 to create diagrams of dependency relationships. You can see a sample below:
 
 ![](./tickspec_svg.png)
@@ -226,7 +226,7 @@ So that's Freebase. Lots of good information, both useful and frivolous.
 
 ## Using Freebase to generate realistic test data
 
-We've seen how FsCheck can be used to [generate test data](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-dummy).
+We've seen how FsCheck can be used to [generate test data](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-dummy).
 Well, you can also get the same affect by getting data from Freebase, which makes the data much more realistic.
 
 [Kit Eason](http://twitter.com/kitlovesfsharp) showed how to do this in a [tweet](http://twitter.com/kitlovesfsharp/status/296240699735695360),

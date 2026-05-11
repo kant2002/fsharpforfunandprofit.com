@@ -9,7 +9,7 @@ seriesOrder: 6
 categories: [Types, DDD]
 ---
 
-In a [previous post](/posts/designing-with-types-single-case-dus/), I talked about avoiding using plain primitive strings for email addresses, zip codes, states, etc.
+In a [previous post](posts/designing-with-types-single-case-dus/), I talked about avoiding using plain primitive strings for email addresses, zip codes, states, etc.
 By wrapping them in a single case union, we could (a) force the types to be distinct and (b) add validation rules.
 
 In this post, we'll look at whether we can extend that concept to an even more fine grained level.
@@ -80,7 +80,7 @@ But how can we trust that the validation has been done correctly for all possibl
 
 The answer, of course, is to create wrapper types which have the constraints built into the type.
 
-So let's knock up a quick prototype using the single case union technique we used [before](/posts/designing-with-types-single-case-dus/).
+So let's knock up a quick prototype using the single case union technique we used [before](posts/designing-with-types-single-case-dus/).
 
 ```fsharp
 module String100 =

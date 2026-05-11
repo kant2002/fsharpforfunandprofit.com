@@ -9,7 +9,7 @@ seriesOrder: 12
 categories: [Patterns, Worked Examples]
 ---
 
-[Last time](/posts/pattern-matching-command-line) we looked at parsing a command line. This time we'll look at another pattern matching example, this time using Roman numerals.
+[Last time](posts/pattern-matching-command-line) we looked at parsing a command line. This time we'll look at another pattern matching example, this time using Roman numerals.
 
 As before, we will try to have a "pure" internal model with separate stages to convert the input to the internal model, and then another separate stage to convert from the internal model to the output.
 
@@ -41,8 +41,8 @@ type RomanNumeral = RomanDigit list
 
 No, stop right there! A `RomanDigit` is not just *any* digit, it has to be taken from a limited set.
 
-Also `RomanNumeral` should not just be a [type alias](/posts/type-abbreviations) for a list of digits. It would be better if it was its own special type as well.
-We can do this by creating a [single case union type](/posts/discriminated-unions).
+Also `RomanNumeral` should not just be a [type alias](posts/type-abbreviations) for a list of digits. It would be better if it was its own special type as well.
+We can do this by creating a [single case union type](posts/discriminated-unions).
 
 Here's a much better version:
 
@@ -144,7 +144,7 @@ let charToRomanDigit =
 
 The compiler doesn't like that! What happens if we get some other character?
 
-This is a great example of how [exhaustive pattern matching](/posts/correctness-exhaustive-pattern-matching) can force you to think about missing requirements.
+This is a great example of how [exhaustive pattern matching](posts/correctness-exhaustive-pattern-matching) can force you to think about missing requirements.
 
 So, what should be done for bad input. How about printing an error message?
 
@@ -163,7 +163,7 @@ let charToRomanDigit =
 	| ch -> eprintf "%c is not a valid character" ch
 ```
 
-The compiler doesn't like that either! The normal cases return a valid `RomanDigit` but the error case returns `unit`. As we saw in the [earlier post](/posts/pattern-matching), every branch *must* return the same type.
+The compiler doesn't like that either! The normal cases return a valid `RomanDigit` but the error case returns `unit`. As we saw in the [earlier post](posts/pattern-matching), every branch *must* return the same type.
 
 How can we fix this? We could throw an exception, but that seems a bit excessive. If we think about it some more, there's no way that `charToRomanDigit` can *always* return a valid `RomanDigit`.
 Sometimes it can, and sometimes it can't. In other words, we need to use something like an option type here.

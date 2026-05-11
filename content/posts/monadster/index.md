@@ -9,7 +9,7 @@ seriesId: "Handling State"
 seriesOrder: 1
 ---
 
-*UPDATE: [Slides and video from my talk on this topic](/monadster/)*
+*UPDATE: [Slides and video from my talk on this topic](monadster/)*
 
 *Warning! This post contains gruesome topics, strained analogies, discussion of monads*
 
@@ -139,7 +139,7 @@ As you can see, this implementation matched the earlier diagram precisely.
 
 At this point Dr Frankenfunctor had two important insights.
 
-The first insight was that, thanks to [currying](/posts/currying/), the function could be converted from a function taking a tuple to a two parameter function, with each parameter passed in turn.
+The first insight was that, thanks to [currying](posts/currying/), the function could be converted from a function taking a tuple to a two parameter function, with each parameter passed in turn.
 
 ![Version 2](./monadster2.png)
 
@@ -778,5 +778,5 @@ We also saw how various M-values could be processed and combined using `mapM` (f
 
 ## Next time
 
-This exciting tale has more shocks in store for you! Stay tuned for [the next installment](/posts/monadster-2/), when I reveal how the head and body were created.
+This exciting tale has more shocks in store for you! Stay tuned for [the next installment](posts/monadster-2/), when I reveal how the head and body were created.
 

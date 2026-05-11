@@ -10,7 +10,7 @@ After a long wait, the Roslyn project (C# compiler and analysis tools) has final
 ([HN](https://news.ycombinator.com/item?id=7524082) and [Reddit](http://www.reddit.com/r/technology/comments/224p4v/microsoft_open_sources_c_and_a_large_part_of_net/)
 and introductory post [here](http://blog.simontimms.com/2014/04/04/roslyn-changes-everything/)).
 
-Immediately, I got a request to do a follow up to my [previous analysis of C# and F# code "in the wild"](/posts/cycles-and-modularity-in-the-wild/)
+Immediately, I got a request to do a follow up to my [previous analysis of C# and F# code "in the wild"](posts/cycles-and-modularity-in-the-wild/)
 and apply a similar analysis to Roslyn, comparing it with the (already open source) F# compiler.
 
 You might ask, is it really fair to compare such different projects? Are they doing the same amount of work?
@@ -239,7 +239,7 @@ but if you have to open 20 different files to understand some code, that's a sig
 For doing the dependency analysis, rather than using a source analysis tool, I'm using the compiled assemblies,
 treating top level classes (C#) and modules (F#) as proxies for files.
 Not perfect, but it is a good rule of thumb that there is one C# class or F# module per file.
-(For more on my reasoning, see the [original post](/posts/cycles-and-modularity-in-the-wild/).)
+(For more on my reasoning, see the [original post](posts/cycles-and-modularity-in-the-wild/).)
 
 Now that Roslyn is available, it would be interesting to do a true source based dependency analysis, and see if the results differed significantly.
 
@@ -374,7 +374,7 @@ It might be useful to look at the dependency diagrams now.  These are SVG files,
 
 Here's a sample of the one for Roslyn:
 
-[![](./roslyn_svg.png)](/assets/svg/roslyn.all.dot.svg)
+[![](./roslyn_svg.png)](assets/svg/roslyn.all.dot.svg)
 
 As you can see, there a lot of tangled lines in the dependency diagram!
 
@@ -382,7 +382,7 @@ Click to see the full SVG file. Note that it is very big -- you will need to zoo
 
 And here's a sample of the one for the F# compiler, which is just as bad:
 
-[![](./fsharpCompiler_svg.png)](/assets/svg/fsharpCompiler.all.dot.svg)
+[![](./fsharpCompiler_svg.png)](assets/svg/fsharpCompiler.all.dot.svg)
 
 Each diagram lists all the top-level types found in the project. If there is a dependency from one type to another, it is shown by an arrow.
 The dependencies point from left to right where possible, so any arrows going from right to left implies that there is a cyclic dependency.
@@ -411,7 +411,7 @@ But in this case, for both systems, the dependency diagrams are really complicat
 Finally, I'd like to examine the use of cyclic dependencies in both codebases.
 
 I personally think that cyclic (or circular) dependencies are a major cause of complexity and should be eliminated or at least reduced to minimal levels.
-(If you want to know why I think they are bad, [read this post](/posts/cyclic-dependencies/)).
+(If you want to know why I think they are bad, [read this post](posts/cyclic-dependencies/)).
 
 Here are the cyclic dependency results for the three projects.
 
@@ -453,18 +453,18 @@ Why such a large difference between C# and F#?
 
 Here's a small part of the cycle diagram for the Roslyn C# analysis project (click to see the full SVG file):
 
-[![](./roslynCsharp_cycles1_svg.png)](/assets/svg/roslynCsharp.all.cycles.dot.svg)
+[![](./roslynCsharp_cycles1_svg.png)](assets/svg/roslynCsharp.all.cycles.dot.svg)
 
 You can see that the `CSharpSyntaxVisitor` is at the centre of most of the dependencies. There are arrows in both directions between it and each syntax node.
 True, many of them are generated from [syntax.xml](https://roslyn.codeplex.com/SourceControl/latest#Src/Compilers/CSharp/Source/Syntax/Syntax.xml), but they are still dependencies.
 
 If you zoom out a bit, you can see that the web of cyclic dependencies grows very large very quickly, showing a syntax tree with hundreds of classes.
 
-[![](./roslynCsharp_cycles2_svg.png)](/assets/svg/roslynCsharp.all.cycles.dot.svg)
+[![](./roslynCsharp_cycles2_svg.png)](assets/svg/roslynCsharp.all.cycles.dot.svg)
 
 In contrast, the F# code has no cycles at all. How does it manage this?
 
-First, in F#, if you do have mutual dependencies, you can often [refactor them away](/posts/removing-cyclic-dependencies/).
+First, in F#, if you do have mutual dependencies, you can often [refactor them away](posts/removing-cyclic-dependencies/).
 
 If that fails, you can just put all the related code in one module. It sounds obvious,
 but in an OO model it is hard to do without creating a [God object](https://en.wikipedia.org/wiki/God_object).
@@ -481,7 +481,7 @@ and you don't need to create a special visitor class.
 ## Conclusion
 
 I hope this analysis has been interesting to you. I think that the influence of the implementation language is clearly apparent,
-but the effect is not as strong as in [my previous analysis of C# and F# projects](/posts/cycles-and-modularity-in-the-wild/).
+but the effect is not as strong as in [my previous analysis of C# and F# projects](posts/cycles-and-modularity-in-the-wild/).
 Both projects are very large, and the complexity is very high, so it is hard to use something as crude as a dependency diagram to draw conclusions.
 
 I don't claim that this analysis is perfect, but I do think that it provides a useful starting point for further investigation and discussion.

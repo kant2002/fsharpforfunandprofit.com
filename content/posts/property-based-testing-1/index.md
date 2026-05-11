@@ -10,10 +10,10 @@ seriesOrder: 2
 ---
 
 
-*UPDATE: I did a talk on property-based testing based on these posts. [Slides and video here.](/pbt/)*
+*UPDATE: I did a talk on property-based testing based on these posts. [Slides and video here.](pbt/)*
 
 
-In [the previous post](/posts/property-based-testing/), I described the basics of property-based testing, and showed how it could save a lot of time by generating random tests.
+In [the previous post](posts/property-based-testing/), I described the basics of property-based testing, and showed how it could save a lot of time by generating random tests.
 
 But how does it actually work in detail? That's the topic of this post.
 
@@ -852,7 +852,7 @@ In this post I've introduced you to the basics of property-based checking.
 
 There's much more to cover though! In future posts I will cover topics such as:
 
-* **[How to come up with properties that apply to your code](/posts/property-based-testing-2)**. The properties don't have to be mathematical.
+* **[How to come up with properties that apply to your code](posts/property-based-testing-2)**. The properties don't have to be mathematical.
   We'll look at more general properties such as inverses (for testing serialization/deserialization), idempotence (for safe handling of multiple updates or duplicate messages),
   and also look at test oracles.
 * **How to create your own generators and shrinkers**. We've seen that FsCheck can generate random values nicely.

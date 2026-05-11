@@ -15,7 +15,7 @@ I will first present some general advice on troubleshooting and some of the most
 
 ## General guidelines for troubleshooting ##
 
-By far the most important thing you can do is to take the time and effort to understand exactly how F# works, especially the core concepts involving functions and the type system.  So please read and reread the series ["thinking functionally"](/series/thinking-functionally.html) and ["understanding F# types"](/series/understanding-fsharp-types.html), play with the examples, and get comfortable with the ideas before you try to start doing serious coding. If you don't understand how functions and types work, then the compiler errors will not make any sense.
+By far the most important thing you can do is to take the time and effort to understand exactly how F# works, especially the core concepts involving functions and the type system.  So please read and reread the series ["thinking functionally"](series/thinking-functionally.html) and ["understanding F# types"](series/understanding-fsharp-types.html), play with the examples, and get comfortable with the ideas before you try to start doing serious coding. If you don't understand how functions and types work, then the compiler errors will not make any sense.
 
 If you are coming from an imperative language such as C#, you may have developed some bad habits by relying on the debugger to find and fix incorrect code.   In F#, you will probably not get that far, because the compiler is so much stricter in many ways.  And of course, there is no tool to "debug" the compiler and step through its processing.  The best tool for debugging compiler errors is your brain, and F# forces you to use it!
 
@@ -59,7 +59,7 @@ Similarly the error for having too many arguments is typically "This value is no
 
 The "printf" family of functions is very strict in this respect. The argument count must be exact.
 
-This is a very important topic -- it is critical that you understand how partial application works. See the series ["thinking functionally"](/series/thinking-functionally.html) for a more detailed discussion.
+This is a very important topic -- it is critical that you understand how partial application works. See the series ["thinking functionally"](series/thinking-functionally.html) for a more detailed discussion.
 
 ### Use semicolons for list separators ###
 
@@ -138,7 +138,7 @@ let randomFn() =  r.Next()  //correct
 let randomFn   =  fun () -> r.Next()  //correct
 ```
 
-See the series ["thinking functionally"](/series/thinking-functionally.html) for more discussion of parameterless functions.
+See the series ["thinking functionally"](series/thinking-functionally.html) for more discussion of parameterless functions.
 
 ### Tips for troubleshooting "not enough information" errors ###
 

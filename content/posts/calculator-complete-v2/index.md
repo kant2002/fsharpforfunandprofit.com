@@ -10,10 +10,10 @@ seriesOrder: 4
 
 In this series of posts, I've been developing a simple pocket calculator app.
 
-In the [first post](/posts/calculator-design/), we completed a first draft of the design, using type-first development.
-and in the [second post](/posts/calculator-implementation/), we created an initial implementation.
+In the [first post](posts/calculator-design/), we completed a first draft of the design, using type-first development.
+and in the [second post](posts/calculator-implementation/), we created an initial implementation.
 
-In the [previous post](/posts/calculator-complete-v1/), we created the rest of the code, including the user interface, and attempted to use it.
+In the [previous post](posts/calculator-complete-v1/), we created the rest of the code, including the user interface, and attempted to use it.
 
 But the final result was unusable!  The problem wasn't that the code was buggy, it was that I didn't
 spend enough time thinking about the requirements before I started coding!
@@ -61,7 +61,7 @@ Well, I am a big proponent of using [finite state machines](https://en.wikipedia
 ("FSMs" -- not be confused with the [True FSM](https://en.wikipedia.org/wiki/Flying_Spaghetti_Monster)) where appropriate.
 It is amazing how often a program can be modelled as a state machine.
 
-What are the benefits of using state machines?  I'm going to repeat what I said in [another post](/posts/designing-with-types-representing-states/).
+What are the benefits of using state machines?  I'm going to repeat what I said in [another post](posts/designing-with-types-representing-states/).
 
 **Each state can have different allowable behavior.**
 In other words, a state machine forces you to think about context, and what options are available in that context.
