@@ -9,7 +9,7 @@ seriesOrder: 3
 
 ---
 
-This post is a continuation of the previous series on [low-risk and incremental ways to use F# at work](/posts/low-risk-ways-to-use-fsharp-at-work/) --
+This post is a continuation of the previous series on [low-risk and incremental ways to use F# at work](posts/low-risk-ways-to-use-fsharp-at-work/) --
 how can you get your hands dirty with F# in a low-risk, incremental way, without affecting any mission critical code?
 
 In this one, we'll talk about using F# for testing.
@@ -20,45 +20,45 @@ Before moving on to the content of the post, here's the full list of the twenty 
 
 **Part 1 - Using F# to explore and develop interactively**
 
-[1. Use F# to explore the .NET framework interactively](/posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively)\
-[2. Use F# to test your own code interactively](/posts/low-risk-ways-to-use-fsharp-at-work/#explore-own-code-interactively)\
-[3. Use F# to play with webservices interactively](/posts/low-risk-ways-to-use-fsharp-at-work/#explore-webservices-interactively)\
-[4. Use F# to play with UI's interactively](/posts/low-risk-ways-to-use-fsharp-at-work/#explore-winforms-interactively)
+[1. Use F# to explore the .NET framework interactively](posts/low-risk-ways-to-use-fsharp-at-work/#explore-net-interactively)\
+[2. Use F# to test your own code interactively](posts/low-risk-ways-to-use-fsharp-at-work/#explore-own-code-interactively)\
+[3. Use F# to play with webservices interactively](posts/low-risk-ways-to-use-fsharp-at-work/#explore-webservices-interactively)\
+[4. Use F# to play with UI's interactively](posts/low-risk-ways-to-use-fsharp-at-work/#explore-winforms-interactively)
 
 **Part 2 - Using F# for development and devops scripts**
 
-[5. Use FAKE for build and CI scripts](/posts/low-risk-ways-to-use-fsharp-at-work-2/#fake)\
-[6. An F# script to check that a website is responding](/posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-website-responding)\
-[7. An F# script to convert an RSS feed into CSV](/posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-rss-to-csv)\
-[8. An F# script that uses WMI to check the stats of a process](/posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-wmi-stats)\
-[9. Use F# for configuring and managing the cloud](/posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-cloud)
+[5. Use FAKE for build and CI scripts](posts/low-risk-ways-to-use-fsharp-at-work-2/#fake)\
+[6. An F# script to check that a website is responding](posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-website-responding)\
+[7. An F# script to convert an RSS feed into CSV](posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-rss-to-csv)\
+[8. An F# script that uses WMI to check the stats of a process](posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-wmi-stats)\
+[9. Use F# for configuring and managing the cloud](posts/low-risk-ways-to-use-fsharp-at-work-2/#dev-cloud)
 
 **Part 3 - Using F# for testing**
 
-[10. Use F# to write unit tests with readable names](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-nunit)\
-[11. Use F# to run unit tests programmatically](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-runner)\
-[12. Use F# to learn to write unit tests in other ways](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-other)\
-[13. Use FsCheck to write better unit tests](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-fscheck)\
-[14. Use FsCheck to create random dummy data](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-dummy)\
-[15. Use F# to create mocks](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-mock)\
-[16. Use F# to do automated browser testing](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-canopy)\
-[17. Use F# for Behaviour Driven Development](/posts/low-risk-ways-to-use-fsharp-at-work-3/#test-bdd)
+[10. Use F# to write unit tests with readable names](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-nunit)\
+[11. Use F# to run unit tests programmatically](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-runner)\
+[12. Use F# to learn to write unit tests in other ways](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-other)\
+[13. Use FsCheck to write better unit tests](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-fscheck)\
+[14. Use FsCheck to create random dummy data](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-dummy)\
+[15. Use F# to create mocks](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-mock)\
+[16. Use F# to do automated browser testing](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-canopy)\
+[17. Use F# for Behaviour Driven Development](posts/low-risk-ways-to-use-fsharp-at-work-3/#test-bdd)
 
 **Part 4 - Using F# for database related tasks**
 
-[18. Use F# to replace LINQpad](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-linqpad)\
-[19. Use F# to unit test stored procedures](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-testprocs)\
-[20. Use FsCheck to generate random database records](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-randomdata)\
-[21. Use F# to do simple ETL](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-etl)\
-[22. Use F# to generate SQL Agent scripts](/posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-sqlagent)
+[18. Use F# to replace LINQpad](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-linqpad)\
+[19. Use F# to unit test stored procedures](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-testprocs)\
+[20. Use FsCheck to generate random database records](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-randomdata)\
+[21. Use F# to do simple ETL](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-etl)\
+[22. Use F# to generate SQL Agent scripts](posts/low-risk-ways-to-use-fsharp-at-work-4/#sql-sqlagent)
 
 **Part 5 - Other interesting ways of using F#**
 
-[23. Use F# for parsing](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-parsers)\
-[24. Use F# for diagramming and visualization](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-diagramming)\
-[25. Use F# for accessing web-based data stores](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-data-access)\
-[26. Use F# for data science and machine learning](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-data-science)\
-[(BONUS) 27: Balance the generation schedule for the UK power station fleet](/posts/low-risk-ways-to-use-fsharp-at-work-5/#other-balance-power)
+[23. Use F# for parsing](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-parsers)\
+[24. Use F# for diagramming and visualization](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-diagramming)\
+[25. Use F# for accessing web-based data stores](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-data-access)\
+[26. Use F# for data science and machine learning](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-data-science)\
+[(BONUS) 27: Balance the generation schedule for the UK power station fleet](posts/low-risk-ways-to-use-fsharp-at-work-5/#other-balance-power)
 
 
 ----------
@@ -468,7 +468,7 @@ But even in Boring Line-Of-Business Applications™, you may find that property 
   Similarly, if you serialize and then deserialize something, you should get the original thing back.
 * **Invariants**. If you add products to a sales order, the sum of the individual lines should be the same as the order total.
   Or, the sum of word counts for each page should be the sum of the word count for the entire book.
-  More generally, if you calculate things via two different paths, you should get the same answer ([monoid homomorphisms!](/posts/monoids-part2/#monoid-homomorphism))
+  More generally, if you calculate things via two different paths, you should get the same answer ([monoid homomorphisms!](posts/monoids-part2/#monoid-homomorphism))
 * **Rounding**. If you add ingredients to a recipe, the sum of the ingredient percentages (with 2 place precision) should always be exactly 100%.
   Similar rules are needed for most partitioning logic, such as shares, tax calculations, etc.
   (e.g. [the "share pie" example in the DDD book](http://books.google.co.uk/books?id=xColAAPGubgC&pg=PA198&lpg=PA198&dq=%22domain+driven+design%22+%22share+pie%22&source=bl&ots=q9-HdfTK4p&sig=IUnHGFUdwQv2p0tuWVbrqqwdAk4&hl=en&sa=X&ei=IdFbU5bLK8SMOPLFgfgC&ved=0CC8Q6AEwAA#v=onepage&q=%22domain%20driven%20design%22%20%22share%20pie%22&f=false)).
@@ -483,7 +483,7 @@ Some more links for FsCheck:
 * I have written [an introduction to property-based testing](http://fsharpforfunandprofit.com/posts/property-based-testing/) and [a follow up on choosing properties for property-based testing](http://fsharpforfunandprofit.com/posts/property-based-testing-2/).
 * [FsCheck documentation](http://github.com/fsharp/FsCheck/blob/master/Docs/Documentation.md).
 * [An article on using FsCheck in practice](http://www.clear-lines.com/blog/post/FsCheck-and-XUnit-is-The-Bomb.aspx).
-* [My post on the Roman Numerals kata that mentions FsCheck](/posts/roman-numeral-kata/).
+* [My post on the Roman Numerals kata that mentions FsCheck](posts/roman-numeral-kata/).
 
 
 For more on property-based testing in general, look for articles and videos about QuickCheck.

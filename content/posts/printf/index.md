@@ -67,7 +67,7 @@ Console.WriteLine("A string: {0}. An int: {1}","Hello") //FormatException
 
 The .NET formatting functions require all parameters to be passed in *at the same time*.
 
-But `printf` is a standard, well-behaved F# function, and so supports [partial application](/posts/partial-application).
+But `printf` is a standard, well-behaved F# function, and so supports [partial application](posts/partial-application).
 
 Here are some examples:
 
@@ -137,7 +137,7 @@ printfn "A string: %s An int: %i" "Hello"
 ```
 
 The reason, of course, is that this is not an error at all; `printf` is just being partially applied!
-See the [discussion of partial application](/posts/partial-application) if you are not clear of why this happens.
+See the [discussion of partial application](posts/partial-application) if you are not clear of why this happens.
 
 Another issue is that the "format strings" are not actually strings.
 
@@ -679,6 +679,6 @@ MyApplication2.test()
 
 ```
 
-The object-oriented approach, although more familiar, is not automatically better! The pros and cons of OO methods vs. pure functions are discussed [here](/posts/type-extensions/#downsides-of-methods).
+The object-oriented approach, although more familiar, is not automatically better! The pros and cons of OO methods vs. pure functions are discussed [here](posts/type-extensions/#downsides-of-methods).
 
 

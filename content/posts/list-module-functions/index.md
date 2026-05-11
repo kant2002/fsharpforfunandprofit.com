@@ -882,7 +882,7 @@ let reduceOptions =
 
 If you want to return the first element in the same way as `choose`, consider using `pick` (see [section 11](#11)).
 
-If you want to do a similar action as `choose` but for other wrapper types (such as a Success/Failure result), there is [a discussion here](/posts/elevated-world-5/).
+If you want to do a similar action as `choose` but for other wrapper types (such as a Success/Failure result), there is [a discussion here](posts/elevated-world-5/).
 
 {{< linktarget "13" >}}
 
@@ -1243,7 +1243,7 @@ These set of functions all return true or false.
 ## 17.	Transforming each element to something different
 
 I sometimes like to think of functional programming as "transformation-oriented programming", and `map` (aka `Select` in LINQ) is one of the most fundamental ingredients for this approach.
-In fact, I have devoted a whole series to it [here](/posts/elevated-world/).
+In fact, I have devoted a whole series to it [here](posts/elevated-world/).
 
 * [`map: mapping:('T -> 'U) -> list:'T list -> 'U list`](https://github.com/fsharp/fsharp/blob/4331dca3648598223204eed6bfad2b41096eec8a/src/fsharp/FSharp.Core/list.fsi#L419).
   Builds a new collection whose elements are the results of applying the given function to each of the elements of the collection.
@@ -2092,7 +2092,7 @@ addFourParams <!> [1;2;3] <*> [1;2;3] <*> [1;2;3] <*> [1;2;3]
 // Result = [4; 8; 12]
 ```
 
-If that seems like magic, see [this series](/posts/elevated-world/#lift) for a explanation of what this code is doing.
+If that seems like magic, see [this series](posts/elevated-world/#lift) for a explanation of what this code is doing.
 
 
 {{< linktarget "26" >}}

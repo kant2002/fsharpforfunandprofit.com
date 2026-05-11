@@ -8,13 +8,13 @@ seriesId: "Understanding Parser Combinators"
 seriesOrder: 4
 ---
 
-*UPDATE: [Slides and video from my talk on this topic](/parser/)*
+*UPDATE: [Slides and video from my talk on this topic](parser/)*
 
 In this series, we are looking at how applicative parsers and parser combinators work.
 
-* In the [first post](/posts/understanding-parser-combinators/), we created the foundations of a parsing library.
-* In the [second post](/posts/understanding-parser-combinators-2/), we built out the library with many other useful combinators.
-* In the [third post](/posts/understanding-parser-combinators-3/), we improved the error messages.
+* In the [first post](posts/understanding-parser-combinators/), we created the foundations of a parsing library.
+* In the [second post](posts/understanding-parser-combinators-2/), we built out the library with many other useful combinators.
+* In the [third post](posts/understanding-parser-combinators-3/), we improved the error messages.
 * In this last post, we'll use the library we've written to build a JSON parser.
 
 ----

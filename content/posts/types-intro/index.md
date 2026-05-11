@@ -8,7 +8,7 @@ seriesId: "Understanding F# types"
 seriesOrder: 1
 ---
 
-*NOTE: Before reading this series, I suggest that you read the ["thinking functionally"](/series/thinking-functionally.html) and ["expressions and syntax"](/series/expressions-and-syntax.html) series as a prerequisite.*
+*NOTE: Before reading this series, I suggest that you read the ["thinking functionally"](series/thinking-functionally.html) and ["expressions and syntax"](series/expressions-and-syntax.html) series as a prerequisite.*
 
 
 F# is not just about functions; the powerful type system is another key ingredient.  And just as with functions, understanding the type system is critical to being fluent and comfortable in the language.

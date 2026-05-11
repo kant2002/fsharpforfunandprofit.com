@@ -235,7 +235,7 @@ printfn "h1=h2 is %b" (h1=h2)  // h1=h2 is true
 
 ### Record representation
 
-As noted in a [previous post](/posts/convenience-types/), records have a nice default string representation, and can be serialized easily. The default `ToString()` implementation uses this same representation.
+As noted in a [previous post](posts/convenience-types/), records have a nice default string representation, and can be serialized easily. The default `ToString()` implementation uses this same representation.
 
 ```fsharp {src=#print1}
 let p = {First="Alice"; Last="Jones"}

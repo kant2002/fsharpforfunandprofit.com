@@ -6,7 +6,7 @@ date: 2015-06-30
 categories: ["DDD"]
 ---
 
-In my talk on [functional DDD](/ddd/), I often use this slide (*[in context](http://www.slideshare.net/ScottWlaschin/ddd-with-fsharptypesystemlondonndc2013/45)*):
+In my talk on [functional DDD](ddd/), I often use this slide (*[in context](http://www.slideshare.net/ScottWlaschin/ddd-with-fsharptypesystemlondonndc2013/45)*):
 
 ![We don't need no stinking UML diagrams](./no-uml-diagrams.jpg)
 

@@ -10,10 +10,10 @@ seriesOrder: 5
 
 In this series, we looked at six different approaches to dependency injection.
 
-* In the [first post](/posts/dependencies/), we looked at "dependency retention" (inlining the dependencies) and "dependency rejection", or keeping I/O at the edges of your implementation.
-* In the [second post](/posts/dependencies-2/), we looked at injecting dependencies using standard function parameters.
-* In the [third post](/posts/dependencies-3/), we looked at dependency handling using classic OO-style dependency injection and the FP equivalent: the Reader monad.
-* In the [fourth post](/posts/dependencies-4/), we looked at avoiding dependencies altogether by using the interpreter pattern.
+* In the [first post](posts/dependencies/), we looked at "dependency retention" (inlining the dependencies) and "dependency rejection", or keeping I/O at the edges of your implementation.
+* In the [second post](posts/dependencies-2/), we looked at injecting dependencies using standard function parameters.
+* In the [third post](posts/dependencies-3/), we looked at dependency handling using classic OO-style dependency injection and the FP equivalent: the Reader monad.
+* In the [fourth post](posts/dependencies-4/), we looked at avoiding dependencies altogether by using the interpreter pattern.
 
 In this final post, we'll implement some simple requirements using all six approaches, so that you can see the differences. I won't explain what's going on in detail. For that, you should read the earlier posts.
 
@@ -125,11 +125,11 @@ let updateCustomerProfile (newProfile:Profile) =
     }
 ```
 
-As we discussed in the [first post](/posts/dependencies/#approach-1-dependency-retention), I think this approach is fine *if* it is for a small script *or* if it is used to quickly assemble a prototype or sketch. But this code is very hard to test properly, and if it gets more complicated, I would strongly recommend refactoring to separate the pure code from the impure code -- the "dependency rejection" approach.
+As we discussed in the [first post](posts/dependencies/#approach-1-dependency-retention), I think this approach is fine *if* it is for a small script *or* if it is used to quickly assemble a prototype or sketch. But this code is very hard to test properly, and if it gets more complicated, I would strongly recommend refactoring to separate the pure code from the impure code -- the "dependency rejection" approach.
 
 ## Approach #2: Dependency rejection
 
-When I [discussed "dependency rejection" in an earlier post](/posts/dependencies/#approach-2-dependency-rejection), I used this diagram to show the end goal: separating pure, deterministic code from impure, non-deterministic code.
+When I [discussed "dependency rejection" in an earlier post](posts/dependencies/#approach-2-dependency-rejection), I used this diagram to show the end goal: separating pure, deterministic code from impure, non-deterministic code.
 
 ![](../dependencies/Dependencies2a.jpg)
 
@@ -306,7 +306,7 @@ The upside is that the method call itself is simpler. The downside is that the m
 ## Approach #4b: Reader monad
 
 The FP equivalent of delaying the injection of dependencies is the `Reader` type and its associated tools, such as the `reader` computation expression.
-For more discussion on the Reader monad, see the [earlier post](/posts/dependencies-3/).
+For more discussion on the Reader monad, see the [earlier post](posts/dependencies-3/).
 
 Here's the pure part of the code written to return a `Reader` containing the `ILogger` as its environment.
 
@@ -428,12 +428,12 @@ let updateCustomerProfile (newProfile:Profile) =
 
 ## Approach #5: Dependency interpretation
 
-To finish up, we'll look at applying the interpreter approach as discussed in the [previous post](/posts/dependencies-4).
+To finish up, we'll look at applying the interpreter approach as discussed in the [previous post](posts/dependencies-4).
 
 To write the program, we will need to:
 
 * Define the instruction sets we want to use. These will be data structures, not functions.
-* Implement `IInstruction` for each of these instruction sets so it can be used with the generic ["Program" library that we defined in the previous post](/posts/dependencies-4/#a-modular-approach-to-handling-multiple-instruction-sets).
+* Implement `IInstruction` for each of these instruction sets so it can be used with the generic ["Program" library that we defined in the previous post](posts/dependencies-4/#a-modular-approach-to-handling-multiple-instruction-sets).
 * Create some helper functions to make it easier to create instructions
 * And then we can write the code using the `program` computation expression
 
@@ -718,7 +718,7 @@ let updateCustomerProfileApi (newProfile:Profile) =
 
 ### Review of the interpreter approach
 
-As we saw in the [previous post](/posts/dependencies-4), and as we see here, the interpreter approach results in very clean code where all the dependencies are hidden. All the nastiness of dealing with IO and stacked multiple effects (e.g. `Async` wrapping `Result`) is gone, or rather, pushed to the interpreter.
+As we saw in the [previous post](posts/dependencies-4), and as we see here, the interpreter approach results in very clean code where all the dependencies are hidden. All the nastiness of dealing with IO and stacked multiple effects (e.g. `Async` wrapping `Result`) is gone, or rather, pushed to the interpreter.
 
 But getting to that clean code was a lot of extra work. For this program we needed only five instructions, yet we had to write around 100 extra lines of code to support them! And that was the simple version of the interpreter, dealing with only one kind of effect, AsyncResult. Furthermore, in practice, you might also need to [avoid stack overflows by adding trampolines](https://johnazariah.github.io/2020/12/07/bouncing-around-with-recursion.html#trampolines), which makes the code even more complicated. In general, I would say that is way too much effort for most situations.
 

@@ -3,7 +3,7 @@ layout: series_index
 title: "The 'Why use F#' series"
 seriesIndexId: "Why use F#?"
 seriesIndexOrder : 1
-permalink: /series/why-use-fsharp.html
+aliases: [/series/why-use-fsharp.html]
 date: 2020-01-01
 ---
 

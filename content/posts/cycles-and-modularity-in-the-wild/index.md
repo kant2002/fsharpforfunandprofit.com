@@ -11,12 +11,12 @@ image: "/posts/cycles-and-modularity-in-the-wild/specflow_svg.png"
 
 (*Updated 2013-06-15. See comments at the end of the post*)
 
-(*Updated 2014-04-12. A [follow up post](/posts/roslyn-vs-fsharp-compiler/) that applies the same analysis to Roslyn*)
+(*Updated 2014-04-12. A [follow up post](posts/roslyn-vs-fsharp-compiler/) that applies the same analysis to Roslyn*)
 
 (*Updated 2015-01-23. A much clearer version of this analysis [has been done by Evelina Gabasova](http://evelinag.com/blog/2014/06-09-comparing-dependency-networks/).
 She knows what she is talking about, so I highly recommend you read her post first!*)
 
-This is a follow up post to two earlier posts on [module organization](/posts/recipe-part3/) and [cyclic dependencies](/posts/cyclic-dependencies/).
+This is a follow up post to two earlier posts on [module organization](posts/recipe-part3/) and [cyclic dependencies](posts/cyclic-dependencies/).
 
 I thought it would be interesting to look at some real projects written in C# and F#, and see how they compare in modularity and number of cyclic dependencies.
 
@@ -289,11 +289,11 @@ Having compared the type counts to the code size, let's now compare them to each
 Again, there is a significant difference. For each unit of modularity in C# there are an average of 1.1 authored types. But in F# the average is 1.9, and for some projects a lot more than that.
 
 Of course, creating nested types is trivial in F#, and quite uncommon in C#, so you could argue that this is not a fair comparison.
-But surely the ability to create [a dozen types in as many lines](/posts/conciseness-type-definitions/) of F# has some effect on the quality of the design?
+But surely the ability to create [a dozen types in as many lines](posts/conciseness-type-definitions/) of F# has some effect on the quality of the design?
 This is harder to do in C#, but there is nothing to stop you. So might this not mean that there is a temptation in C# to not be as fine-grained as you could potentially be?
 
 The project with the highest ratio (4.9) is my F# business application. I believe that this is due to this being only F# project in this list which is designed around a specific business domain,
-I created many "little" types to model the domain accurately, using the concepts [described here](/series/designing-with-types.html). For other projects created using DDD principles,
+I created many "little" types to model the domain accurately, using the concepts [described here](series/designing-with-types.html). For other projects created using DDD principles,
 I would expect to see this same high number.
 
 ## Dependencies
@@ -417,15 +417,15 @@ It might be useful to look at the dependency diagrams now.  These are SVG files,
 
 Note that most of these diagrams are very big -- so after you open them you will need to zoom out quite a bit in order to see anything!
 
-Let's start by comparing the diagrams for [SpecFlow](/assets/svg/specFlow.all.dot.svg) and [TickSpec](/assets/svg/tickSpec.all.dot.svg).
+Let's start by comparing the diagrams for [SpecFlow](assets/svg/specFlow.all.dot.svg) and [TickSpec](assets/svg/tickSpec.all.dot.svg).
 
 Here's the one for SpecFlow:
 
-[![](./specflow_svg.png)](/assets/svg/specFlow.all.dot.svg)
+[![](./specflow_svg.png)](assets/svg/specFlow.all.dot.svg)
 
 Here's the one for TickSpec:
 
-[![](./tickspec_svg.png)](/assets/svg/tickSpec.all.dot.svg)
+[![](./tickspec_svg.png)](assets/svg/tickSpec.all.dot.svg)
 
 Each diagram lists all the top-level types found in the project. If there is a dependency from one type to another, it is shown by an arrow.
 The dependencies point from left to right where possible, so any arrows going from right to left implies that there is a cyclic dependency.
@@ -441,25 +441,25 @@ The TickSpec diagram is a lot simpler than the SpecFlow one. Is that because Tic
 
 The answer is no, I don't think that it has anything to do with the size of the feature set at all, but rather because the code is organized differently.
 
-Looking at the SpecFlow classes ([dotfile](/assets/svg/specFlow.all.dot)), we can see it follows good OOD and TDD practices by creating interfaces.
+Looking at the SpecFlow classes ([dotfile](assets/svg/specFlow.all.dot)), we can see it follows good OOD and TDD practices by creating interfaces.
 There's a `TestRunnerManager` and an `ITestRunnerManager`, for example.
 And there are many other patterns that commonly crop up in OOD: "listener" classes and interfaces, "provider" classes and interfaces, "comparer" classes and interfaces, and so on.
 
-But if we look at the TickSpec modules ([dotfile](/assets/svg/tickSpec.all.dot)) there are no interfaces at all. And no "listeners", "providers" or "comparers" either.
+But if we look at the TickSpec modules ([dotfile](assets/svg/tickSpec.all.dot)) there are no interfaces at all. And no "listeners", "providers" or "comparers" either.
 There might well be a need for such things in the code, but either they are not exposed outside their module, or more likely, the role they play is fulfilled by functions rather than types.
 
 I'm not picking on the SpecFlow code, by the way. It seems well designed, and is a very useful library, but I think it does highlight some of the differences between OO design and functional design.
 
 ### Moq compared with Foq
 
-Let's also compare the diagrams for [Moq](/assets/svg/moq.all.dot.svg) and [Foq](/assets/svg/foq.all.dot.svg). These two projects do roughly the same thing, so the code should be comparable.
+Let's also compare the diagrams for [Moq](assets/svg/moq.all.dot.svg) and [Foq](assets/svg/foq.all.dot.svg). These two projects do roughly the same thing, so the code should be comparable.
 
 As before, the project written in F# has a much smaller dependency diagram.
 
-Looking at the Moq classes ([dotfile](/assets/svg/moq.all.dot)), we can see it includes the "Castle" library, which I didn't eliminate from the analysis.
+Looking at the Moq classes ([dotfile](assets/svg/moq.all.dot)), we can see it includes the "Castle" library, which I didn't eliminate from the analysis.
 Out of the 249 classes with dependencies, only 66 are Moq specific. If we had considered only the classes in the Moq namespace, we might have had a cleaner diagram.
 
-On the other hand, looking at the Foq modules ([dotfile](/assets/svg/foq.all.dot)) there are only 23 modules with dependencies, fewer even than just the Moq classes alone.
+On the other hand, looking at the Foq modules ([dotfile](assets/svg/foq.all.dot)) there are only 23 modules with dependencies, fewer even than just the Moq classes alone.
 
 So something is very different with code organization in F#.
 
@@ -469,7 +469,7 @@ The FParsec project is an interesting natural experiment.  The project has two a
 
 It is a bit unfair to compare them directly, because the C# code is designed for parsing fast, while the F# code is more high level. But... I'm going to be unfair and compare them anyway!
 
-Here are the diagrams for the F# assembly ["FParsec"](/assets/svg/fParsec.all.dot.svg) and C# assembly ["FParsecCS"](/assets/svg/fparsecCS.all.dot.svg).
+Here are the diagrams for the F# assembly ["FParsec"](assets/svg/fParsec.all.dot.svg) and C# assembly ["FParsecCS"](assets/svg/fparsecCS.all.dot.svg).
 
 They are both nice and clear. Lovely code!
 
@@ -496,7 +496,7 @@ Whether the F# approach is better or worse depends on your preference. It does m
 
 ## Cyclic dependencies
 
-Finally, we can turn our attention to the oh-so-evil cyclic dependencies. (If you want to know why they are bad, [read this post](/posts/cyclic-dependencies/) ).
+Finally, we can turn our attention to the oh-so-evil cyclic dependencies. (If you want to know why they are bad, [read this post](posts/cyclic-dependencies/) ).
 
 Here are the cyclic dependency results for the C# projects.
 

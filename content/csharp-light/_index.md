@@ -158,11 +158,11 @@ Doing something
 Disposed
 ```
 
-In F#, these are actually called ["object expressions"](/posts/object-expressions/).
+In F#, these are actually called ["object expressions"](posts/object-expressions/).
 
 ## Allow subclasses to be merged into a single "case" class
 
-In F#, these are called ["discriminated unions"](/posts/discriminated-unions/) and they are one of the
+In F#, these are called ["discriminated unions"](posts/discriminated-unions/) and they are one of the
 best things about F#.
 
 Here's the C# light version:
@@ -234,10 +234,10 @@ printPayment card
 The F# code for these examples is available on [.Net Fiddle here](https://dotnetfiddle.net/K1zs3W).
 Do play with them to convince yourself that F# really does fulfill all the promises of C# Light!
 
-If you want to see more about F#, [this page](/site-contents/) is a good starting point for browsing this site.
+If you want to see more about F#, [this page](site-contents/) is a good starting point for browsing this site.
 Or visit [fsharp.org](http://fsharp.org) for more about F# in general.
 
-And for more about the power of F# types, check out my slide show on "Domain Driven Design with F# types", below. And there is more DDD stuff [here](/ddd/).
+And for more about the power of F# types, check out my slide show on "Domain Driven Design with F# types", below. And there is more DDD stuff [here](ddd/).
 
 {{< speakerdeck "96b632008eb6013146041a945ae20cc0" >}}
 

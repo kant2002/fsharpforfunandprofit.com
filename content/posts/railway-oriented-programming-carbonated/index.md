@@ -6,7 +6,7 @@ date: 2013-06-22
 categories: []
 ---
 
-As a follow up to the [Railway Oriented Programming](/posts/recipe-part2/) post, I thought I'd apply the same technique to the [FizzBuzz](http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) problem,
+As a follow up to the [Railway Oriented Programming](posts/recipe-part2/) post, I thought I'd apply the same technique to the [FizzBuzz](http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) problem,
 and compare it with other implementations.
 
 A large part of this post was directly ~~stolen from~~ inspired by [Dave Fayram's post on FizzBuzz](http://dave.fayr.am/posts/2012-10-4-finding-fizzbuzz.html), with some additional ideas from
@@ -427,7 +427,7 @@ Hint: try an empty list of rules.
 ## FizzBuzz: The railway oriented version
 
 The pipeline version is a perfectly adequate functional implementation of FizzBuzz, but for fun, let's see if we can use the "two-track" design described
-in the [railway oriented programming](/posts/recipe-part2/) post.
+in the [railway oriented programming](posts/recipe-part2/) post.
 
 As a quick reminder, in "railway oriented programming" (a.k.a the "Either" monad), we define a union type with two cases: "Success" and "Failure", each representing a different "track".
 We then connect a set of "two-track" functions together to make the railway.
@@ -692,7 +692,7 @@ There are some problems with the version we have so far:
 As it happens, we can kill two birds with one stone and address both of these issues at once.
 
 Instead of combining all the "switch" functions in *series*, we can "add" them together in *parallel*.
-In the [railway oriented programming](/posts/recipe-part2/) post, we used this technique for combining validation functions.
+In the [railway oriented programming](posts/recipe-part2/) post, we used this technique for combining validation functions.
 For FizzBuzz we are going to use it for doing all the factors at once.
 
 The trick is to define a "append" or "concat" function for combining two functions. Once we can add two functions this way, we can continue and add as many as we like.
@@ -825,7 +825,7 @@ You can see the difference if you compare the pipeline version of `carbonate` wi
 
 In other situations, of course, the railway oriented approach might not work, and the pipeline approach might be better. I hope this post has given some useful insight into both.
 
-*If you're a FizzBuzz fan, check out the [Functional Reactive Programming](/posts/concurrency-reactive/) page, which has yet another variant of the problem.*
+*If you're a FizzBuzz fan, check out the [Functional Reactive Programming](posts/concurrency-reactive/) page, which has yet another variant of the problem.*
 
 ## Postscript: Be careful when using List.reduce
 

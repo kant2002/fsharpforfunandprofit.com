@@ -92,7 +92,7 @@ The more interesting and high-level ones can be grouped as follows:
 * Computation expressions such as `async {..}`
 * Expressions related to object-oriented code, including casts, interfaces, etc
 
-We have already discussed lambdas in the ["thinking functionally"](/series/thinking-functionally.html) series, and as noted earlier, computation expressions and object-oriented expressions will be left to later series.
+We have already discussed lambdas in the ["thinking functionally"](series/thinking-functionally.html) series, and as noted earlier, computation expressions and object-oriented expressions will be left to later series.
 
 So, in upcoming posts in this series, we will focus on "control flow" expressions and "let" expressions.
 
@@ -104,9 +104,9 @@ In fact, it is not even helpful to think of "control flow" in a functional langu
 
 There will be some upcoming posts on these different types of control flow expressions:
 
-* [The match expression](/posts/match-expression)
-* [Imperative control flow: if-then-else and for loops](/posts/control-flow-expressions)
-* [Exceptions](/posts/exceptions)
+* [The match expression](posts/match-expression)
+* [Imperative control flow: if-then-else and for loops](posts/control-flow-expressions)
+* [Exceptions](posts/exceptions)
 
 ### "let" bindings as expressions
 
@@ -116,7 +116,7 @@ What about `let x=something`? In the examples above we saw:
 let x6 = let n=1 in n+2
 ```
 
-How can "`let`" be an expression? The reason will be discussed in the next post on ["let", "use" and "do"](/posts/let-use-do).
+How can "`let`" be an expression? The reason will be discussed in the next post on ["let", "use" and "do"](posts/let-use-do).
 
 ## General tips for using expressions
 

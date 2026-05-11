@@ -28,11 +28,11 @@ How can we work with this? The obvious solution is to have a separate stage to c
 
 In this way, we can hide the messiness of the real world from the core of the application. This "keep your model pure" approach is similar to the ["Hexagonal Architecture"](http://alistair.cockburn.us/Hexagonal+architecture) concept in the large, or the MVC pattern in the small.
 
-In this post and the [next](/posts/roman-numerals), we'll see some simple examples of this.
+In this post and the [next](posts/roman-numerals), we'll see some simple examples of this.
 
 ## Example: parsing a command line
 
-We talked about the match expression in general in the [previous post](/posts/match-expression), so let's look at a real example where it is useful, namely parsing a command line.
+We talked about the match expression in general in the [previous post](posts/match-expression), so let's look at a real example where it is useful, namely parsing a command line.
 
 We'll design and implement two slightly different versions, one with a basic internal model, and second one with some improvements.
 

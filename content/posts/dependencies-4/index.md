@@ -11,11 +11,11 @@ seriesOrder: 4
 
 In this series, we are looking at six different approaches to dependency injection.
 
-* In the [first post](/posts/dependencies/), we looked at "dependency retention" (inlining the dependencies) and "dependency rejection" (keeping I/O at the edges of your implementation).
-* In the [second post](/posts/dependencies-2/), we looked at injecting dependencies using standard function parameters.
-* In the [third post](/posts/dependencies-3/), we looked at dependency handling using classic OO-style dependency injection and the FP equivalent: the Reader monad.
+* In the [first post](posts/dependencies/), we looked at "dependency retention" (inlining the dependencies) and "dependency rejection" (keeping I/O at the edges of your implementation).
+* In the [second post](posts/dependencies-2/), we looked at injecting dependencies using standard function parameters.
+* In the [third post](posts/dependencies-3/), we looked at dependency handling using classic OO-style dependency injection and the FP equivalent: the Reader monad.
 * In this post, we'll look at avoiding dependencies altogether by using the interpreter pattern.
-* In the [next post](/posts/dependencies-5/), we'll revisit all the techniques discussed and apply them to a new example.
+* In the [next post](posts/dependencies-5/), we'll revisit all the techniques discussed and apply them to a new example.
 
 The examples in this post build on the examples in previous posts, so please read them first.
 
@@ -24,7 +24,7 @@ The examples in this post build on the examples in previous posts, so please rea
 
 ## Dependency interpretation
 
-In the ["dependency rejection" approach](/posts/dependencies/) we showed how to return a data structure (typically a "choice" type) that represented a decision. The last segment of the pipeline would then do various I/O actions based on the choice provided. This kept the core code pure and pushed all I/O to the edges.
+In the ["dependency rejection" approach](posts/dependencies/) we showed how to return a data structure (typically a "choice" type) that represented a decision. The last segment of the pipeline would then do various I/O actions based on the choice provided. This kept the core code pure and pushed all I/O to the edges.
 
 We can take this approach further and extend it to cover *all* I/O. Instead of performing the I/O directly, we will return a data structure that will act as instructions to do various I/O actions later.
 
@@ -142,7 +142,7 @@ And it does! You can try it yourself using the code in the gist linked at the bo
 
 The `readFromConsole` implementation above is hard to write and ugly to look at. Can we make it easier to write and read this kind of code?
 
-Yes, we can. The series of continuations at the end of each line (`fun ... -> ...`) is [exactly the problem that computation expressions were designed to solve](/posts/computation-expressions-intro/)!
+Yes, we can. The series of continuations at the end of each line (`fun ... -> ...`) is [exactly the problem that computation expressions were designed to solve](posts/computation-expressions-intro/)!
 
 So let's now build a computation expression for these instructions.
 First we need to implement a `bind` function. It can be created mechanically using the following rules:
@@ -309,7 +309,7 @@ let rec interpret program =
 
 ### Building the pipeline
 
-In the Reader approach from the [previous post](/posts/dependencies-3/), we broke our mini-application into three components:
+In the Reader approach from the [previous post](posts/dependencies-3/), we broke our mini-application into three components:
 
 * readFromConsole
 * compareTwoStrings
@@ -524,7 +524,7 @@ The advantage of this approach is that it is much more modular. We can write sub
 
 ## Further reading
 
-For another example of using the Interpreter approach, see [the last post in this series](/posts/dependencies-5/#approach-5-dependency-interpretation).
+For another example of using the Interpreter approach, see [the last post in this series](posts/dependencies-5/#approach-5-dependency-interpretation).
 
 The interpreter approach that I've used here is closely related to the "Free Monad" approach used in Haskell and FP-style Scala. The Free Monad is even more abstract, and uses more math-y jargon to name the cases in the `Program` type, namely "Free" and "Pure" instead of "Instruction" and "Stop". Nevertheless, I think it is worth spending some time understanding it, even if you rarely use it in practice.
 
@@ -542,7 +542,7 @@ But as always, there are tradeoffs.
 
 First, there is a lot of extra work. You have to define and interpret every possible I/O action that your workflow will need, which can be tedious. The number of operations can easily get out of hand if you are not careful. One advantage to [building your system out of small independent workflows](https://www.youtube.com/watch?v=USSkidmaS6w) is that the number of operations shouldn't be too high for any particular workflow.
 
-Second, it's a lot harder to understand what's going on if you are not already familiar with this approach. Unlike the ["dependency rejection"](/posts/dependencies/) and ["dependency parameterization"](/posts/dependencies-2/) techniques, which do not require any special knowledge, both the Reader and the Interpreter approaches demand quite a lot of expertise. And if you ever need to step through code in a debugger, the deeply nested continuations will really make things very complicated.
+Second, it's a lot harder to understand what's going on if you are not already familiar with this approach. Unlike the ["dependency rejection"](posts/dependencies/) and ["dependency parameterization"](posts/dependencies-2/) techniques, which do not require any special knowledge, both the Reader and the Interpreter approaches demand quite a lot of expertise. And if you ever need to step through code in a debugger, the deeply nested continuations will really make things very complicated.
 
 Next, as always, one of the downsides of computation expressions is that it is hard to mix and match them. For example, in the previous post, I mentioned that it would be tricky to mix the `Reader` expressions with `Result` expressions and `Async` expressions. The interpreter approach alleviates this issue a little, as you never have to deal with things like `Async` in the main "program" code, and not even `Result` most of the time.  But even so, when you do need to deal with this problem, it can be painful.
 
@@ -551,7 +551,7 @@ Interpretation might be slow, use a lot of memory, trigger more garbage collecti
 
 So, to sum up, I would only recommend this approach if (a) you really care about separating I/O from the pure code (b) everyone on the team is familiar with this technique (c) you have the skills and know-how to deal with any performance issues that might arise.
 
-In the [next post](/posts/dependencies-5/), we'll revisit all the techniques discussed and apply them to a new example.
+In the [next post](posts/dependencies-5/), we'll revisit all the techniques discussed and apply them to a new example.
 
 *The source code for this post is available at [this gist](https://gist.github.com/swlaschin/1cdbed00d2095987e474d500caa9bd4d).*
 

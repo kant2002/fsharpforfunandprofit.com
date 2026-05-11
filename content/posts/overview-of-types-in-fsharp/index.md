@@ -52,12 +52,12 @@ If you are familiar with C#, you will know all the CLI types. They include:
 
 The F# specific types include:
 
-* 	[Function types](/posts/function-values-and-simple-values/) (not the same as delegates or C# lambdas)
-* 	[The unit type](/posts/how-types-work-with-functions/#unit-type)
-* 	[Tuples](/posts/tuples/)
-* 	[Records](/posts/records/)
-* 	[Discriminated Unions](/posts/discriminated-unions/)
-* 	[Option types](/posts/the-option-type/)
+* 	[Function types](posts/function-values-and-simple-values/) (not the same as delegates or C# lambdas)
+* 	[The unit type](posts/how-types-work-with-functions/#unit-type)
+* 	[Tuples](posts/tuples/)
+* 	[Records](posts/records/)
+* 	[Discriminated Unions](posts/discriminated-unions/)
+* 	[Option types](posts/the-option-type/)
 * 	Lists (not the same as the .NET List class)
 
 I strongly recommend that when creating new types you stick with the F# specific types rather than using classes. They have a number of advantages over the CLI types, such as:
@@ -98,7 +98,7 @@ type MyClass(initX:int) =
    member this.Method() = printf "x=%i" x
 ```
 
-As we said in a [previous post](/posts/function-signatures/), there is a special syntax for defining new types that is different from the normal expression syntax. So do be aware of this difference.
+As we said in a [previous post](posts/function-signatures/), there is a special syntax for defining new types that is different from the normal expression syntax. So do be aware of this difference.
 
 Types can *only* be declared in namespaces or modules. But that doesn't mean you always have to create them at the top level -- you can create types in nested modules if you need to hide them.
 

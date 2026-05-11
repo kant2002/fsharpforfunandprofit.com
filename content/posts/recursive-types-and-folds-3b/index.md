@@ -10,7 +10,7 @@ categories: [Folds, Patterns]
 
 This post is the sixth in a series.
 
-In the [previous post](/posts/recursive-types-and-folds-3/), we briefly looked at some generic types.
+In the [previous post](posts/recursive-types-and-folds-3/), we briefly looked at some generic types.
 
 In this post, we'll do some deeper dives into some real-world examples of using trees and folds.
 
@@ -19,41 +19,41 @@ In this post, we'll do some deeper dives into some real-world examples of using 
 Here's the contents of this series:
 
 * **Part 1: Introduction to recursive types and catamorphisms**
-  * [A simple recursive type](/posts/recursive-types-and-folds/#basic-recursive-type)
-  * [Parameterize all the things](/posts/recursive-types-and-folds/#parameterize)
-  * [Introducing catamorphisms](/posts/recursive-types-and-folds/#catamorphisms)
-  * [Benefits of catamorphisms](/posts/recursive-types-and-folds/#benefits)
-  * [Rules for creating a catamorphism](/posts/recursive-types-and-folds/#rules)
+  * [A simple recursive type](posts/recursive-types-and-folds/#basic-recursive-type)
+  * [Parameterize all the things](posts/recursive-types-and-folds/#parameterize)
+  * [Introducing catamorphisms](posts/recursive-types-and-folds/#catamorphisms)
+  * [Benefits of catamorphisms](posts/recursive-types-and-folds/#benefits)
+  * [Rules for creating a catamorphism](posts/recursive-types-and-folds/#rules)
 * **Part 2: Catamorphism examples**
-  * [Catamorphism example: File system domain](/posts/recursive-types-and-folds-1b/#file-system)
-  * [Catamorphism example: Product domain](/posts/recursive-types-and-folds-1b/#product)
+  * [Catamorphism example: File system domain](posts/recursive-types-and-folds-1b/#file-system)
+  * [Catamorphism example: Product domain](posts/recursive-types-and-folds-1b/#product)
 * **Part 3: Introducing folds**
-  * [A flaw in our catamorphism implementation](/posts/recursive-types-and-folds-2/#flaw)
-  * [Introducing `fold`](/posts/recursive-types-and-folds-2/#fold)
-  * [Problems with fold](/posts/recursive-types-and-folds-2/#problems)
-  * [Using functions as accumulators](/posts/recursive-types-and-folds-2/#functions)
-  * [Introducing `foldback`](/posts/recursive-types-and-folds-2/#foldback)
-  * [Rules for creating a fold](/posts/recursive-types-and-folds-2/#rules)
+  * [A flaw in our catamorphism implementation](posts/recursive-types-and-folds-2/#flaw)
+  * [Introducing `fold`](posts/recursive-types-and-folds-2/#fold)
+  * [Problems with fold](posts/recursive-types-and-folds-2/#problems)
+  * [Using functions as accumulators](posts/recursive-types-and-folds-2/#functions)
+  * [Introducing `foldback`](posts/recursive-types-and-folds-2/#foldback)
+  * [Rules for creating a fold](posts/recursive-types-and-folds-2/#rules)
 * **Part 4: Understanding folds**
-  * [Iteration vs. recursion](/posts/recursive-types-and-folds-2b/#iteration)
-  * [Fold example: File system domain](/posts/recursive-types-and-folds-2b/#file-system)
-  * [Common questions about "fold"](/posts/recursive-types-and-folds-2b/#questions)
+  * [Iteration vs. recursion](posts/recursive-types-and-folds-2b/#iteration)
+  * [Fold example: File system domain](posts/recursive-types-and-folds-2b/#file-system)
+  * [Common questions about "fold"](posts/recursive-types-and-folds-2b/#questions)
 * **Part 5: Generic recursive types**
-  * [LinkedList: A generic recursive type](/posts/recursive-types-and-folds-3/#linkedlist)
-  * [Making the Gift domain generic](/posts/recursive-types-and-folds-3/#revisiting-gift)
-  * [Defining a generic Container type](/posts/recursive-types-and-folds-3/#container)
-  * [A third way to implement the gift domain](/posts/recursive-types-and-folds-3/#another-gift)
-  * [Abstract or concrete? Comparing the three designs](/posts/recursive-types-and-folds-3/#compare)
+  * [LinkedList: A generic recursive type](posts/recursive-types-and-folds-3/#linkedlist)
+  * [Making the Gift domain generic](posts/recursive-types-and-folds-3/#revisiting-gift)
+  * [Defining a generic Container type](posts/recursive-types-and-folds-3/#container)
+  * [A third way to implement the gift domain](posts/recursive-types-and-folds-3/#another-gift)
+  * [Abstract or concrete? Comparing the three designs](posts/recursive-types-and-folds-3/#compare)
 * **Part 6: Trees in the real world**
-  * [Defining a generic Tree type](/posts/recursive-types-and-folds-3b/#tree)
-  * [The Tree type in the real world](/posts/recursive-types-and-folds-3b/#reuse)
-  * [Mapping the Tree type](/posts/recursive-types-and-folds-3b/#map)
-  * [Example: Creating a directory listing](/posts/recursive-types-and-folds-3b/#listing)
-  * [Example: A parallel grep](/posts/recursive-types-and-folds-3b/#grep)
-  * [Example: Storing the file system in a database](/posts/recursive-types-and-folds-3b/#database)
-  * [Example: Serializing a Tree to JSON](/posts/recursive-types-and-folds-3b/#tojson)
-  * [Example: Deserializing a Tree from JSON](/posts/recursive-types-and-folds-3b/#fromjson)
-  * [Example: Deserializing a Tree from JSON - with error handling](/posts/recursive-types-and-folds-3b/#json-with-error-handling)
+  * [Defining a generic Tree type](posts/recursive-types-and-folds-3b/#tree)
+  * [The Tree type in the real world](posts/recursive-types-and-folds-3b/#reuse)
+  * [Mapping the Tree type](posts/recursive-types-and-folds-3b/#map)
+  * [Example: Creating a directory listing](posts/recursive-types-and-folds-3b/#listing)
+  * [Example: A parallel grep](posts/recursive-types-and-folds-3b/#grep)
+  * [Example: Storing the file system in a database](posts/recursive-types-and-folds-3b/#database)
+  * [Example: Serializing a Tree to JSON](posts/recursive-types-and-folds-3b/#tojson)
+  * [Example: Deserializing a Tree from JSON](posts/recursive-types-and-folds-3b/#fromjson)
+  * [Example: Deserializing a Tree from JSON - with error handling](posts/recursive-types-and-folds-3b/#json-with-error-handling)
 
 
 {{< linktarget "tree" >}}
@@ -1362,7 +1362,7 @@ type Result<'a> =
 ```
 
 I'm not going to explain how it works here.
-If you are not familiar with this approach, please [read my post](/posts/recipe-part2/) or [watch my talk](/rop/) on the topic of functional error handling.
+If you are not familiar with this approach, please [read my post](posts/recipe-part2/) or [watch my talk](rop/) on the topic of functional error handling.
 
 Let's revisit all the steps from the previous section, and use `Result` rather than throwing exceptions.
 
@@ -1422,7 +1422,7 @@ But this type is useless as it stands -- what we *really* want is to merge all t
 How can we transform a Tree of Results into a Result of Tree?
 
 The answer is to use a `sequence` function which "swaps" the two types.
-You can read much more about `sequence` in [my series on elevated worlds](/posts/elevated-world-4/#sequence).
+You can read much more about `sequence` in [my series on elevated worlds](posts/elevated-world-4/#sequence).
 
 *Note that we could also use the slightly more complicated `traverse` variant to combine the `map` and `sequence` into one step,
 but for the purposes of this demonstration, it's easier to understand if the steps are kept separate.*
@@ -1430,7 +1430,7 @@ but for the purposes of this demonstration, it's easier to understand if the ste
 We need to create our own `sequence` function for the Tree/Result combination. Luckily the creation of a sequence function
 is a mechanical process:
 
-* For the lower type (`Result`) we need to define `apply` and `return` functions. See [here for more details](/posts/elevated-world/#apply) on what `apply` means.
+* For the lower type (`Result`) we need to define `apply` and `return` functions. See [here for more details](posts/elevated-world/#apply) on what `apply` means.
 * For the higher type (`Tree`) we need to have a `cata` function, which we do.
 * In the catamorphism, each constructor of the higher type (`LeafNode` and `InternalNode` in this case) is replaced by an equivalent that is "lifted" to the `Result` type (e.g. `retn LeafNode <*> data`)
 
@@ -1509,7 +1509,7 @@ let strToCardMessage str =
 
 The case converter methods have to build a `Book` or `Chocolate` from parameters that are `Result`s rather than normal values. This is
 where lifting functions like `Result.lift2` can help.
-For details on how this works, see [this post on lifting](/posts/elevated-world/#lift) and [this one on validation with applicatives](/posts/elevated-world-3/#validation).
+For details on how this works, see [this post on lifting](posts/elevated-world/#lift) and [this one on validation with applicatives](posts/elevated-world-3/#validation).
 
 ```fsharp
 let bookFromDto (dto:GiftContentsDto) =
@@ -1591,7 +1591,7 @@ But changes are needed to work with the new error handling code:
 * The `fromJson` function returns a `Result<TreeDto>` but the next function in the pipeline (`dtoToTree`) expects a regular `TreeDto` as input.
 * Similarly `dtoToTree` returns a `Result<Tree>` but the next function in the pipeline (`dtoToGift`) expects a regular `Tree` as input.
 
-In both case, `Result.bind` can be used to solve that problem of mis-matched output/input. See [here for a more detailed discussion of bind](/posts/elevated-world-2/#bind).
+In both case, `Result.bind` can be used to solve that problem of mis-matched output/input. See [here for a more detailed discussion of bind](posts/elevated-world-2/#bind).
 
 Ok, let's try deserializing the `goodJson` string we created earlier.
 

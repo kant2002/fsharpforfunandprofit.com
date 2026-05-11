@@ -117,7 +117,7 @@ let p = {Person1.First="Alice"; Last="Jones"}
 //  ^Person1
 ```
 
-If needed, you can even add a fully qualified name (with namespace). Here's an example using [modules](/posts/organizing-functions/).
+If needed, you can even add a fully qualified name (with namespace). Here's an example using [modules](posts/organizing-functions/).
 
 ```fsharp {src=#namingConflicts4}
 module Module1 =
@@ -266,7 +266,7 @@ printfn "h1=h2 is %b" (h1=h2)  // h1=h2 is true
 
 ### Record representation
 
-As noted in a [previous post](/posts/convenience-types/), records have a nice default string representation, and can be serialized easily. The default `ToString()` implementation uses this same representation.
+As noted in a [previous post](posts/convenience-types/), records have a nice default string representation, and can be serialized easily. The default `ToString()` implementation uses this same representation.
 
 ```fsharp {src=#print1}
 let p = {First="Alice"; Last="Jones"}

@@ -14,7 +14,7 @@ In this post and the next, we'll look at the nearest F# equivalents to common C#
 
 ## Basic syntax conversion guidelines ##
 
-Before starting a port, you need to understand how F# syntax is different from C# syntax. This section presents some general guidelines for converting from one to another. (For a quick overview of F# syntax as a whole, see ["F# syntax in 60 seconds"](/posts/fsharp-in-60-seconds/))
+Before starting a port, you need to understand how F# syntax is different from C# syntax. This section presents some general guidelines for converting from one to another. (For a quick overview of F# syntax as a whole, see ["F# syntax in 60 seconds"](posts/fsharp-in-60-seconds/))
 
 ### Curly braces and indentation ###
 
@@ -25,7 +25,7 @@ Curly braces are used in F#, but not for blocks of code. Instead, you will see t
 * 	For definitions and usage of "record" types.
 * 	In conjunction with computation expressions, such as `seq` and `async`. In general, you will not be using these expressions for basic ports anyway.
 
-For details on the indentation rules, [see this post](/posts/fsharp-syntax).
+For details on the indentation rules, [see this post](posts/fsharp-syntax).
 
 ### Semicolons
 
@@ -60,7 +60,7 @@ let myFunc (x:int) (y:int) (z:int) :int = ... function body ...
 let myFunc x y z = ... function body ...
 ```
 
-Commas are generally only used for tuples, or for separating parameters when calling .NET library functions. (See [this post](/posts/defining-functions/#tuples) for more on tuples vs multiple parameters)
+Commas are generally only used for tuples, or for separating parameters when calling .NET library functions. (See [this post](posts/defining-functions/#tuples) for more on tuples vs multiple parameters)
 
 ### Defining variables, functions and types
 
@@ -115,7 +115,7 @@ variableName <> 43                // Comparison will return true.
 variableName != 43                // Error FS0020.
 ```
 
-If you accidentally use `!=` you will probably get an [error FS0020](/troubleshooting-fsharp/#FS0020).
+If you accidentally use `!=` you will probably get an [error FS0020](troubleshooting-fsharp/#FS0020).
 
 ## Conversion example #1
 
@@ -168,7 +168,7 @@ type myClassName() =
 
 Note that there are parentheses after the class name. These are required for class definitions.
 
-More complicated class definitions will be shown in the next example, and you read the [complete discussion of classes](/posts/classes/).
+More complicated class definitions will be shown in the next example, and you read the [complete discussion of classes](posts/classes/).
 
 ### Converting function/method signatures
 
@@ -325,11 +325,11 @@ let Square input =
 
 This is because F# is expression-based. Everything is an expression, and the value of a block expression as a whole is just the value of the last expression in the block.
 
-For more details on expression-oriented code, see ["expressions vs statements"](/posts/expressions-vs-statements/).
+For more details on expression-oriented code, see ["expressions vs statements"](posts/expressions-vs-statements/).
 
 ### Printing to the console
 
-To print output in C#, you generally use `Console.WriteLine` or similar. In F#, you generally use `printf` or similar, which is typesafe.  ([More details on using "printf" family](/posts/printf)).
+To print output in C#, you generally use `Console.WriteLine` or similar. In F#, you generally use `printf` or similar, which is typesafe.  ([More details on using "printf" family](posts/printf)).
 
 ### The complete port of example #1
 

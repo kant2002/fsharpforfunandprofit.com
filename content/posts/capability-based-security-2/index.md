@@ -9,9 +9,9 @@ categories: []
 image: "/posts/capability-based-security-2/auth_3.png"
 ---
 
-*UPDATE: [Slides and video from my talk on this topic](/cap/)*
+*UPDATE: [Slides and video from my talk on this topic](cap/)*
 
-In the [previous post](/posts/capability-based-security/), we started looking at "capabilities" as the basis for ensuring that code could not do any more than it was supposed to do.
+In the [previous post](posts/capability-based-security/), we started looking at "capabilities" as the basis for ensuring that code could not do any more than it was supposed to do.
 And I demonstrated this with a simple application that changed a configuration flag.
 
 In this post, we'll look at how to constrain capabilities based on the current user's identity and role.
@@ -61,7 +61,7 @@ public class CustomerDatabase
 *Note that I have deliberately added the `IPrincipal` to the method signature -- we are not allowing any "magic" where the principal is fetched from a global context.
 As with the use of any global, having implicit access hides the dependencies and makes it hard to test in isolation.*
 
-Here's the F# equivalent, using a [Success/Failure return value](/rop/) rather than throwing exceptions:
+Here's the F# equivalent, using a [Success/Failure return value](rop/) rather than throwing exceptions:
 
 ```fsharp
 let getCustomer id principal =
@@ -585,7 +585,7 @@ module Domain =
         | CapabilityRevoked
 ```
 
-The `FailureCase` type documents all possible things that can go wrong at the top-level of the application. See the ["Railway Oriented Programming" talk](/rop/) for more discussion on this.
+The `FailureCase` type documents all possible things that can go wrong at the top-level of the application. See the ["Railway Oriented Programming" talk](rop/) for more discussion on this.
 
 ### Defining the capabilities
 
@@ -621,7 +621,7 @@ module Capabilities =
         }
 ```
 
-This module references a `SuccessFailure` result type similar to the one [discussed here](/rop/), but which I won't show.
+This module references a `SuccessFailure` result type similar to the one [discussed here](rop/), but which I won't show.
 
 ### Implementing authentication
 
@@ -1073,7 +1073,7 @@ For example, a web service process may be operating at a high level of system au
 But we don't want to expose that to most of our code. We want to make sure that any failures in programming logic cannot accidentally expose unauthorized data.
 
 Yes, of course, the capability functions themselves must do error handling,
-and as you can see in the snippets above, I'm using the `Success/Failure` result type as described [here](/rop/).
+and as you can see in the snippets above, I'm using the `Success/Failure` result type as described [here](rop/).
 As a result, we will need to merge failures from core functions (e.g. database errors) with capability-specific failures such as `Failure OnlyAllowedOnce`.
 
 **Question: You've created a whole module with types defined for each capability. I might have hundreds of capabilities. Do you really expect me to do all this extra work?**
@@ -1106,13 +1106,13 @@ Yes. This code is just an example. The authorization logic is completely separat
 
 **I've got more questions...**
 
-If you missed them, some additional questions are answered at the [end of part 1](/posts/capability-based-security/#summary).
+If you missed them, some additional questions are answered at the [end of part 1](posts/capability-based-security/#summary).
 Otherwise please add your question in the comments below, and I'll try to address it.
 
 
 ## Coming up
 
-In the [next post](/posts/capability-based-security-3/), we'll look at how to use types to emulate access tokens and prevent unauthorized access to global functions.
+In the [next post](posts/capability-based-security-3/), we'll look at how to use types to emulate access tokens and prevent unauthorized access to global functions.
 
 *NOTE: All the code for this post is available as a [gist here](https://gist.github.com/swlaschin/909c5b24bf921e5baa8c#file-capabilitybasedsecurity_dbexample-fsx)
 and [here](https://gist.github.com/swlaschin/909c5b24bf921e5baa8c#file-capabilitybasedsecurity_consoleexample-fsx).*

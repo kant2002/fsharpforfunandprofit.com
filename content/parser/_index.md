@@ -23,7 +23,7 @@ Here's the blurb for the talk:
 
 This talk is based on my blog posts on this topic:
 
-* [Understanding parser combinators](/series/understanding-parser-combinators.html)
+* [Understanding parser combinators](series/understanding-parser-combinators.html)
 
 ## Videos
 

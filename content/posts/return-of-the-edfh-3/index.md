@@ -8,14 +8,14 @@ seriesId: "The Return of the EDFH"
 seriesOrder: 3
 ---
 
-In the [first post in this series](/posts/return-of-the-edfh), we came up with some properties that could be used to test a run-length encoding implementation:
+In the [first post in this series](posts/return-of-the-edfh), we came up with some properties that could be used to test a run-length encoding implementation:
 
 * The output must contain all the characters from the input, in the same order
 * Two adjacent characters in the output cannot be the same
 * The sum of the run lengths in the output must equal the total length of the input
 * If the input is reversed, the output must also be reversed
 
-In the [previous post](/posts/return-of-the-edfh-2), we tested various RLE implementations created by the [*Enterprise Developer From Hell*](/pbt) and were happy that they all failed.
+In the [previous post](posts/return-of-the-edfh-2), we tested various RLE implementations created by the [*Enterprise Developer From Hell*](pbt) and were happy that they all failed.
 
 But are these four properties enough to correctly check a RLE implementation? Can the EDFH create a implementation that would satisfy these properties and yet be wrong?
 
@@ -26,7 +26,7 @@ The answer is yes! The EDFH can take the output of a correct implementation and 
 * The "sum of the run lengths" property means that the run-lengths for the new prefix must steal a count from subsequent runs. If we didn't steal a count, and used 0 as a run-length for these new elements, then that would actually be an acceptable RLE -- not corrupt at all!
 * And finally, the "reversed" property means the both the front and the rear of the list must be modified in the same way. To avoid corrupting the same elements twice, we require the list to have at least four elements.
 
-Putting all those requirements together, we can come up with this implementation, where `rle_recursive` is the correct RLE implementation from [the previous post](/posts/return-of-the-edfh-2#correct1).
+Putting all those requirements together, we can come up with this implementation, where `rle_recursive` is the correct RLE implementation from [the previous post](posts/return-of-the-edfh-2#correct1).
 
 ```fsharp {src=#rle_corrupted}
 /// An incorrect implementation that satisfies all the properties
@@ -72,7 +72,7 @@ Check.One(config,prop)
 
 And it passed. Oh dear! How are we going to defeat the EDFH now?
 
-In [an earlier post](/posts/property-based-testing-2), I described a number of approaches that could be used to come up with properties. We already used one of them ("some things never change") to require an invariant, namely that every character in the source string also occurs in the RLE. We will use two more of them in this post:
+In [an earlier post](posts/property-based-testing-2), I described a number of approaches that could be used to come up with properties. We already used one of them ("some things never change") to require an invariant, namely that every character in the source string also occurs in the RLE. We will use two more of them in this post:
 
 * "Different paths, same destination"
 * "There and back again"
@@ -85,7 +85,7 @@ For our first approach, we will use a variant of the "commutative diagram" appro
 
 In this case we're going exploit the fact that run-length encoding is a "structure-preserving" operation. What that means is that operations in "string world" are preserved after being transformed onto "RLE world".
 
-The defining operation on strings is concatenation (because strings are [monoids](/posts/monoids-without-tears/)) and so we require that a structure-preserving operation on strings maps concatenation in string world to concatenation in the target world
+The defining operation on strings is concatenation (because strings are [monoids](posts/monoids-without-tears/)) and so we require that a structure-preserving operation on strings maps concatenation in string world to concatenation in the target world
 
 ```
 OP(str1 + str2) = OP(str1) + OP(str2)

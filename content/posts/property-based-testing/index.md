@@ -12,9 +12,9 @@ seriesOrder: 1
 > This post is part of the [F# Advent Calendar in English 2014](https://sergeytihon.wordpress.com/2014/11/24/f-advent-calendar-in-english-2014/) project.
 > Check out all the other great posts there! And special thanks to Sergey Tihon for organizing this.
 
-*UPDATE: I did a talk on property-based testing based on these posts. [Slides and video here.](/pbt/)*
+*UPDATE: I did a talk on property-based testing based on these posts. [Slides and video here.](pbt/)*
 
-*Also, there is now a post on [how to choose properties for property-based testing](/posts/property-based-testing-2/)*
+*Also, there is now a post on [how to choose properties for property-based testing](posts/property-based-testing-2/)*
 
 Let's start with a discussion that I might have had once (topic changed to protect the guilty):
 
@@ -556,7 +556,7 @@ but doesn't work more generally, not out of evil intent, but out of unawareness 
 
 Like fish unaware of water, we are often unaware of the assumptions we make. Property-based testing can force us to become aware of them.
 
-But how does a property-based testing library like FsCheck actually work in detail? That's the topic of the [next post](/posts/property-based-testing-1/).
+But how does a property-based testing library like FsCheck actually work in detail? That's the topic of the [next post](posts/property-based-testing-1/).
 
 {{<ghsource "/posts/property-based-testing">}}
 

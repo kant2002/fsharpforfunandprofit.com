@@ -10,7 +10,7 @@ seriesOrder: 5
 ---
 
 
-In [the previous post](/posts/property-based-testing-3/), we tested some list functions using various properties. Let's keep going and test some more code in the same way. For this post, our challenge will be to test roman numeral conversion logic.
+In [the previous post](posts/property-based-testing-3/), we tested some list functions using various properties. Let's keep going and test some more code in the same way. For this post, our challenge will be to test roman numeral conversion logic.
 
 * ["Two heads are better than one"](#oracle) applied to two different implementations
 * ["There and back again"](#inverse) applied to encoding and decoding roman numerals
@@ -20,7 +20,7 @@ In [the previous post](/posts/property-based-testing-3/), we tested some list fu
 
 ## Generating Roman numerals in two different ways
 
-In my post ["Commentary on 'Roman Numerals Kata with Commentary'"](/posts/roman-numeral-kata/) I came up with two completely different algorithms for generating Roman Numerals.
+In my post ["Commentary on 'Roman Numerals Kata with Commentary'"](posts/roman-numeral-kata/) I came up with two completely different algorithms for generating Roman Numerals.
 
 The first algorithm was based on understanding that Roman numerals were based on tallying
 
@@ -125,9 +125,9 @@ So we need to only include inputs that are positive.  We also need to exclude nu
 
 How can we implement this filter?
 
-We saw in [an earlier post](/posts/property-based-testing-1/#adding-pre-conditions) that we could use preconditions.  But for this example, we'll try something different and change the generator.
+We saw in [an earlier post](posts/property-based-testing-1/#adding-pre-conditions) that we could use preconditions.  But for this example, we'll try something different and change the generator.
 
-First we'll define a integer generator (an "arbitrary") called `arabicNumber` which is filtered as we want (if you recall, an "arbitrary" is a combination of a generator algorithm and a shrinker algorithm, as described [earlier](/posts/property-based-testing-1/#understanding-fscheck-generators)). We'll only include numbers from 1 to 4000.
+First we'll define a integer generator (an "arbitrary") called `arabicNumber` which is filtered as we want (if you recall, an "arbitrary" is a combination of a generator algorithm and a shrinker algorithm, as described [earlier](posts/property-based-testing-1/#understanding-fscheck-generators)). We'll only include numbers from 1 to 4000.
 
 ```fsharp {src=#oracle_input}
 let arabicNumber =
@@ -531,6 +531,6 @@ If you want to learn more about Zendo, [the rules are here](http://www.looneylab
 
 ## To be continued
 
-In [the next post](/posts/property-based-testing-5) we will keep going and use the same techniques to test a classic TDD example.
+In [the next post](posts/property-based-testing-5) we will keep going and use the same techniques to test a classic TDD example.
 
 {{<ghsource "/posts/property-based-testing-4">}}

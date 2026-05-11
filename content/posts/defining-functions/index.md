@@ -82,7 +82,7 @@ let adderGenerator2 x   = fun y -> x + y
 let adderGenerator3     = fun x -> (fun y -> x + y)
 ```
 
-If you can't see it, then do reread the [post on currying](/posts/currying/). This is important stuff to understand!
+If you can't see it, then do reread the [post on currying](posts/currying/). This is important stuff to understand!
 
 ## Pattern matching on parameters ##
 
@@ -236,7 +236,7 @@ System.String.Compare tuple   // error
 System.String.Compare "a","b" // error
 ```
 
-If you do want to partially apply .NET library functions, it is normally trivial to write wrapper functions for them, as we have [seen earlier](/posts/partial-application/), and as shown below:
+If you do want to partially apply .NET library functions, it is normally trivial to write wrapper functions for them, as we have [seen earlier](posts/partial-application/), and as shown below:
 
 ```fsharp
 // create a wrapper function
@@ -286,7 +286,7 @@ let setCustomerName first last = // not recommended
 let setCustomerName myCredentials aName = //good
 ```
 
-Finally, do be sure to order the parameters appropriately to assist with partial application (see the guidelines in the earlier [post](/posts/partial-application/)). For example, in the last function above, why did I put the `myCredentials` parameter ahead of the `aName` parameter?
+Finally, do be sure to order the parameters appropriately to assist with partial application (see the guidelines in the earlier [post](posts/partial-application/)). For example, in the last function above, why did I put the `myCredentials` parameter ahead of the `aName` parameter?
 
 ## Parameter-less functions ##
 
@@ -431,7 +431,7 @@ Indeed, there is a well-known theorem that states that any computable function w
 
 A combinator library is a code library that exports a set of combinator functions that are designed to work together. The user of the library can then easily combine simple functions together to make bigger and more complex functions, like building with Lego.
 
-A well designed combinator library allows you to focus on the high level operations, and push the low level "noise" to the background. We've already seen some examples of this power in the examples in ["why use F#"](/series/why-use-fsharp.html) series, and the `List` module is full of them -- the "`fold`" and "`map`" functions are also combinators, if you think about it.
+A well designed combinator library allows you to focus on the high level operations, and push the low level "noise" to the background. We've already seen some examples of this power in the examples in ["why use F#"](series/why-use-fsharp.html) series, and the `List` module is full of them -- the "`fold`" and "`map`" functions are also combinators, if you think about it.
 
 Another advantage of combinators is that they are the safest type of function. As they have no dependency on the outside world they cannot change if the global environment changes.  A function that reads a global value or uses a library function can break or alter between calls if the context is different. This can never happen with combinators.
 

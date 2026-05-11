@@ -9,13 +9,13 @@ seriesId: "Handling State"
 seriesOrder: 2
 ---
 
-*UPDATE: [Slides and video from my talk on this topic](/monadster/)*
+*UPDATE: [Slides and video from my talk on this topic](monadster/)*
 
 *Warning! This post contains gruesome topics, strained analogies, discussion of monads*
 
 Welcome to the gripping tale of Dr Frankenfunctor and the Monadster!
 
-We saw [in the previous installment](/posts/monadster/) how Dr Frankenfunctor created life out of dead body parts using "Monadster part generators" (or "M"s for short),
+We saw [in the previous installment](posts/monadster/) how Dr Frankenfunctor created life out of dead body parts using "Monadster part generators" (or "M"s for short),
 that would, on being supplied with some vital force, return a live body part.
 
 We also saw how the leg and arms of the creature were created, and how these M-values could be processed
@@ -365,7 +365,7 @@ Just like `map`, `bind` appears in many other contexts.
 For example, `Option.bind` transforms a option-generating function (`'a -> 'b option`) into a function whose inputs and outputs are options.
 Similarly, `List.bind` transforms a list-generating function (`'a -> 'b list`) into a function whose inputs and outputs are lists.
 
-And I discuss yet another version of bind at length in my talk on [functional error handling](/rop/).
+And I discuss yet another version of bind at length in my talk on [functional error handling](rop/).
 
 The reason that bind is so important is that "M-returning" functions crop up a lot, and they cannot be chained together easily because the output of one step does not match the input
 of the the next step.
@@ -709,5 +709,5 @@ In this post, we extended our repertoire of manipulation techniques to include:
 
 ## Next time
 
-In [the final installment](/posts/monadster-3/), we'll refactor the code and review all the techniques used.
+In [the final installment](posts/monadster-3/), we'll refactor the code and review all the techniques used.
 

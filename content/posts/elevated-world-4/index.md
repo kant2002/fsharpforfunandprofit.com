@@ -10,8 +10,8 @@ image: "/posts/elevated-world-4/vgfp_sequence_stack.png"
 ---
 
 This post is one in a series.
-In the [first two posts](/posts/elevated-world/), I described some of the core functions for dealing with generic data types:  `map`, `bind`, and so on.
-In the [previous post](/posts/elevated-world-3/), I discussed "applicative" vs "monadic" style, and how to lift values and functions to be consistent with each other.
+In the [first two posts](posts/elevated-world/), I described some of the core functions for dealing with generic data types:  `map`, `bind`, and so on.
+In the [previous post](posts/elevated-world-3/), I discussed "applicative" vs "monadic" style, and how to lift values and functions to be consistent with each other.
 
 In this post, we'll look at a common problem: working with lists of elevated values.
 
@@ -20,36 +20,36 @@ In this post, we'll look at a common problem: working with lists of elevated val
 Here's a list of shortcuts to the various functions mentioned in this series:
 
 * **Part 1: Lifting to the elevated world**
-  * [The `map` function](/posts/elevated-world/#map)
-  * [The `return` function](/posts/elevated-world/#return)
-  * [The `apply` function](/posts/elevated-world/#apply)
-  * [The `liftN` family of functions](/posts/elevated-world/#lift)
-  * [The `zip` function and ZipList world](/posts/elevated-world/#zip)
+  * [The `map` function](posts/elevated-world/#map)
+  * [The `return` function](posts/elevated-world/#return)
+  * [The `apply` function](posts/elevated-world/#apply)
+  * [The `liftN` family of functions](posts/elevated-world/#lift)
+  * [The `zip` function and ZipList world](posts/elevated-world/#zip)
 * **Part 2: How to compose world-crossing functions**
-  * [The `bind` function](/posts/elevated-world-2/#bind)
-  * [List is not a monad. Option is not a monad.](/posts/elevated-world-2/#not-a-monad)
+  * [The `bind` function](posts/elevated-world-2/#bind)
+  * [List is not a monad. Option is not a monad.](posts/elevated-world-2/#not-a-monad)
 * **Part 3: Using the core functions in practice**
-  * [Independent and dependent data](/posts/elevated-world-3/#dependent)
-  * [Example: Validation using applicative style and monadic style](/posts/elevated-world-3/#validation)
-  * [Lifting to a consistent world](/posts/elevated-world-3/#consistent)
-  * [Kleisli world](/posts/elevated-world-3/#kleisli)
+  * [Independent and dependent data](posts/elevated-world-3/#dependent)
+  * [Example: Validation using applicative style and monadic style](posts/elevated-world-3/#validation)
+  * [Lifting to a consistent world](posts/elevated-world-3/#consistent)
+  * [Kleisli world](posts/elevated-world-3/#kleisli)
 * **Part 4: Mixing lists and elevated values**
-  * [Mixing lists and elevated values](/posts/elevated-world-4/#mixing)
-  * [The `traverse`/`MapM` function](/posts/elevated-world-4/#traverse)
-  * [The `sequence` function](/posts/elevated-world-4/#sequence)
-  * ["Sequence" as a recipe for ad-hoc implementations](/posts/elevated-world-4/#adhoc)
-  * [Readability vs. performance](/posts/elevated-world-4/#readability)
-  * [Dude, where's my `filter`?](/posts/elevated-world-4/#filter)
+  * [Mixing lists and elevated values](posts/elevated-world-4/#mixing)
+  * [The `traverse`/`MapM` function](posts/elevated-world-4/#traverse)
+  * [The `sequence` function](posts/elevated-world-4/#sequence)
+  * ["Sequence" as a recipe for ad-hoc implementations](posts/elevated-world-4/#adhoc)
+  * [Readability vs. performance](posts/elevated-world-4/#readability)
+  * [Dude, where's my `filter`?](posts/elevated-world-4/#filter)
 * **Part 5: A real-world example that uses all the techniques**
-  * [Example: Downloading and processing a list of websites](/posts/elevated-world-5/#asynclist)
-  * [Treating two worlds as one](/posts/elevated-world-5/#asyncresult)
+  * [Example: Downloading and processing a list of websites](posts/elevated-world-5/#asynclist)
+  * [Treating two worlds as one](posts/elevated-world-5/#asyncresult)
 * **Part 6: Designing your own elevated world**
-  * [Designing your own elevated world](/posts/elevated-world-6/#part6)
-  * [Filtering out failures](/posts/elevated-world-6/#filtering)
-  * [The Reader monad](/posts/elevated-world-6/#readermonad)
+  * [Designing your own elevated world](posts/elevated-world-6/#part6)
+  * [Filtering out failures](posts/elevated-world-6/#filtering)
+  * [The Reader monad](posts/elevated-world-6/#readermonad)
 * **Part 7: Summary**
-  * [List of operators mentioned](/posts/elevated-world-7/#operators)
-  * [Further reading](/posts/elevated-world-7/#further-reading)
+  * [List of operators mentioned](posts/elevated-world-7/#operators)
+  * [Further reading](posts/elevated-world-7/#further-reading)
 
 {{< linktarget "mixing" >}}
 
@@ -826,7 +826,7 @@ output = desiredOutput |> printfn "Is output correct? %b"
 Ok, this solution is more work than having one reusable function, but because it is mechanical, it only takes a few minutes to code, and is still easier than
 trying to come up with your own solution!
 
-*Want more? For an example of using `sequence` in a real-world problem, please read [this post](/posts/recursive-types-and-folds-3b/#json-with-error-handling).*
+*Want more? For an example of using `sequence` in a real-world problem, please read [this post](posts/recursive-types-and-folds-3b/#json-with-error-handling).*
 
 {{< linktarget "readability" >}}
 
@@ -885,5 +885,5 @@ The various uses of fold are worthy of their own series, so I'm going to save a 
 
 In this post, we learned about `traverse` and `sequence` as a way of working with lists of elevated values.
 
-In the [next post](/posts/elevated-world-5/) we'll finish up by working through a practical example that uses all the techniques that have been discussed.
+In the [next post](posts/elevated-world-5/) we'll finish up by working through a practical example that uses all the techniques that have been discussed.
 

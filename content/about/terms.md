@@ -18,7 +18,7 @@ THEREFORE, you promise to always look at the timestamp on a post and, if it is a
 
 * You agree to never uncritically use the techniques described on this SITE. This SITE is not responsible for damage, loss of income, or your bad code that you thought was cool at the time but you end up hating later.
 
-* Some of the techniques on this SITE can be dangerous if [ingested carelessly](/posts/against-railway-oriented-programming/). If you are concerned that your monads have become free, please consult a physician.
+* Some of the techniques on this SITE can be dangerous if [ingested carelessly](posts/against-railway-oriented-programming/). If you are concerned that your monads have become free, please consult a physician.
 
 * You acknowledge that this SITE is primarily targeted at beginner and intermediate functional programmers. You indemnify ME against any pain and suffering caused to you by being deprived of words such as "Endofunctor", "Coyoneda", and "Zygohistomorphic prepromorphism".
 

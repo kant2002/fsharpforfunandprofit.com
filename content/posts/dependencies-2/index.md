@@ -12,7 +12,7 @@ seriesOrder: 2
 
 In this series, we are looking at six different approaches to dependency injection.
 
-* In the [first post](/posts/dependencies/), we looked at "dependency retention" (inlining the dependencies) and "dependency rejection" (keeping I/O at the edges of your implementation).
+* In the [first post](posts/dependencies/), we looked at "dependency retention" (inlining the dependencies) and "dependency rejection" (keeping I/O at the edges of your implementation).
 * In this post, we'll look at "dependency parameterization" as a way of managing dependencies.
 
 ----
@@ -200,6 +200,6 @@ I would say that you should always start with the "dependency rejection" approac
 But in some cases, passing I/O dependencies is perfectly acceptable -- in my opinion anyway!
 I/O heavy pipelines, or where you need logging, are situations where it may make sense to pass dependencies directly.
 
-If you want to be really strict about purity, stay tuned! In the [next post](/posts/dependencies-3/), we'll look at the reader monad.
+If you want to be really strict about purity, stay tuned! In the [next post](posts/dependencies-3/), we'll look at the reader monad.
 
 *The source code for this post is available at [this gist](https://gist.github.com/swlaschin/047f8c9a631ac0a620ab0a815d474911).*

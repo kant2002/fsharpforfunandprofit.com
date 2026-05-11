@@ -286,7 +286,7 @@ One trick in F# is to appropriate the `use` keyword to do any kind of "stop" or 
 
 The way to do this is:
 
-* Create an [extension method](/posts/type-extensions) for some type
+* Create an [extension method](posts/type-extensions) for some type
 * In that method, start the behavior you want but then return an `IDisposable` that stops the behavior.
 
 For example, here is an extension method that starts a timer and then returns an `IDisposable` that stops it.
@@ -391,7 +391,7 @@ When you see `let!`, `use!` and `do!` (that is, with exclamation marks) and they
 The most common type of computation expression you will run into are *asynchronous workflows*, indicated by a `async{..}` block.
 In this context, it means they are being used to wait for an async operation to finish, and only then bind to the result value.
 
-Here are some examples we saw earlier in [a post from the "why use F#?" series](/posts/concurrency-async-and-parallel):
+Here are some examples we saw earlier in [a post from the "why use F#?" series](posts/concurrency-async-and-parallel):
 
 ```fsharp
 //This simple workflow just sleeps for 2 seconds.

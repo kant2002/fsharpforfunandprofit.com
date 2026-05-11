@@ -10,9 +10,9 @@ image: "/posts/elevated-world/vgfp_map.png"
 ---
 
 In this series of posts, I'll attempt to describe some of the core functions for dealing with generic data types (such as `Option` and `List`).
-This is a follow-up post to [my talk on functional patterns](/fppatterns/).
+This is a follow-up post to [my talk on functional patterns](fppatterns/).
 
-Yes, I know that [I promised not to do this kind of thing](/posts/why-i-wont-be-writing-a-monad-tutorial/),
+Yes, I know that [I promised not to do this kind of thing](posts/why-i-wont-be-writing-a-monad-tutorial/),
 but for this post I thought I'd take a different approach from most people. Rather than talking about abstractions such as type classes,
 I thought it might be useful to focus on the core functions themselves and how they are used in practice.
 
@@ -76,36 +76,36 @@ This series is developed as follows:
 Here's a list of shortcuts to the various functions:
 
 * **Part 1: Lifting to the elevated world**
-  * [The `map` function](/posts/elevated-world/#map)
-  * [The `return` function](/posts/elevated-world/#return)
-  * [The `apply` function](/posts/elevated-world/#apply)
-  * [The `liftN` family of functions](/posts/elevated-world/#lift)
-  * [The `zip` function and ZipList world](/posts/elevated-world/#zip)
+  * [The `map` function](posts/elevated-world/#map)
+  * [The `return` function](posts/elevated-world/#return)
+  * [The `apply` function](posts/elevated-world/#apply)
+  * [The `liftN` family of functions](posts/elevated-world/#lift)
+  * [The `zip` function and ZipList world](posts/elevated-world/#zip)
 * **Part 2: How to compose world-crossing functions**
-  * [The `bind` function](/posts/elevated-world-2/#bind)
-  * [List is not a monad. Option is not a monad.](/posts/elevated-world-2/#not-a-monad)
+  * [The `bind` function](posts/elevated-world-2/#bind)
+  * [List is not a monad. Option is not a monad.](posts/elevated-world-2/#not-a-monad)
 * **Part 3: Using the core functions in practice**
-  * [Independent and dependent data](/posts/elevated-world-3/#dependent)
-  * [Example: Validation using applicative style and monadic style](/posts/elevated-world-3/#validation)
-  * [Lifting to a consistent world](/posts/elevated-world-3/#consistent)
-  * [Kleisli world](/posts/elevated-world-3/#kleisli)
+  * [Independent and dependent data](posts/elevated-world-3/#dependent)
+  * [Example: Validation using applicative style and monadic style](posts/elevated-world-3/#validation)
+  * [Lifting to a consistent world](posts/elevated-world-3/#consistent)
+  * [Kleisli world](posts/elevated-world-3/#kleisli)
 * **Part 4: Mixing lists and elevated values**
-  * [Mixing lists and elevated values](/posts/elevated-world-4/#mixing)
-  * [The `traverse`/`MapM` function](/posts/elevated-world-4/#traverse)
-  * [The `sequence` function](/posts/elevated-world-4/#sequence)
-  * ["Sequence" as a recipe for ad-hoc implementations](/posts/elevated-world-4/#adhoc)
-  * [Readability vs. performance](/posts/elevated-world-4/#readability)
-  * [Dude, where's my `filter`?](/posts/elevated-world-4/#filter)
+  * [Mixing lists and elevated values](posts/elevated-world-4/#mixing)
+  * [The `traverse`/`MapM` function](posts/elevated-world-4/#traverse)
+  * [The `sequence` function](posts/elevated-world-4/#sequence)
+  * ["Sequence" as a recipe for ad-hoc implementations](posts/elevated-world-4/#adhoc)
+  * [Readability vs. performance](posts/elevated-world-4/#readability)
+  * [Dude, where's my `filter`?](posts/elevated-world-4/#filter)
 * **Part 5: A real-world example that uses all the techniques**
-  * [Example: Downloading and processing a list of websites](/posts/elevated-world-5/#asynclist)
-  * [Treating two worlds as one](/posts/elevated-world-5/#asyncresult)
+  * [Example: Downloading and processing a list of websites](posts/elevated-world-5/#asynclist)
+  * [Treating two worlds as one](posts/elevated-world-5/#asyncresult)
 * **Part 6: Designing your own elevated world**
-  * [Designing your own elevated world](/posts/elevated-world-6/#part6)
-  * [Filtering out failures](/posts/elevated-world-6/#filtering)
-  * [The Reader monad](/posts/elevated-world-6/#readermonad)
+  * [Designing your own elevated world](posts/elevated-world-6/#part6)
+  * [Filtering out failures](posts/elevated-world-6/#filtering)
+  * [The Reader monad](posts/elevated-world-6/#readermonad)
 * **Part 7: Summary**
-  * [List of operators mentioned](/posts/elevated-world-7/#operators)
-  * [Further reading](/posts/elevated-world-7/#further-reading)
+  * [List of operators mentioned](posts/elevated-world-7/#operators)
+  * [Further reading](posts/elevated-world-7/#further-reading)
 
 
 {{< linktarget "part1" >}}
@@ -240,7 +240,7 @@ and so on. We want `map` to return this corresponding elevated function in a sen
 For example, `map` of `add` should not (wrongly) return the elevated version of `multiply`, and `map` of `lowercase` should not return the elevated version of `uppercase`!
 But how can we be *sure* that a particular implementation of map does indeed return the *correct* corresponding function?
 
-In [my post on property based testing](/pbt/) I showed how a correct implementation of a function can be defined and tested using general properties rather than specific examples.
+In [my post on property based testing](pbt/) I showed how a correct implementation of a function can be defined and tested using general properties rather than specific examples.
 
 This is true for `map` as well. The implementation will vary with the specific elevated world, but in all cases,
 there are certain properties that the implementation should satisfy to avoid strange behavior.
@@ -273,7 +273,7 @@ There are some variants of map that are common:
 * **Const map**. A const or "replace-by" map replaces all values with a constant rather than the output of a function.
   In some cases, a specialized function like this can allow for a more efficient implementation.
 * **Maps that work with cross-world functions**. The map function `a->b` lives entirely in the normal world. But what if the function you want to map with
-  does not return something in the normal world, but a value in another, different, enhanced world?  We'll see how to address this challenge in [a later post](/posts/elevated-world-4/).
+  does not return something in the normal world, but a value in another, different, enhanced world?  We'll see how to address this challenge in [a later post](posts/elevated-world-4/).
 
 
 {{< linktarget "return" >}}
@@ -669,7 +669,7 @@ combineList [1;2] []
 ```
 
 It's possible to create an alternative kind of combiner that ignores missing or bad values, just as adding "0" to a number is ignored.
-For more information, see my post on ["Monoids without tears"](/posts/monoids-without-tears/).
+For more information, see my post on ["Monoids without tears"](posts/monoids-without-tears/).
 
 ### One sided combiners `<*` and `*>`
 
@@ -871,5 +871,5 @@ plus some derived functions like `liftN` and `zip`.
 In practice however, things are not that simple. We frequently have to work with functions that cross between the worlds.
 Their input is in the normal world but their output is in the elevated world.
 
-In the [next post](/posts/elevated-world-2/) we'll show how these world-crossing functions can be lifted to the elevated world as well.
+In the [next post](posts/elevated-world-2/) we'll show how these world-crossing functions can be lifted to the elevated world as well.
 

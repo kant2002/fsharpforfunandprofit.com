@@ -21,19 +21,19 @@ Here's the blurb for the talk:
 
 This talk is based on my blog posts on this topic:
 
-* [Enterprise Tic-Tac-Toe](/posts/enterprise-tic-tac-toe/)
-* [Enterprise Tic-Tac-Toe Part 2, In which I throw away the previous design](/posts/enterprise-tic-tac-toe-2/)
+* [Enterprise Tic-Tac-Toe](posts/enterprise-tic-tac-toe/)
+* [Enterprise Tic-Tac-Toe Part 2, In which I throw away the previous design](posts/enterprise-tic-tac-toe-2/)
 
 
 Also related are my posts and talks on capability based security and DDD:
 
 * More on designing with capabilities:
-  * [A functional approach to authorization](/posts/capability-based-security/)
-  * [Constraining capabilities based on identity and role](/posts/capability-based-security-2/)
-  * [Using types as access tokens](/posts/capability-based-security-3/)
-  * [Video and slides for my "Designing with Capabilities" talk](/cap/)
+  * [A functional approach to authorization](posts/capability-based-security/)
+  * [Constraining capabilities based on identity and role](posts/capability-based-security-2/)
+  * [Using types as access tokens](posts/capability-based-security-3/)
+  * [Video and slides for my "Designing with Capabilities" talk](cap/)
 * More on Domain Driven Design:
-  * [Video and slides for my "Domain Driven Design with the F# Type System" talk](/ddd/)
+  * [Video and slides for my "Domain Driven Design with the F# Type System" talk](ddd/)
 
 ## Videos
 

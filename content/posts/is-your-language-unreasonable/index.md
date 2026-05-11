@@ -454,7 +454,7 @@ if (customerOrError.IsError)
 ```
 
 This is exactly the approach taken by most functional languages. It does help if the language provides conveniences to make this technique easier, such as sum types,
-but even without that, this approach is still the only way to go if you want to make it obvious what your code is doing. (You can read more about this technique [here](/rop/).)
+but even without that, this approach is still the only way to go if you want to make it obvious what your code is doing. (You can read more about this technique [here](rop/).)
 
 So that's the last two items to add to our list, at least for now.
 

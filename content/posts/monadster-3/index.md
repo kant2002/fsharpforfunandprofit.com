@@ -8,26 +8,26 @@ seriesId: "Handling State"
 seriesOrder: 3
 ---
 
-*UPDATE: [Slides and video from my talk on this topic](/monadster/)*
+*UPDATE: [Slides and video from my talk on this topic](monadster/)*
 
 *Warning! This post contains gruesome topics, strained analogies, discussion of monads*
 
 Welcome to the third installment in the gripping tale of Dr Frankenfunctor and the Monadster!
 
-We saw [in the first installment](/posts/monadster/) how Dr Frankenfunctor created life out of dead body parts using "Monadster part generators" (or "M"s for short),
+We saw [in the first installment](posts/monadster/) how Dr Frankenfunctor created life out of dead body parts using "Monadster part generators" (or "M"s for short),
 that would, on being supplied with some vital force, return a live body part.
 
 We also saw how the leg and arms of the creature were created, and how these M-values could be processed and combined using `mapM` and `map2M`.
 
-In [the second installment](/posts/monadster-2/) we learned how the head, heart and body were built using other powerful techniques such as `returnM`, `bindM` and `applyM`.
+In [the second installment](posts/monadster-2/) we learned how the head, heart and body were built using other powerful techniques such as `returnM`, `bindM` and `applyM`.
 
 In this last installment, we'll review all the techniques used, refactor the code, and compare Dr Frankenfunctor's techniques to the modern-day state monad.
 
 Links for the complete series:
 
-* [Part 1 - Dr Frankenfunctor and the Monadster](/posts/monadster/)
-* [Part 2 - Completing the body](/posts/monadster-2/)
-* [Part 3 - Review and refactoring](/posts/monadster-3/) (*this post*)
+* [Part 1 - Dr Frankenfunctor and the Monadster](posts/monadster/)
+* [Part 2 - Completing the body](posts/monadster-2/)
+* [Part 3 - Review and refactoring](posts/monadster-3/) (*this post*)
 
 ## Review of the the techniques used
 
@@ -182,7 +182,7 @@ monster {
     }
 ```
 
-*If you want more on computation expressions, I have an [in-depth series of posts about them](/series/computation-expressions.html).*
+*If you want more on computation expressions, I have an [in-depth series of posts about them](series/computation-expressions.html).*
 
 ### Redefining mapM and friends
 
@@ -586,7 +586,7 @@ let putS newState =
 
 Before moving on, how do we know that our `state` implementation is correct? What does it even *mean* to be correct?
 
-Well, rather than writing lots of example based tests, this is a great candidate for a [property-based testing](/pbt/) approach.
+Well, rather than writing lots of example based tests, this is a great candidate for a [property-based testing](pbt/) approach.
 
 The properties we might expect to be satisfied include:
 
@@ -596,7 +596,7 @@ The properties we might expect to be satisfied include:
 
 and so on.
 
-I won't go into this any more right now. I suggest watching [the talk](/pbt/) for a more in-depth discussion.
+I won't go into this any more right now. I suggest watching [the talk](pbt/) for a more in-depth discussion.
 
 ### Using the state expression instead of the monster expression
 
@@ -776,7 +776,7 @@ let fiveN = calculate five |> getValue   // 5
 
 ## OK, OK, some monad stuff
 
-People always want to know about monads, even though I do not want these posts to degenerate into [yet another monad tutorial](/posts/why-i-wont-be-writing-a-monad-tutorial/).
+People always want to know about monads, even though I do not want these posts to degenerate into [yet another monad tutorial](posts/why-i-wont-be-writing-a-monad-tutorial/).
 
 So here's how they fit in with what we have worked with in these posts.
 
@@ -808,7 +808,7 @@ so I'm only going to mention a few follow up links.
 * ["A few monads more", from "Learn You A Haskell"](http://learnyouahaskell.com/for-a-few-monads-more)
 * [Much Ado About Monads](http://codebetter.com/matthewpodwysocki/2009/12/31/much-ado-about-monads-state-edition/). Discussion about state monad in F#.
 
-And for another important use of "bind", you might find my talk on [functional error handling](/rop/) useful.
+And for another important use of "bind", you might find my talk on [functional error handling](rop/) useful.
 
 If you want to see F# implementations of other monads, look no further than [the FSharpx project](https://github.com/fsprojects/FSharpx.Extras/blob/master/src/FSharpx.Extras/ComputationExpressions).
 

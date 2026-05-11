@@ -8,7 +8,7 @@ seriesId: "The Return of the EDFH"
 seriesOrder: 1
 ---
 
-In a [previous series of posts](/pbt), I introduced you to the burned-out and lazy programmer known as the *Enterprise Developer From Hell*, or the *EDFH* for short. As we saw, the EDFH loves to practice [malicious compliance](https://www.reddit.com/r/MaliciousCompliance/top/?sort=top&t=all).
+In a [previous series of posts](pbt), I introduced you to the burned-out and lazy programmer known as the *Enterprise Developer From Hell*, or the *EDFH* for short. As we saw, the EDFH loves to practice [malicious compliance](https://www.reddit.com/r/MaliciousCompliance/top/?sort=top&t=all).
 
 Recently, the EDFH's influence was apparent with [this viral answer to an interview problem](https://twitter.com/allenholub/status/1357115515672555520).
 
@@ -82,7 +82,7 @@ rle "aaaabbbcca"  //=> [('a',4); ('b',3); ('c',2); ('a',1)]
 
 The best way to beat the EFDH is to use random inputs, and in particular, property-based testing.
 
-A nice thing about property-based testing is that, by doing it, you can often discover the specification. In [a previous post](/posts/property-based-testing), I discussed how we might test an implementation of addition. Eventually, we discovered the properties of commutativity, associativity, and identity. These not only defined the tests we needed, they also pretty much define what "addition" actually is.
+A nice thing about property-based testing is that, by doing it, you can often discover the specification. In [a previous post](posts/property-based-testing), I discussed how we might test an implementation of addition. Eventually, we discovered the properties of commutativity, associativity, and identity. These not only defined the tests we needed, they also pretty much define what "addition" actually is.
 
 Let's see if we can do the same for RLE.
 
@@ -189,7 +189,7 @@ So, already, with just a few minutes thinking (and some help from the EDFH) we h
 * If the input is reversed, the output must also be reversed
 
 {{<alertinfo>}}
-Is that enough to correctly check a RLE implementation? Can you think of any malicious EDFH implementations that would satisfy these properties and yet be wrong? We'll revisit this in a [later post](/posts/return-of-the-edfh-3).
+Is that enough to correctly check a RLE implementation? Can you think of any malicious EDFH implementations that would satisfy these properties and yet be wrong? We'll revisit this in a [later post](posts/return-of-the-edfh-3).
 {{</alertinfo>}}
 
 ## Property checking in practice
@@ -408,6 +408,6 @@ So what we need to do now is generate *interesting* inputs rather than random st
 
 How can we do that? And then how can we monitor what the inputs are without resorting to crude `print` debugging?
 
-That will be the topic of the [next installment!](/posts/return-of-the-edfh-2)
+That will be the topic of the [next installment!](posts/return-of-the-edfh-2)
 
 {{<ghsource "/posts/return-of-the-edfh">}}

@@ -16,3 +16,4 @@
 /content/posts/.vs
 /content/posts/_drafts
 /content/posts/wordcounts.txt
+.hugo_build.lock

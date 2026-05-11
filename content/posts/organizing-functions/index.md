@@ -293,7 +293,7 @@ let result = add 1 2  // Compiler error: This expression was expected to
 
 What happened was that the `MathStuff.FloatLib` module has masked or overridden the original `MathStuff` module, which has been "shadowed" by `FloatLib`.
 
-As a result you now get a [FS0001 compiler error](/troubleshooting-fsharp/#FS0001) because the first parameter `1` is expected to be a float. You would have to change `1` to `1.0` to fix this.
+As a result you now get a [FS0001 compiler error](troubleshooting-fsharp/#FS0001) because the first parameter `1` is expected to be a float. You would have to change `1` to `1.0` to fix this.
 
 Unfortunately, this is invisible and easy to overlook. Sometimes you can do cool tricks with this, almost like subclassing, but more often, it can be annoying if you have functions with the same name (such as the very common `map`).
 

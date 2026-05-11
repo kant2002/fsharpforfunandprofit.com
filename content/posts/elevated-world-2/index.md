@@ -9,7 +9,7 @@ seriesOrder: 2
 image: "/posts/elevated-world-2/vgfp_bind.png"
 ---
 
-This post is the second in a series. In the [previous post](/posts/elevated-world/), I described some of the core functions for
+This post is the second in a series. In the [previous post](posts/elevated-world/), I described some of the core functions for
 lifting a value from a normal world to an elevated world.
 
 In this post, we'll look at "world-crossing" functions, and how they can be tamed with the `bind` function.
@@ -19,36 +19,36 @@ In this post, we'll look at "world-crossing" functions, and how they can be tame
 Here's a list of shortcuts to the various functions mentioned in this series:
 
 * **Part 1: Lifting to the elevated world**
-  * [The `map` function](/posts/elevated-world/#map)
-  * [The `return` function](/posts/elevated-world/#return)
-  * [The `apply` function](/posts/elevated-world/#apply)
-  * [The `liftN` family of functions](/posts/elevated-world/#lift)
-  * [The `zip` function and ZipList world](/posts/elevated-world/#zip)
+  * [The `map` function](posts/elevated-world/#map)
+  * [The `return` function](posts/elevated-world/#return)
+  * [The `apply` function](posts/elevated-world/#apply)
+  * [The `liftN` family of functions](posts/elevated-world/#lift)
+  * [The `zip` function and ZipList world](posts/elevated-world/#zip)
 * **Part 2: How to compose world-crossing functions**
-  * [The `bind` function](/posts/elevated-world-2/#bind)
-  * [List is not a monad. Option is not a monad.](/posts/elevated-world-2/#not-a-monad)
+  * [The `bind` function](posts/elevated-world-2/#bind)
+  * [List is not a monad. Option is not a monad.](posts/elevated-world-2/#not-a-monad)
 * **Part 3: Using the core functions in practice**
-  * [Independent and dependent data](/posts/elevated-world-3/#dependent)
-  * [Example: Validation using applicative style and monadic style](/posts/elevated-world-3/#validation)
-  * [Lifting to a consistent world](/posts/elevated-world-3/#consistent)
-  * [Kleisli world](/posts/elevated-world-3/#kleisli)
+  * [Independent and dependent data](posts/elevated-world-3/#dependent)
+  * [Example: Validation using applicative style and monadic style](posts/elevated-world-3/#validation)
+  * [Lifting to a consistent world](posts/elevated-world-3/#consistent)
+  * [Kleisli world](posts/elevated-world-3/#kleisli)
 * **Part 4: Mixing lists and elevated values**
-  * [Mixing lists and elevated values](/posts/elevated-world-4/#mixing)
-  * [The `traverse`/`MapM` function](/posts/elevated-world-4/#traverse)
-  * [The `sequence` function](/posts/elevated-world-4/#sequence)
-  * ["Sequence" as a recipe for ad-hoc implementations](/posts/elevated-world-4/#adhoc)
-  * [Readability vs. performance](/posts/elevated-world-4/#readability)
-  * [Dude, where's my `filter`?](/posts/elevated-world-4/#filter)
+  * [Mixing lists and elevated values](posts/elevated-world-4/#mixing)
+  * [The `traverse`/`MapM` function](posts/elevated-world-4/#traverse)
+  * [The `sequence` function](posts/elevated-world-4/#sequence)
+  * ["Sequence" as a recipe for ad-hoc implementations](posts/elevated-world-4/#adhoc)
+  * [Readability vs. performance](posts/elevated-world-4/#readability)
+  * [Dude, where's my `filter`?](posts/elevated-world-4/#filter)
 * **Part 5: A real-world example that uses all the techniques**
-  * [Example: Downloading and processing a list of websites](/posts/elevated-world-5/#asynclist)
-  * [Treating two worlds as one](/posts/elevated-world-5/#asyncresult)
+  * [Example: Downloading and processing a list of websites](posts/elevated-world-5/#asynclist)
+  * [Treating two worlds as one](posts/elevated-world-5/#asyncresult)
 * **Part 6: Designing your own elevated world**
-  * [Designing your own elevated world](/posts/elevated-world-6/#part6)
-  * [Filtering out failures](/posts/elevated-world-6/#filtering)
-  * [The Reader monad](/posts/elevated-world-6/#readermonad)
+  * [Designing your own elevated world](posts/elevated-world-6/#part6)
+  * [Filtering out failures](posts/elevated-world-6/#filtering)
+  * [The Reader monad](posts/elevated-world-6/#readermonad)
 * **Part 7: Summary**
-  * [List of operators mentioned](/posts/elevated-world-7/#operators)
-  * [Further reading](/posts/elevated-world-7/#further-reading)
+  * [List of operators mentioned](posts/elevated-world-7/#operators)
+  * [Further reading](posts/elevated-world-7/#further-reading)
 
 {{< linktarget "part2" >}}
 
@@ -304,7 +304,7 @@ The answer is that just because `apply` *can* be emulated by `bind`, doesn't mea
 in a way that cannot be emulated by a `bind` implementation.
 
 In fact, using `apply` ("applicative style") or `bind` ("monadic style") can have a profound effect on how your program works!
-We'll discuss these two approaches in more detail in [part 3 of this post](/posts/elevated-world-3/#dependent).
+We'll discuss these two approaches in more detail in [part 3 of this post](posts/elevated-world-3/#dependent).
 
 ### The properties of a correct bind/return implementation
 
@@ -411,6 +411,6 @@ We now have a set of four core functions:  `map`, `return`, `apply`, and `bind`,
 But there are some questions that have not been addressed yet, such as "why should I choose `apply` instead of `bind`?",
 or "how can I deal with multiple elevated worlds at the same time?"
 
-In the [next post](/posts/elevated-world-3/) we'll address these questions and demonstrate how to use the toolset with a series of practical examples.
+In the [next post](posts/elevated-world-3/) we'll address these questions and demonstrate how to use the toolset with a series of practical examples.
 
 *UPDATE: Fixed error in monad laws pointed out by @joseanpg. Thanks!*

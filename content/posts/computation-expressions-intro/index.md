@@ -8,7 +8,7 @@ seriesId: "Computation Expressions"
 seriesOrder: 1
 ---
 
-By popular request, it is time to talk about the mysteries of computation expressions, what they are, and how they can be useful in practice (and I will try to avoid using the [forbidden m-word](/about/#banned)).
+By popular request, it is time to talk about the mysteries of computation expressions, what they are, and how they can be useful in practice (and I will try to avoid using the [forbidden m-word](about/#banned)).
 
 In this series, you'll learn what computation expressions are, how to make your own, and some common patterns involving them. In the process, we'll also look at continuations, the bind function, wrapper types, and more.
 
